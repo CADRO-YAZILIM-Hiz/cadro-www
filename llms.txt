@@ -1,0 +1,22 @@
+# CADRO
+
+> Cloud-based HR platform for TR/EN/DE/AR audiences.
+
+## Canonical site
+- https://www.cadro.io/
+
+## Core sections
+- Product: https://www.cadro.io/ik-yazilimi.html
+- Pricing: https://www.cadro.io/pricing.html
+- Blog: https://www.cadro.io/blog.html
+- Case studies: https://www.cadro.io/vaka-calismalari.html
+
+## Sitemaps
+- https://www.cadro.io/sitemap.xml
+- https://www.cadro.io/video-sitemap.xml
+
+## Language roots
+- TR: https://www.cadro.io/
+- EN: https://www.cadro.io/en/
+- DE: https://www.cadro.io/de/
+- AR: https://www.cadro.io/ar/

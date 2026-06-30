@@ -1,0 +1,38 @@
+{
+  "name": "CADRO - Modern İnsan Kaynakları Yazılımı",
+  "short_name": "CADRO",
+  "description": "CADRO; işe alım, performans, izin ve özlük yönetimini tek bir bulut platformunda toplayan modern İK yazılımıdır.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "lang": "tr",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "human resources"],
+  "icons": [
+    {
+      "src": "/Cadro Logo.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/Cadro Logo.webp",
+      "sizes": "any",
+      "type": "image/webp",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/assets/screenshots/phase2/tr/dashboard.webp",
+      "sizes": "1200x630",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "CADRO Dashboard"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

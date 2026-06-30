@@ -1,0 +1,451 @@
+[
+  {
+    "publish_date": "2026-05-26",
+    "slug": "makale-ik-yazilimi-secim-rehberi-2026.html",
+    "title": "HR-Software Auswahlleitfaden 2026: 12 kritische Kriterien",
+    "excerpt": "Diese Anleitung zeigt die 12 technischen und operativen Kriterien, die Sie bei der Auswahl einer HR-Software neben dem Preis bewerten sollten.",
+    "category": "İK Teknolojisi",
+    "keywords": [
+      "ik yazılımı",
+      "insan kaynakları yazılımı",
+      "ik yazılımı seçimi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-26"
+  },
+  {
+    "publish_date": "2026-05-27",
+    "slug": "makale-personel-takip-programi-nedir.html",
+    "title": "Was ist ein Personalverfolgungsprogramm? Umstiegsplan von Excel",
+    "excerpt": "Ein praxisnaher Plan, um Anwesenheit, Urlaub und Personaldaten zentral in einem System zu steuern.",
+    "category": "Operasyon",
+    "keywords": [
+      "personel takip programı",
+      "ik programı",
+      "puantaj"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-27"
+  },
+  {
+    "publish_date": "2026-05-28",
+    "slug": "makale-ise-alim-yazilimi-ats-kontrol-listesi.html",
+    "title": "Checkliste fuer Recruiting-Software (ATS)",
+    "excerpt": "Welche Punkte sind bei Candidate Experience, Reporting und Integrationen bei der ATS-Auswahl entscheidend?",
+    "category": "İşe Alım",
+    "keywords": [
+      "işe alım yazılımı",
+      "aday takip sistemi",
+      "ats"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-28"
+  },
+  {
+    "publish_date": "2026-05-29",
+    "slug": "makale-ik-analitigi-12-kpi.html",
+    "title": "12 KPI fuer HR-Analytics, die Sie verfolgen sollten",
+    "excerpt": "Bauen Sie Ihre HR-Analytics-Struktur mit 12 KPI auf: Fluktuation, Time-to-Hire, Abwesenheit und Produktivitaet.",
+    "category": "İK Analitiği",
+    "keywords": [
+      "ik analitiği",
+      "workforce analytics",
+      "ik raporlama"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-29"
+  },
+  {
+    "publish_date": "2026-05-30",
+    "slug": "makale-ik-roi-hesaplama-formulu.html",
+    "title": "HR-ROI-Formel: So messen Sie den Investitionsruecklauf",
+    "excerpt": "Verknuepfen Sie Einsparungen, Softwarekosten und Amortisationszeit in einer klaren HR-ROI-Formel.",
+    "category": "Finans",
+    "keywords": [
+      "ik roi hesaplama",
+      "ik yazılımı maliyeti",
+      "hr roi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-30"
+  },
+  {
+    "publish_date": "2026-05-31",
+    "slug": "makale-pdks-secim-kriterleri.html",
+    "title": "PDKS-Software richtig auswaehlen",
+    "excerpt": "Kriterien fuer Geraetekompatibilitaet, Schichtlogik und Lohnabrechnungsintegration in PDKS-Projekten.",
+    "category": "PDKS",
+    "keywords": [
+      "pdks",
+      "personel devam kontrol sistemi",
+      "vardiya"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-31"
+  },
+  {
+    "publish_date": "2026-06-01",
+    "slug": "makale-bordro-yazilimi-entegrasyon-listesi.html",
+    "title": "Integrations-Checkliste fuer Payroll-Software: Buchhaltung + HR",
+    "excerpt": "Eine praktische Checkliste, um Payroll-Software mit Buchhaltung, Zeiterfassung und HR-Prozessen zu verbinden.",
+    "category": "Bordro",
+    "keywords": [
+      "bordro yazılımı",
+      "bordro entegrasyonu",
+      "sgk"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-01"
+  },
+  {
+    "publish_date": "2026-06-02",
+    "slug": "makale-ucret-degerlendirme-sureci.html",
+    "title": "Wie gestaltet man einen Verguetungs-Review-Prozess?",
+    "excerpt": "Entwickeln Sie einen nachhaltigen Prozess mit Gehaltsbaendern, Marktbenchmarks und Entgeltgleichheitsmetriken.",
+    "category": "Ücret Yönetimi",
+    "keywords": [
+      "ücret değerlendirme",
+      "ücret yönetimi",
+      "pay equity"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-02"
+  },
+  {
+    "publish_date": "2026-06-03",
+    "slug": "makale-izin-yonetimi-hatalari.html",
+    "title": "Die 10 haeufigsten Fehler im Urlaubsmanagement",
+    "excerpt": "Reduzieren Sie Reibungsverluste in Urlaubsprozessen durch klare Freigaberegeln und Kontrollpunkte.",
+    "category": "Operasyon",
+    "keywords": [
+      "izin yönetimi",
+      "ik süreçleri",
+      "çalışan deneyimi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-03"
+  },
+  {
+    "publish_date": "2026-06-04",
+    "slug": "makale-puantaj-ve-vardiya-optimizasyonu.html",
+    "title": "Zeiterfassung und Schichtoptimierung: 5 Praxisszenarien",
+    "excerpt": "Machen Sie Zeitdaten payroll-ready mit praxisnahen Szenarien fuer Schicht, Ueberstunden und Abwesenheit.",
+    "category": "PDKS",
+    "keywords": [
+      "puantaj",
+      "vardiya",
+      "pdks"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-04"
+  },
+  {
+    "publish_date": "2026-06-05",
+    "slug": "makale-kobi-icin-ik-programi.html",
+    "title": "HR-Programm fuer KMU: Wo beginnt man?",
+    "excerpt": "Eine 90-Tage-Roadmap fuer KMU zur Priorisierung von Modulen und zur strukturierten Einfuehrung.",
+    "category": "KOBİ",
+    "keywords": [
+      "ik programı",
+      "insan kaynakları yazılımı",
+      "kobi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-05"
+  },
+  {
+    "publish_date": "2026-06-06",
+    "slug": "makale-ise-alim-sureci-kpi-metrikleri.html",
+    "title": "Recruiting-KPIs: Von Time-to-Hire bis Offer-Rate",
+    "excerpt": "Die wichtigsten Recruiting-Metriken und Zielwerte fuer Teams mit ATS.",
+    "category": "İşe Alım",
+    "keywords": [
+      "aday takip sistemi",
+      "işe alım yazılımı",
+      "kpi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-06"
+  },
+  {
+    "publish_date": "2026-06-07",
+    "slug": "makale-performans-yonetimi-okr-modeli.html",
+    "title": "Performance Management mit OKR kombinieren",
+    "excerpt": "Ein praktisches Modell, um Leistungszyklen und OKR-Rhythmus gemeinsam zu steuern.",
+    "category": "Performans",
+    "keywords": [
+      "performans yönetimi",
+      "okr",
+      "ik yazılımı"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-07"
+  },
+  {
+    "publish_date": "2026-06-08",
+    "slug": "makale-dijital-ozluk-donusu-suresi.html",
+    "title": "ROI in der digitalen Personalakte berechnen",
+    "excerpt": "Schaetzen Sie operative Vorteile, Audit-Sicherheit und Gesamtkosten beim Umstieg auf digitale Personalakten.",
+    "category": "Dijital Özlük",
+    "keywords": [
+      "dijital özlük",
+      "ik roi",
+      "kvkk"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-08"
+  },
+  {
+    "publish_date": "2026-06-09",
+    "slug": "makale-insan-kaynaklari-yazilimi-fiyatlama-modeli.html",
+    "title": "Preis-Modelle fuer HR-Software im Vergleich",
+    "excerpt": "Vergleichen Sie pro Benutzer-, modulbasierte und hybride Modelle aus TCO-Sicht.",
+    "category": "Fiyatlandırma",
+    "keywords": [
+      "insan kaynakları yazılımı",
+      "ik yazılımı fiyat",
+      "saas"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-09"
+  },
+  {
+    "publish_date": "2026-06-10",
+    "slug": "makale-hr-yazilimi-global-lokal-fark.html",
+    "title": "Globale vs lokale HR-Software: So treffen Sie die Entscheidung",
+    "excerpt": "Bewerten Sie Compliance, Supportqualitaet und Integrationen bei globalen und lokalen Loesungen.",
+    "category": "Strateji",
+    "keywords": [
+      "hr yazılımı",
+      "ik yazılımı",
+      "kvkk"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-10"
+  },
+  {
+    "publish_date": "2026-06-11",
+    "slug": "makale-personel-takip-programi-kurulum-rehberi.html",
+    "title": "Einrichtungsleitfaden fuer Personalverfolgungssoftware",
+    "excerpt": "Planen Sie Datenvorbereitung, Berechtigungen und Pilotphase fuer eine saubere Einfuehrung.",
+    "category": "Kurulum",
+    "keywords": [
+      "personel takip programı",
+      "pdks",
+      "ik sistemi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-11"
+  },
+  {
+    "publish_date": "2026-06-12",
+    "slug": "makale-ik-raporlama-dashboard-kurgusu.html",
+    "title": "HR-Reporting-Dashboard: Welche Daten brauchen Entscheider?",
+    "excerpt": "Gestalten Sie unterschiedliche Reporting-Sichten fuer Management, HR-Team und operatives Umfeld.",
+    "category": "İK Analitiği",
+    "keywords": [
+      "ik analitiği",
+      "workforce analytics",
+      "dashboard"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-12"
+  },
+  {
+    "publish_date": "2026-06-13",
+    "slug": "makale-ucret-adaleti-ve-analitik.html",
+    "title": "Entgeltgleichheit und Analytics: Wo anfangen?",
+    "excerpt": "Bauen Sie ein faires, datenbasiertes Verguetungssystem mit messbaren Entgeltindikatoren auf.",
+    "category": "Ücret Yönetimi",
+    "keywords": [
+      "ücret değerlendirme",
+      "ücret adaleti",
+      "ik analitiği"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-13"
+  },
+  {
+    "publish_date": "2026-06-14",
+    "slug": "makale-ik-roi-hesaplama-ornek-senaryolar.html",
+    "title": "HR-ROI-Rechner: 5 realistische Szenarien",
+    "excerpt": "Beispielhafte ROI-Szenarien fuer Handel, Logistik, Gesundheitswesen, Industrie und Technologie.",
+    "category": "Finans",
+    "keywords": [
+      "ik roi hesaplama",
+      "ik yazılımı",
+      "tasarruf"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-14"
+  },
+  {
+    "publish_date": "2026-06-15",
+    "slug": "makale-pdks-ile-bordro-entegrasyonu.html",
+    "title": "PDKS und Payroll-Integration: Versteckte Kosten senken",
+    "excerpt": "Verbinden Sie Zeitdaten korrekt mit Payroll, um Leckagen, Konflikte und Nacharbeit zu reduzieren.",
+    "category": "Bordro",
+    "keywords": [
+      "pdks",
+      "bordro yazılımı",
+      "puantaj"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-15"
+  },
+  {
+    "publish_date": "2026-06-16",
+    "slug": "makale-ise-alim-yazilimi-aday-deneyimi.html",
+    "title": "Candidate Experience in Recruiting-Software verbessern",
+    "excerpt": "Gestalten Sie eine bessere Bewerberreise mit schneller Kommunikation und klaren Prozessschritten.",
+    "category": "İşe Alım",
+    "keywords": [
+      "işe alım yazılımı",
+      "aday takip sistemi",
+      "aday deneyimi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-16"
+  },
+  {
+    "publish_date": "2026-06-17",
+    "slug": "makale-insan-kaynaklari-yazilimi-kvkk-kontrol-listesi.html",
+    "title": "KVKK-Checkliste fuer HR-Software",
+    "excerpt": "Praktische Compliance-Liste fuer Datenminimierung, Zugriffskontrolle und Aufbewahrung in HR-Systemen.",
+    "category": "Uyumluluk",
+    "keywords": [
+      "insan kaynakları yazılımı",
+      "kvkk",
+      "güvenlik"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-17"
+  },
+  {
+    "publish_date": "2026-06-18",
+    "slug": "makale-ik-yazilimi-uygulama-takvimi-90-gun.html",
+    "title": "HR-Software Einfuehrungsplan: In 90 Tagen live",
+    "excerpt": "Ein 90-Tage-Plan von Vorbereitung ueber Pilotphase bis Rollout und Erfolgsmessung.",
+    "category": "Kurulum",
+    "keywords": [
+      "ik yazılımı",
+      "uygulama planı",
+      "dijital dönüşüm"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-18"
+  },
+  {
+    "publish_date": "2026-06-19",
+    "slug": "makale-hr-yazilimi-maliyet-hesabi.html",
+    "title": "HR-Software Kostenrechnung mit TCO",
+    "excerpt": "Berechnen Sie die Gesamtbetriebskosten ueber Lizenzen, Integrationen, Schulung und Betrieb.",
+    "category": "Finans",
+    "keywords": [
+      "hr yazılımı",
+      "tco",
+      "ik roi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-19"
+  },
+  {
+    "publish_date": "2026-06-20",
+    "slug": "makale-performans-ve-prim-modeli.html",
+    "title": "Performance Management mit Bonusmodellen verknuepfen",
+    "excerpt": "Entwickeln Sie faire Bonusmodelle auf Basis von Leistungsergebnissen und OKR-Zyklen.",
+    "category": "Performans",
+    "keywords": [
+      "performans yönetimi",
+      "okr",
+      "prim"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-20"
+  },
+  {
+    "publish_date": "2026-06-21",
+    "slug": "makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi.html",
+    "title": "Verguetungs-Review und Marktbenchmarking",
+    "excerpt": "Praktischer Leitfaden fuer Rollenfamilien, Gehaltsbaender und externes Benchmarking.",
+    "category": "Ücret Yönetimi",
+    "keywords": [
+      "ücret değerlendirme",
+      "piyasa karşılaştırması",
+      "compensation"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-21"
+  },
+  {
+    "publish_date": "2026-06-22",
+    "slug": "makale-ik-analitigi-raporlama-sik-hatalar.html",
+    "title": "Haeufige Fehler im HR-Analytics-Reporting",
+    "excerpt": "Vermeiden Sie schwache Dashboards durch bessere KPI-Auswahl, Segmentierung und Aktionslogik.",
+    "category": "İK Analitiği",
+    "keywords": [
+      "ik analitiği",
+      "workforce analytics",
+      "kpi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-22"
+  },
+  {
+    "publish_date": "2026-06-23",
+    "slug": "makale-pdks-ve-uzaktan-calisma-yonetimi.html",
+    "title": "PDKS fuer Remote- und Hybridarbeit",
+    "excerpt": "Steuern Sie Anwesenheit und Schichtprozesse in hybriden Modellen compliant und stabil.",
+    "category": "PDKS",
+    "keywords": [
+      "pdks",
+      "uzaktan çalışma",
+      "personel takip"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-23"
+  },
+  {
+    "publish_date": "2026-06-24",
+    "slug": "makale-ik-yazilimi-2026-trendler.html",
+    "title": "HR-Software Trends 2026: Was sich veraendert",
+    "excerpt": "Ein klarer Ueberblick ueber Automatisierung, Analytics, Compliance und Employee Experience in 2026.",
+    "category": "Trend",
+    "keywords": [
+      "ik yazılımı",
+      "insan kaynakları yazılımı",
+      "hr tech"
+    ],
+    "published": false,
+    "ready": true
+  }
+]

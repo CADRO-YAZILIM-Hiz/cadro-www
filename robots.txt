@@ -1,0 +1,42 @@
+User-agent: *
+Allow: /
+Disallow: /index.nginx-debian.html
+Disallow: /RAKIP-ANALIZ-RAPORU.md
+Disallow: /page-content.js.bak
+Disallow: /node_modules/
+Disallow: /*.bak$
+Disallow: /site-config.js.live.backup
+
+# AI search & training crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+Sitemap: https://www.cadro.io/sitemap.xml
+Sitemap: https://www.cadro.io/video-sitemap.xml
+Host: www.cadro.io

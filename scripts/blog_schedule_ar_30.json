@@ -1,0 +1,451 @@
+[
+  {
+    "publish_date": "2026-05-26",
+    "slug": "makale-ik-yazilimi-secim-rehberi-2026.html",
+    "title": "دليل اختيار برنامج الموارد البشرية 2026: 12 معيارا حاسما",
+    "excerpt": "دليل عملي يشرح 12 معيارا تقنيا وتشغيليا يجب تقييمها عند اختيار برنامج الموارد البشرية، بعيدا عن السعر فقط.",
+    "category": "İK Teknolojisi",
+    "keywords": [
+      "ik yazılımı",
+      "insan kaynakları yazılımı",
+      "ik yazılımı seçimi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-26"
+  },
+  {
+    "publish_date": "2026-05-27",
+    "slug": "makale-personel-takip-programi-nedir.html",
+    "title": "ما هو برنامج متابعة الموظفين؟ خطة الانتقال من Excel",
+    "excerpt": "خطة انتقال عملية لإدارة الحضور والإجازات وملفات الموظفين من منصة واحدة.",
+    "category": "Operasyon",
+    "keywords": [
+      "personel takip programı",
+      "ik programı",
+      "puantaj"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-27"
+  },
+  {
+    "publish_date": "2026-05-28",
+    "slug": "makale-ise-alim-yazilimi-ats-kontrol-listesi.html",
+    "title": "قائمة التحقق لاختيار برنامج التوظيف (ATS)",
+    "excerpt": "ما المعايير الأهم في تجربة المرشح والتقارير والتكاملات عند اختيار نظام ATS؟",
+    "category": "İşe Alım",
+    "keywords": [
+      "işe alım yazılımı",
+      "aday takip sistemi",
+      "ats"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-28"
+  },
+  {
+    "publish_date": "2026-05-29",
+    "slug": "makale-ik-analitigi-12-kpi.html",
+    "title": "12 مؤشر KPI يجب تتبعها في تحليلات الموارد البشرية",
+    "excerpt": "ابنِ منظومة تحليلات الموارد البشرية عبر 12 مؤشرا، تشمل دوران الموظفين وزمن التوظيف والغياب والإنتاجية.",
+    "category": "İK Analitiği",
+    "keywords": [
+      "ik analitiği",
+      "workforce analytics",
+      "ik raporlama"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-29"
+  },
+  {
+    "publish_date": "2026-05-30",
+    "slug": "makale-ik-roi-hesaplama-formulu.html",
+    "title": "معادلة ROI للموارد البشرية: كيف تقيس العائد على الاستثمار",
+    "excerpt": "اجمع التوفير وتكلفة البرنامج وفترة الاسترداد في معادلة عملية واحدة لقياس ROI.",
+    "category": "Finans",
+    "keywords": [
+      "ik roi hesaplama",
+      "ik yazılımı maliyeti",
+      "hr roi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-30"
+  },
+  {
+    "publish_date": "2026-05-31",
+    "slug": "makale-pdks-secim-kriterleri.html",
+    "title": "كيف تختار نظام PDKS المناسب؟",
+    "excerpt": "معايير اختيار نظام PDKS من حيث توافق الأجهزة وبنية الورديات والتكامل مع الرواتب.",
+    "category": "PDKS",
+    "keywords": [
+      "pdks",
+      "personel devam kontrol sistemi",
+      "vardiya"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-05-31"
+  },
+  {
+    "publish_date": "2026-06-01",
+    "slug": "makale-bordro-yazilimi-entegrasyon-listesi.html",
+    "title": "قائمة تكامل برنامج الرواتب: المحاسبة + الموارد البشرية",
+    "excerpt": "قائمة عملية لربط برنامج الرواتب مع المحاسبة والحضور وسير عمل الموارد البشرية.",
+    "category": "Bordro",
+    "keywords": [
+      "bordro yazılımı",
+      "bordro entegrasyonu",
+      "sgk"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-01"
+  },
+  {
+    "publish_date": "2026-06-02",
+    "slug": "makale-ucret-degerlendirme-sureci.html",
+    "title": "كيف تبني عملية تقييم الرواتب؟",
+    "excerpt": "أنشئ عملية مستدامة لتقييم الرواتب عبر نطاقات الرواتب ومقارنات السوق ومؤشرات عدالة الأجور.",
+    "category": "Ücret Yönetimi",
+    "keywords": [
+      "ücret değerlendirme",
+      "ücret yönetimi",
+      "pay equity"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-02"
+  },
+  {
+    "publish_date": "2026-06-03",
+    "slug": "makale-izin-yonetimi-hatalari.html",
+    "title": "أكثر 10 أخطاء شائعة في إدارة الإجازات",
+    "excerpt": "خفف الاحتكاك التشغيلي في مسارات الإجازات عبر تصميم موافقات أوضح ونقاط ضبط فعالة.",
+    "category": "Operasyon",
+    "keywords": [
+      "izin yönetimi",
+      "ik süreçleri",
+      "çalışan deneyimi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-03"
+  },
+  {
+    "publish_date": "2026-06-04",
+    "slug": "makale-puantaj-ve-vardiya-optimizasyonu.html",
+    "title": "تحسين الحضور والورديات: 5 سيناريوهات عملية",
+    "excerpt": "حوّل بيانات الحضور إلى مدخلات جاهزة للرواتب من خلال سيناريوهات عملية للورديات والعمل الإضافي والغياب.",
+    "category": "PDKS",
+    "keywords": [
+      "puantaj",
+      "vardiya",
+      "pdks"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-04"
+  },
+  {
+    "publish_date": "2026-06-05",
+    "slug": "makale-kobi-icin-ik-programi.html",
+    "title": "برنامج الموارد البشرية للشركات الصغيرة والمتوسطة: من أين تبدأ؟",
+    "excerpt": "خارطة طريق لمدة 90 يوما لتحديد أولويات الوحدات وتطبيق برنامج الموارد البشرية بكفاءة.",
+    "category": "KOBİ",
+    "keywords": [
+      "ik programı",
+      "insan kaynakları yazılımı",
+      "kobi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-05"
+  },
+  {
+    "publish_date": "2026-06-06",
+    "slug": "makale-ise-alim-sureci-kpi-metrikleri.html",
+    "title": "مؤشرات KPI في التوظيف: من Time-to-Hire إلى Offer Rate",
+    "excerpt": "أهم مؤشرات الأداء وحدودها التشغيلية لفرق التوظيف التي تستخدم أنظمة ATS.",
+    "category": "İşe Alım",
+    "keywords": [
+      "aday takip sistemi",
+      "işe alım yazılımı",
+      "kpi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-06"
+  },
+  {
+    "publish_date": "2026-06-07",
+    "slug": "makale-performans-yonetimi-okr-modeli.html",
+    "title": "دمج إدارة الأداء مع نموذج OKR",
+    "excerpt": "نموذج عملي لتشغيل مراجعات الأداء وتتبع OKR ضمن إيقاع واحد.",
+    "category": "Performans",
+    "keywords": [
+      "performans yönetimi",
+      "okr",
+      "ik yazılımı"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-07"
+  },
+  {
+    "publish_date": "2026-06-08",
+    "slug": "makale-dijital-ozluk-donusu-suresi.html",
+    "title": "كيف تحسب عائد التحول إلى الملف الوظيفي الرقمي؟",
+    "excerpt": "قدّر المكاسب التشغيلية وجاهزية التدقيق والأثر المالي الكلي عند الانتقال إلى الملفات الرقمية.",
+    "category": "Dijital Özlük",
+    "keywords": [
+      "dijital özlük",
+      "ik roi",
+      "kvkk"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-08"
+  },
+  {
+    "publish_date": "2026-06-09",
+    "slug": "makale-insan-kaynaklari-yazilimi-fiyatlama-modeli.html",
+    "title": "نماذج تسعير برامج الموارد البشرية",
+    "excerpt": "قارن بين التسعير لكل مستخدم، والتسعير حسب الوحدات، والنموذج الهجين من منظور التكلفة الكلية.",
+    "category": "Fiyatlandırma",
+    "keywords": [
+      "insan kaynakları yazılımı",
+      "ik yazılımı fiyat",
+      "saas"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-09"
+  },
+  {
+    "publish_date": "2026-06-10",
+    "slug": "makale-hr-yazilimi-global-lokal-fark.html",
+    "title": "الفرق بين حلول HR العالمية والمحلية",
+    "excerpt": "قيّم الامتثال وجودة الدعم والتكاملات قبل اختيار حل HR عالمي أو محلي.",
+    "category": "Strateji",
+    "keywords": [
+      "hr yazılımı",
+      "ik yazılımı",
+      "kvkk"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-10"
+  },
+  {
+    "publish_date": "2026-06-11",
+    "slug": "makale-personel-takip-programi-kurulum-rehberi.html",
+    "title": "دليل إعداد برنامج متابعة الموظفين خطوة بخطوة",
+    "excerpt": "خطط لتهيئة البيانات والصلاحيات والتجربة الأولية لضمان تطبيق سلس.",
+    "category": "Kurulum",
+    "keywords": [
+      "personel takip programı",
+      "pdks",
+      "ik sistemi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-11"
+  },
+  {
+    "publish_date": "2026-06-12",
+    "slug": "makale-ik-raporlama-dashboard-kurgusu.html",
+    "title": "تصميم لوحة تقارير الموارد البشرية: ما الذي يحتاجه المديرون؟",
+    "excerpt": "صمّم لوحات مختلفة للإدارة العليا وفريق الموارد البشرية ومديري العمليات.",
+    "category": "İK Analitiği",
+    "keywords": [
+      "ik analitiği",
+      "workforce analytics",
+      "dashboard"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-12"
+  },
+  {
+    "publish_date": "2026-06-13",
+    "slug": "makale-ucret-adaleti-ve-analitik.html",
+    "title": "عدالة الأجور والتحليلات: من أين تبدأ؟",
+    "excerpt": "ابنِ إطارا عادلا ومبنياً على البيانات لإدارة الرواتب عبر مؤشرات واضحة.",
+    "category": "Ücret Yönetimi",
+    "keywords": [
+      "ücret değerlendirme",
+      "ücret adaleti",
+      "ik analitiği"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-13"
+  },
+  {
+    "publish_date": "2026-06-14",
+    "slug": "makale-ik-roi-hesaplama-ornek-senaryolar.html",
+    "title": "حاسبة ROI للموارد البشرية: 5 سيناريوهات واقعية",
+    "excerpt": "سيناريوهات تطبيقية لقياس ROI في قطاعات التجزئة واللوجستيات والصحة والتصنيع والتقنية.",
+    "category": "Finans",
+    "keywords": [
+      "ik roi hesaplama",
+      "ik yazılımı",
+      "tasarruf"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-14"
+  },
+  {
+    "publish_date": "2026-06-15",
+    "slug": "makale-pdks-ile-bordro-entegrasyonu.html",
+    "title": "تكامل PDKS مع الرواتب لتقليل التكاليف المخفية",
+    "excerpt": "اربط بيانات الحضور بالرواتب بشكل صحيح لتقليل التسربات والنزاعات وإعادة العمل.",
+    "category": "Bordro",
+    "keywords": [
+      "pdks",
+      "bordro yazılımı",
+      "puantaj"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-15"
+  },
+  {
+    "publish_date": "2026-06-16",
+    "slug": "makale-ise-alim-yazilimi-aday-deneyimi.html",
+    "title": "تحسين تجربة المرشح في برامج التوظيف",
+    "excerpt": "صمّم رحلة مرشح أفضل عبر سرعة التواصل ووضوح الخطوات وثبات العمليات عبر ATS.",
+    "category": "İşe Alım",
+    "keywords": [
+      "işe alım yazılımı",
+      "aday takip sistemi",
+      "aday deneyimi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-16"
+  },
+  {
+    "publish_date": "2026-06-17",
+    "slug": "makale-insan-kaynaklari-yazilimi-kvkk-kontrol-listesi.html",
+    "title": "قائمة KVKK لبرامج الموارد البشرية",
+    "excerpt": "قائمة امتثال عملية تشمل تقليل البيانات، والتحكم في الصلاحيات، وسياسات الاحتفاظ.",
+    "category": "Uyumluluk",
+    "keywords": [
+      "insan kaynakları yazılımı",
+      "kvkk",
+      "güvenlik"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-17"
+  },
+  {
+    "publish_date": "2026-06-18",
+    "slug": "makale-ik-yazilimi-uygulama-takvimi-90-gun.html",
+    "title": "خطة تطبيق برنامج الموارد البشرية خلال 90 يوما",
+    "excerpt": "خطة تنفيذ لمدة 90 يوما تشمل التحضير والتجربة الأولية والتوسع وقياس النتائج.",
+    "category": "Kurulum",
+    "keywords": [
+      "ik yazılımı",
+      "uygulama planı",
+      "dijital dönüşüm"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-18"
+  },
+  {
+    "publish_date": "2026-06-19",
+    "slug": "makale-hr-yazilimi-maliyet-hesabi.html",
+    "title": "حساب تكلفة برنامج HR بمنهجية TCO",
+    "excerpt": "احسب التكلفة الكلية للملكية عبر التراخيص والتكاملات والتدريب والتشغيل.",
+    "category": "Finans",
+    "keywords": [
+      "hr yazılımı",
+      "tco",
+      "ik roi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-19"
+  },
+  {
+    "publish_date": "2026-06-20",
+    "slug": "makale-performans-ve-prim-modeli.html",
+    "title": "مواءمة إدارة الأداء مع نماذج المكافآت",
+    "excerpt": "ابنِ نماذج مكافآت عادلة وقابلة للقياس مرتبطة بنتائج الأداء ودورات OKR.",
+    "category": "Performans",
+    "keywords": [
+      "performans yönetimi",
+      "okr",
+      "prim"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-20"
+  },
+  {
+    "publish_date": "2026-06-21",
+    "slug": "makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi.html",
+    "title": "تقييم الرواتب ومقارنة السوق",
+    "excerpt": "منهج عملي لبناء عائلات الوظائف ونطاقات الرواتب وآليات المقارنة الخارجية.",
+    "category": "Ücret Yönetimi",
+    "keywords": [
+      "ücret değerlendirme",
+      "piyasa karşılaştırması",
+      "compensation"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-21"
+  },
+  {
+    "publish_date": "2026-06-22",
+    "slug": "makale-ik-analitigi-raporlama-sik-hatalar.html",
+    "title": "أخطاء شائعة في تقارير تحليلات الموارد البشرية",
+    "excerpt": "تجنب لوحات غير فعالة عبر تحسين اختيار المؤشرات والتقسيم وتحويل النتائج إلى إجراءات.",
+    "category": "İK Analitiği",
+    "keywords": [
+      "ik analitiği",
+      "workforce analytics",
+      "kpi"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-22"
+  },
+  {
+    "publish_date": "2026-06-23",
+    "slug": "makale-pdks-ve-uzaktan-calisma-yonetimi.html",
+    "title": "PDKS لإدارة العمل عن بعد والهجين",
+    "excerpt": "أدر الحضور والورديات في نماذج العمل الهجين بما يحافظ على الامتثال والاستقرار التشغيلي.",
+    "category": "PDKS",
+    "keywords": [
+      "pdks",
+      "uzaktan çalışma",
+      "personel takip"
+    ],
+    "published": true,
+    "ready": true,
+    "published_at": "2026-06-23"
+  },
+  {
+    "publish_date": "2026-06-24",
+    "slug": "makale-ik-yazilimi-2026-trendler.html",
+    "title": "اتجاهات برامج الموارد البشرية 2026: ما الذي يتغير؟",
+    "excerpt": "نظرة عملية على اتجاهات 2026 في الأتمتة والتحليلات والامتثال وتجربة الموظف.",
+    "category": "Trend",
+    "keywords": [
+      "ik yazılımı",
+      "insan kaynakları yazılımı",
+      "hr tech"
+    ],
+    "published": false,
+    "ready": true
+  }
+]
