@@ -13,5 +13,7 @@
             "matchCommandLine": true
         }
     },
-    "snyk.advanced.autoSelectOrganization": true
+    "snyk.advanced.autoSelectOrganization": true,
+    "github.copilot.chat.agent.autoFix": true,
+    "github.copilot.completions.chat.enabled": true
 }
