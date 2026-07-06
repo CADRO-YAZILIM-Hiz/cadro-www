@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3e39d793.css",
+    "main.js": "/static/js/main.f5f25694.js",
+    "static/js/264.33a6f3a7.chunk.js": "/static/js/264.33a6f3a7.chunk.js",
+    "static/media/hr-tech-grid.svg": "/static/media/hr-tech-grid.96decd261e6bdb1b7583.svg",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.3e39d793.css",
+    "static/js/main.f5f25694.js"
+  ]
+}

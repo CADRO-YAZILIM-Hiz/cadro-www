@@ -1,0 +1,76 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lineA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6EE7F9" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#60A5FA" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="lineB" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BAE6FD" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#C4B5FD" stop-opacity="0.38"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1200" fill="#F8FBFE"/>
+  <circle cx="1180" cy="260" r="120" fill="#FFFFFF"/>
+  <circle cx="1180" cy="260" r="180" fill="url(#lineB)" opacity="0.10"/>
+
+  <g stroke="url(#lineB)" stroke-width="1">
+    <path d="M100 420 H410 V350 H620"/>
+    <path d="M140 500 H360 V460 H710"/>
+    <path d="M180 580 H400 V610 H720"/>
+    <path d="M1260 120 V210 H1120 V300"/>
+    <path d="M1380 180 V260 H1260 V340"/>
+    <path d="M1460 240 V330 H1320 V400"/>
+    <path d="M1320 980 V860 H1180 V760"/>
+    <path d="M1220 1040 V920 H1080 V820"/>
+    <path d="M1120 1100 V980 H980 V880"/>
+  </g>
+
+  <g stroke="url(#lineA)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)">
+    <path d="M1180 260 H1060 V210 H900 V150"/>
+    <path d="M1180 260 H1090 V300 H960 V340 H880 V420"/>
+    <path d="M1180 260 H1100 V390 H980 V520"/>
+    <path d="M1180 260 H1240 V180 H1360 V100"/>
+    <path d="M1180 260 H1260 V260 H1400 V260"/>
+    <path d="M1180 260 H1260 V340 H1380 V420"/>
+    <path d="M1180 260 V340 H1100 V460 H990 V600"/>
+    <path d="M1180 260 V360 H1220 V520 H1290 V660"/>
+    <path d="M1180 260 V340 H1260 V480 H1370 V620"/>
+    <path d="M1180 260 H980 V260 H840 V260 H720 V260"/>
+    <path d="M1180 260 H1020 V220 H860 V220 H760 V180"/>
+    <path d="M1180 260 H1000 V300 H860 V300 H740 V340"/>
+  </g>
+
+  <g fill="none" stroke="#93C5FD" stroke-opacity="0.7">
+    <rect x="1052" y="202" width="16" height="16" rx="3"/>
+    <rect x="1082" y="292" width="16" height="16" rx="3"/>
+    <rect x="970" y="512" width="16" height="16" rx="3"/>
+    <rect x="1252" y="252" width="16" height="16" rx="3"/>
+    <rect x="1212" y="512" width="16" height="16" rx="3"/>
+    <rect x="1362" y="612" width="16" height="16" rx="3"/>
+    <rect x="838" y="252" width="16" height="16" rx="3"/>
+    <rect x="858" y="212" width="16" height="16" rx="3"/>
+  </g>
+
+  <g fill="#38BDF8">
+    <circle cx="1180" cy="260" r="7"/>
+    <circle cx="1100" cy="390" r="4"/>
+    <circle cx="1260" cy="340" r="4"/>
+    <circle cx="980" cy="520" r="4"/>
+    <circle cx="1220" cy="520" r="4"/>
+    <circle cx="1380" cy="420" r="4"/>
+  </g>
+
+  <g fill="#EC4899" filter="url(#softGlow)">
+    <circle cx="1180" cy="260" r="22" fill-opacity="0.18"/>
+    <circle cx="1180" cy="260" r="10"/>
+  </g>
+</svg>

@@ -1,0 +1,754 @@
+import os
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from jose import JWTError, jwt
+from starlette.requests import Request
+from sqlalchemy import inspect, text
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
+from slowapi.middleware import SlowAPIMiddleware
+os.makedirs("static", exist_ok=True)
+
+from app.core.database import Base, engine, SessionLocal
+from app.models.company import Company
+from app.models.audit_log import AuditLog
+from app.models.employee import Employee
+from app.models.leave import LeaveRequest
+from app.models.asset_expense import Expense
+from app.models.document import EmployeeDocument
+from app.models.helpdesk import Ticket
+from app.core.security import SECRET_KEY, ALGORITHM
+
+# --- Özel Rotalar ---
+# ats_router (v1) kaldırıldı — çakışma önlendi. Tüm ATS endpoint'leri app.api.ats içinde.
+from app.api.v1.endpoints import admin
+from app.api import social
+from app.api import report
+from app.api import location as location_api
+from app.api import attendance_export
+
+from app.api import notification
+from app.api import audit_log as audit_log_api
+from app.api import executive as executive_api
+from app.api import mobile as mobile_api
+from app.api import support as support_api
+from app.api import paddle as paddle_api
+
+# --- Modeller ---
+from app.models import (
+    employee, company, settings, 
+    asset_expense, helpdesk, ats,
+    document, performance, announcement, attendance,
+    generic_request,
+    kpi,
+    training, leave, work_schedule, audit_log, mobile_device, knowledge_base, checklist, paddle_event
+)
+
+# --- API Rotaları ---
+from app.api import (
+    auth, 
+    employee as employee_api, 
+    attendance as attendance_api, 
+    leave as leave_api, 
+    company as company_api,
+    asset as asset_api,
+    dashboard as dashboard_api,
+    ats as ats_api,
+    document as document_api,
+    expense as expense_api,
+    purchase_request as purchase_request_api,
+    generic_request as generic_request_api,
+    kpi as kpi_api,
+    knowledge_base as knowledge_base_api,
+    performance as performance_api,
+    training as training_api,
+    helpdesk as helpdesk_api,
+    work_schedule as work_schedule_api
+)
+
+app = FastAPI(title="KKTC Entegre HR SaaS", version="1.8.0")
+
+# Health check endpoint
+@app.get("/health")
+def health_check():
+    try:
+        # Database connection check
+        db = SessionLocal()
+        db.execute(text("SELECT 1"))
+        db.close()
+        return {"status": "healthy", "database": "connected"}
+    except Exception as e:
+        return {"status": "unhealthy", "database": "disconnected", "error": str(e)}
+
+# Rate limiting
+limiter = Limiter(key_func=get_remote_address, default_limits=["100/minute"])
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+app.add_middleware(SlowAPIMiddleware)
+
+# --- KLASÖR OLUŞTURMA VE STATİK DOSYA BAĞLANTILARI ---
+os.makedirs("uploads", exist_ok=True) 
+app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
+
+os.makedirs("static/cvs", exist_ok=True)
+app.mount("/static/cvs", StaticFiles(directory="static/cvs"), name="cv_uploads")
+
+os.makedirs("uploads/documents", exist_ok=True) 
+
+os.makedirs("static", exist_ok=True)
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# --- CORS AYARLARI ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://app.cadro.io",      # ✅ React SaaS uygulaması
+        "https://cadro.io",
+        "https://www.cadro.io",
+        "https://api.cadro.io",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:9999",
+        "http://127.0.0.1:9999"
+    ], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# ==============================================================
+# 🛡️ GÜVENLİ KURULUM: SADECE EKSİK TABLOLARI OLUŞTURUR
+# ==============================================================
+Base.metadata.create_all(bind=engine)
+
+
+def ensure_audit_log_schema():
+    inspector = inspect(engine)
+    if "audit_logs" not in inspector.get_table_names():
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("audit_logs")}
+    required_columns = {
+        "company_name": "ALTER TABLE audit_logs ADD COLUMN company_name VARCHAR",
+        "actor_department_name": "ALTER TABLE audit_logs ADD COLUMN actor_department_name VARCHAR",
+        "query_string": "ALTER TABLE audit_logs ADD COLUMN query_string TEXT",
+        "ip_address": "ALTER TABLE audit_logs ADD COLUMN ip_address VARCHAR",
+        "detail": "ALTER TABLE audit_logs ADD COLUMN detail TEXT",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+
+
+def ensure_expense_schema():
+    inspector = inspect(engine)
+    if "expenses" not in inspector.get_table_names():
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("expenses")}
+    required_columns = {
+        "receipt_url": "ALTER TABLE expenses ADD COLUMN receipt_url VARCHAR",
+        "purchase_request_id": "ALTER TABLE expenses ADD COLUMN purchase_request_id INTEGER REFERENCES purchase_requests (id)",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+
+
+def ensure_mobile_device_schema():
+    inspector = inspect(engine)
+    table_names = set(inspector.get_table_names())
+
+    if "mobile_devices" not in table_names:
+        with engine.begin() as connection:
+            connection.execute(text("""
+                CREATE TABLE mobile_devices (
+                    id INTEGER PRIMARY KEY,
+                    company_id INTEGER NOT NULL,
+                    employee_id INTEGER NOT NULL,
+                    device_id VARCHAR(255) NOT NULL UNIQUE,
+                    device_name VARCHAR(255),
+                    device_platform VARCHAR(50) NOT NULL DEFAULT 'unknown',
+                    push_token VARCHAR(512),
+                    is_active BOOLEAN NOT NULL DEFAULT 1,
+                    last_login_at DATETIME NOT NULL,
+                    created_at DATETIME NOT NULL,
+                    updated_at DATETIME NOT NULL,
+                    FOREIGN KEY(company_id) REFERENCES companies (id),
+                    FOREIGN KEY(employee_id) REFERENCES employees (id)
+                )
+            """))
+            connection.execute(text("CREATE INDEX IF NOT EXISTS ix_mobile_devices_company_id ON mobile_devices (company_id)"))
+            connection.execute(text("CREATE INDEX IF NOT EXISTS ix_mobile_devices_employee_id ON mobile_devices (employee_id)"))
+            connection.execute(text("CREATE INDEX IF NOT EXISTS ix_mobile_devices_device_id ON mobile_devices (device_id)"))
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("mobile_devices")}
+    required_columns = {
+        "device_name": "ALTER TABLE mobile_devices ADD COLUMN device_name VARCHAR(255)",
+        "device_platform": "ALTER TABLE mobile_devices ADD COLUMN device_platform VARCHAR(50) NOT NULL DEFAULT 'unknown'",
+        "push_token": "ALTER TABLE mobile_devices ADD COLUMN push_token VARCHAR(512)",
+        "is_active": "ALTER TABLE mobile_devices ADD COLUMN is_active BOOLEAN NOT NULL DEFAULT 1",
+        "last_login_at": "ALTER TABLE mobile_devices ADD COLUMN last_login_at DATETIME",
+        "created_at": "ALTER TABLE mobile_devices ADD COLUMN created_at DATETIME",
+        "updated_at": "ALTER TABLE mobile_devices ADD COLUMN updated_at DATETIME",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+        connection.execute(text("CREATE INDEX IF NOT EXISTS ix_mobile_devices_company_id ON mobile_devices (company_id)"))
+        connection.execute(text("CREATE INDEX IF NOT EXISTS ix_mobile_devices_employee_id ON mobile_devices (employee_id)"))
+        connection.execute(text("CREATE INDEX IF NOT EXISTS ix_mobile_devices_device_id ON mobile_devices (device_id)"))
+
+
+def ensure_company_schema():
+    inspector = inspect(engine)
+    if "companies" not in inspector.get_table_names():
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("companies")}
+    required_columns = {
+        "official_legal_name": "ALTER TABLE companies ADD COLUMN official_legal_name VARCHAR",
+        "tax_number": "ALTER TABLE companies ADD COLUMN tax_number VARCHAR",
+        "workplace_registration_no": "ALTER TABLE companies ADD COLUMN workplace_registration_no VARCHAR",
+        "onboarding_responsible": "ALTER TABLE companies ADD COLUMN onboarding_responsible INTEGER REFERENCES employees (id)",
+        "offboarding_responsible": "ALTER TABLE companies ADD COLUMN offboarding_responsible INTEGER REFERENCES employees (id)",
+        "plan_code": "ALTER TABLE companies ADD COLUMN plan_code VARCHAR DEFAULT 'PRO'",
+        "dossier_required_global": "ALTER TABLE companies ADD COLUMN dossier_required_global TEXT",
+        "dossier_required_tr": "ALTER TABLE companies ADD COLUMN dossier_required_tr TEXT",
+        "dossier_required_kktc": "ALTER TABLE companies ADD COLUMN dossier_required_kktc TEXT",
+        "dossier_required_eu": "ALTER TABLE companies ADD COLUMN dossier_required_eu TEXT",
+        "dossier_required_mena": "ALTER TABLE companies ADD COLUMN dossier_required_mena TEXT",
+        "dossier_required_leadership": "ALTER TABLE companies ADD COLUMN dossier_required_leadership TEXT",
+        "dossier_alert_roles": "ALTER TABLE companies ADD COLUMN dossier_alert_roles TEXT",
+        "paddle_customer_id": "ALTER TABLE companies ADD COLUMN paddle_customer_id VARCHAR",
+        "paddle_subscription_id": "ALTER TABLE companies ADD COLUMN paddle_subscription_id VARCHAR",
+        "paddle_price_id": "ALTER TABLE companies ADD COLUMN paddle_price_id VARCHAR",
+        "paddle_transaction_id": "ALTER TABLE companies ADD COLUMN paddle_transaction_id VARCHAR",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+        connection.execute(text("UPDATE companies SET plan_code = 'PRO' WHERE plan_code IS NULL OR TRIM(plan_code) = ''"))
+
+
+def ensure_document_schema():
+    inspector = inspect(engine)
+    if "employee_documents" not in inspector.get_table_names():
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("employee_documents")}
+    required_columns = {
+        "document_number": "ALTER TABLE employee_documents ADD COLUMN document_number VARCHAR",
+        "issued_by": "ALTER TABLE employee_documents ADD COLUMN issued_by VARCHAR",
+        "issue_date": "ALTER TABLE employee_documents ADD COLUMN issue_date DATE",
+        "is_mandatory": "ALTER TABLE employee_documents ADD COLUMN is_mandatory INTEGER NOT NULL DEFAULT 0",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+
+
+def ensure_document_action_log_schema():
+    inspector = inspect(engine)
+    if "document_action_logs" not in inspector.get_table_names():
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("document_action_logs")}
+    required_columns = {
+        "document_type": "ALTER TABLE document_action_logs ADD COLUMN document_type VARCHAR",
+        "file_name": "ALTER TABLE document_action_logs ADD COLUMN file_name VARCHAR",
+        "detail": "ALTER TABLE document_action_logs ADD COLUMN detail TEXT",
+        "created_at": "ALTER TABLE document_action_logs ADD COLUMN created_at DATETIME",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+
+
+def ensure_employee_schema():
+    inspector = inspect(engine)
+    if "employees" not in inspector.get_table_names():
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("employees")}
+    required_columns = {
+        "emergency_contact_name": "ALTER TABLE employees ADD COLUMN emergency_contact_name VARCHAR(150)",
+        "emergency_contact_relation": "ALTER TABLE employees ADD COLUMN emergency_contact_relation VARCHAR(100)",
+        "emergency_contact_phone": "ALTER TABLE employees ADD COLUMN emergency_contact_phone VARCHAR(50)",
+        "bank_name": "ALTER TABLE employees ADD COLUMN bank_name VARCHAR(150)",
+        "iban": "ALTER TABLE employees ADD COLUMN iban VARCHAR(64)",
+        "account_holder_name": "ALTER TABLE employees ADD COLUMN account_holder_name VARCHAR(150)",
+        "tax_id_number": "ALTER TABLE employees ADD COLUMN tax_id_number VARCHAR(64)",
+        "work_authorization_type": "ALTER TABLE employees ADD COLUMN work_authorization_type VARCHAR(100)",
+        "work_authorization_no": "ALTER TABLE employees ADD COLUMN work_authorization_no VARCHAR(100)",
+        "work_authorization_start_date": "ALTER TABLE employees ADD COLUMN work_authorization_start_date DATE",
+        "work_authorization_expiry_date": "ALTER TABLE employees ADD COLUMN work_authorization_expiry_date DATE",
+        "visa_type": "ALTER TABLE employees ADD COLUMN visa_type VARCHAR(100)",
+        "visa_expiry_date": "ALTER TABLE employees ADD COLUMN visa_expiry_date DATE",
+        "nda_signed_at": "ALTER TABLE employees ADD COLUMN nda_signed_at DATE",
+        "handbook_ack_signed_at": "ALTER TABLE employees ADD COLUMN handbook_ack_signed_at DATE",
+        "background_check_status": "ALTER TABLE employees ADD COLUMN background_check_status VARCHAR(50)",
+        "background_check_completed_at": "ALTER TABLE employees ADD COLUMN background_check_completed_at DATE",
+        "occupational_health_status": "ALTER TABLE employees ADD COLUMN occupational_health_status VARCHAR(50)",
+        "occupational_health_valid_until": "ALTER TABLE employees ADD COLUMN occupational_health_valid_until DATE",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+
+
+def ensure_leave_schema():
+    inspector = inspect(engine)
+    if "leave_requests" not in inspector.get_table_names():
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("leave_requests")}
+    required_columns = {
+        "leave_country": "ALTER TABLE leave_requests ADD COLUMN leave_country VARCHAR",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+
+
+def ensure_attendance_schema():
+    inspector = inspect(engine)
+    if "attendances" not in inspector.get_table_names():
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("attendances")}
+    required_columns = {
+        "record_type": "ALTER TABLE attendances ADD COLUMN record_type VARCHAR NOT NULL DEFAULT 'TIME'",
+        "exception_type": "ALTER TABLE attendances ADD COLUMN exception_type VARCHAR",
+        "payroll_treatment": "ALTER TABLE attendances ADD COLUMN payroll_treatment VARCHAR NOT NULL DEFAULT 'STANDARD'",
+        "include_in_payroll": "ALTER TABLE attendances ADD COLUMN include_in_payroll BOOLEAN NOT NULL DEFAULT 1",
+        "payroll_decision_note": "ALTER TABLE attendances ADD COLUMN payroll_decision_note TEXT",
+        "supporting_document_no": "ALTER TABLE attendances ADD COLUMN supporting_document_no VARCHAR",
+        "issued_by": "ALTER TABLE attendances ADD COLUMN issued_by VARCHAR",
+        "issue_date": "ALTER TABLE attendances ADD COLUMN issue_date DATE",
+        "range_start_date": "ALTER TABLE attendances ADD COLUMN range_start_date DATE",
+        "range_end_date": "ALTER TABLE attendances ADD COLUMN range_end_date DATE",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+
+
+def ensure_purchase_request_schema():
+    inspector = inspect(engine)
+    if "purchase_requests" not in inspector.get_table_names():
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("purchase_requests")}
+    required_columns = {
+        "converted_expense_id": "ALTER TABLE purchase_requests ADD COLUMN converted_expense_id INTEGER REFERENCES expenses (id)",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+
+
+def ensure_checklist_schema():
+    inspector = inspect(engine)
+    if "lifecycle_checklist_templates" not in inspector.get_table_names():
+        return
+
+    existing_columns = {column["name"] for column in inspector.get_columns("lifecycle_checklist_templates")}
+    required_columns = {
+        "action_key": "ALTER TABLE lifecycle_checklist_templates ADD COLUMN action_key VARCHAR(80)",
+    }
+
+    with engine.begin() as connection:
+        for column_name, ddl in required_columns.items():
+            if column_name not in existing_columns:
+                connection.execute(text(ddl))
+
+@app.on_event("startup")
+def seed_data():
+    ensure_audit_log_schema()
+    ensure_expense_schema()
+    ensure_mobile_device_schema()
+    ensure_company_schema()
+    ensure_document_schema()
+    ensure_document_action_log_schema()
+    ensure_employee_schema()
+    ensure_leave_schema()
+    ensure_attendance_schema()
+    ensure_purchase_request_schema()
+    ensure_checklist_schema()
+    db = SessionLocal()
+    try:
+        if not db.query(Company).first():
+            new_company = Company(
+                name="Merkez Holding A.Ş.",
+                email="admin@merkez-holding.com",  # ✅ DÜZELTİLDİ: email nullable=False
+                is_free_zone=False,
+            )
+            db.add(new_company)
+            db.commit()
+            print("🚀 Sistem: Veritabanı Başarıyla Hazırlandı ve İlk Şirket Eklendi!")
+    except Exception as e:
+        print(f"Seed Hatası: {e}")
+        db.rollback()
+    finally:
+        db.close()
+
+
+def _resolve_audit_actor(request: Request, db):
+    auth_header = request.headers.get("Authorization", "")
+    if not auth_header.startswith("Bearer "):
+        return None
+
+    token = auth_header.replace("Bearer ", "", 1).strip()
+    if not token:
+        return None
+
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+    except JWTError:
+        return None
+
+    token_sub = payload.get("sub")
+    user_id = payload.get("user_id")
+    company_id = payload.get("company_id")
+    role = payload.get("role")
+
+    if isinstance(token_sub, str) and token_sub.startswith("{"):
+        import json
+
+        try:
+            parsed = json.loads(token_sub)
+            user_id = parsed.get("user_id", user_id)
+            company_id = parsed.get("company_id", company_id)
+            role = parsed.get("role", role)
+        except Exception:
+            pass
+
+    if not user_id:
+        return None
+
+    employee = db.query(Employee).filter(Employee.id == int(user_id)).first()
+    if not employee:
+        return {
+            "company_id": company_id,
+            "actor_employee_id": int(user_id),
+            "actor_name": None,
+            "actor_role": role,
+            "actor_department_id": None,
+            "actor_department_name": None,
+        }
+
+    return {
+        "company_id": employee.company_id,
+        "company_name": employee.company.name if getattr(employee, "company", None) else None,
+        "actor_employee_id": employee.id,
+        "actor_name": f"{employee.first_name} {employee.last_name}",
+        "actor_role": employee.role,
+        "actor_department_id": employee.department_id,
+        "actor_department_name": employee.department_rel.name if getattr(employee, "department_rel", None) else None,
+    }
+
+
+def _derive_resource_type(path: str) -> str:
+    normalized = path.strip("/").split("/")
+    if not normalized or not normalized[0]:
+        return "ROOT"
+    return normalized[0].upper().replace("-", "_")
+
+
+def _derive_action_type(method: str, path: str) -> str:
+    resource = _derive_resource_type(path)
+
+    if path == "/auth/login":
+        return "LOGIN"
+    if path == "/auth/verify-mfa":
+        return "VERIFY_MFA"
+
+    method_map = {
+        "GET": "VIEW",
+        "POST": "CREATE",
+        "PUT": "UPDATE",
+        "PATCH": "UPDATE",
+        "DELETE": "DELETE",
+    }
+    verb = method_map.get(method.upper(), method.upper())
+    return f"{verb}_{resource}"
+
+
+def _describe_audit_event(method: str, path: str, status_code: int) -> str:
+    method = method.upper()
+
+    route_map = [
+        ("/auth/login", {"POST": "Giris yapti"}),
+        ("/auth/verify-mfa", {"POST": "MFA kodunu dogruladi"}),
+        ("/attendance/clock-in", {"POST": "QR ve konum ile ise giris yapti"}),
+        ("/attendance/clock-out", {"POST": "QR ve konum ile cikis yapti"}),
+        ("/attendance/bulk-upload", {"POST": "Toplu puantaj dosyasi yukledi"}),
+        ("/work-schedule/templates", {"POST": "Mesai plani olusturdu", "GET": "Mesai planlarini goruntuledu"}),
+        ("/work-schedule/assign/departments", {"POST": "Departmanlara mesai plani atadi", "GET": "Departman mesai atamalarini goruntuledu"}),
+        ("/work-schedule/assign/employees/bulk", {"POST": "Personele ozel mesai plani atadi"}),
+        ("/work-schedule/assign/employees/clear", {"POST": "Personel mesai istisnasini kaldirdi"}),
+        ("/document/upload", {"POST": "Evrak yukledi"}),
+        ("/expense/", {"POST": "Masraf talebi olusturdu", "GET": "Masraf kayitlarini goruntuledu"}),
+        ("/leave/", {"POST": "Izin talebi olusturdu", "GET": "Izin kayitlarini goruntuledu"}),
+        ("/helpdesk/", {"POST": "Destek talebi olusturdu", "GET": "Destek taleplerini goruntuledu"}),
+        ("/audit-logs/", {"GET": "Sistem loglarini goruntuledu"}),
+        ("/employee/create", {"POST": "Yeni personel olusturdu"}),
+        ("/employee/list", {"GET": "Personel listesini goruntuledu"}),
+        ("/company/settings", {"PUT": "Sistem sorumlularini guncelledi", "GET": "Sistem sorumlularini goruntuledu"}),
+        ("/company/settings/payroll-officer", {"PUT": "Bordro sorumlusunu guncelledi"}),
+        ("/company/", {"PUT": "Sirket bilgilerini guncelledi"}),
+        ("/company/", {"POST": "Sirket logosunu guncelledi"}),
+    ]
+
+    for prefix, mapping in route_map:
+        if path == prefix or path.startswith(prefix):
+            message = mapping.get(method)
+            if message:
+                break
+    else:
+        action = {
+            "GET": "Kaydi goruntuledu",
+            "POST": "Yeni islem olusturdu",
+            "PUT": "Kaydi guncelledi",
+            "PATCH": "Kaydi guncelledi",
+            "DELETE": "Kaydi sildi",
+        }.get(method, "Bir islem gerceklestirdi")
+        message = action
+
+    if path.startswith("/helpdesk/") and "/messages/with-file" in path and method == "POST":
+        message = "Destek talebine dosyali mesaj ekledi"
+    elif path.startswith("/helpdesk/") and "/messages" in path and method == "POST":
+        message = "Destek talebine mesaj ekledi"
+    elif path.startswith("/helpdesk/") and path.endswith("/status") and method == "PUT":
+        message = "Destek talebinin durumunu guncelledi"
+    elif path.startswith("/leave/") and path.endswith("/status") and method == "PUT":
+        message = "Izin talebinin durumunu guncelledi"
+    elif path.startswith("/expense/") and path.endswith("/status") and method == "PUT":
+        message = "Masraf talebinin durumunu guncelledi"
+    elif path.startswith("/employee/document/") and path.endswith("/status") and method == "PUT":
+        message = "Evrak durumunu guncelledi"
+    elif path.startswith("/work-schedule/templates/") and method == "PUT":
+        message = "Mesai planini guncelledi"
+    elif path.startswith("/work-schedule/templates/") and method == "DELETE":
+        message = "Mesai planini sildi"
+    elif path.startswith("/location/") and "/rotate-qr" in path and method == "PUT":
+        message = "Lokasyon QR kodunu yeniledi"
+    elif path.startswith("/location/") and "/poster" in path and method == "GET":
+        message = "QR posterini indirdi"
+    elif path.startswith("/location/") and method == "POST":
+        message = "Yeni lokasyon ekledi"
+    elif path.startswith("/location/") and method == "PUT":
+        message = "Lokasyon bilgilerini guncelledi"
+    elif path.startswith("/asset/assign") and method == "POST":
+        message = "Zimmet atamasi yapti"
+    elif path.startswith("/asset/return") and method == "POST":
+        message = "Zimmet iadesi aldi"
+    elif path.startswith("/ats/candidates/") and "/offer-letter" in path and method == "POST":
+        message = "Teklif mektubu olusturdu"
+    elif path.startswith("/ats/candidates/") and path.endswith("/stage") and method == "PUT":
+        message = "Aday asamasini guncelledi"
+    elif path.startswith("/ats/candidates/") and path.endswith("/cv") and method == "POST":
+        message = "Aday CV yukledi"
+    elif path.startswith("/ats/jobs") and method == "POST":
+        message = "Yeni is ilani olusturdu"
+
+    if status_code >= 400:
+        return f"{message} ancak islem hata ile sonuclandi"
+
+    return message
+
+
+def _describe_audit_event_with_context(method: str, path: str, status_code: int, db) -> str:
+    detail = _describe_audit_event(method, path, status_code)
+
+    try:
+        path_parts = [part for part in path.strip("/").split("/") if part]
+
+        if len(path_parts) >= 3 and path_parts[0] == "leave" and path_parts[-1] == "status":
+            leave_id = int(path_parts[1])
+            leave = db.query(LeaveRequest).filter(LeaveRequest.id == leave_id).first()
+            if leave and leave.employee:
+                employee_name = f"{leave.employee.first_name} {leave.employee.last_name}".strip()
+                return f"{employee_name} icin izin talebini {leave.status} yapti ({leave.leave_type}: {leave.start_date} - {leave.end_date})"
+
+        if len(path_parts) >= 3 and path_parts[0] == "expense" and path_parts[-1] == "status":
+            expense_id = int(path_parts[1])
+            expense = db.query(Expense).filter(Expense.id == expense_id).first()
+            if expense and expense.employee:
+                employee_name = f"{expense.employee.first_name} {expense.employee.last_name}".strip()
+                return f"{employee_name} icin masraf talebini {expense.status} yapti ({expense.amount} {expense.currency} - {expense.category})"
+
+        if len(path_parts) >= 4 and path_parts[0] == "employee" and path_parts[1] == "document" and path_parts[-1] == "status":
+            document_id = int(path_parts[2])
+            document = db.query(EmployeeDocument).filter(EmployeeDocument.id == document_id).first()
+            if document and document.employee:
+                employee_name = f"{document.employee.first_name} {document.employee.last_name}".strip()
+                return f"{employee_name} icin evrak durumunu {document.status} yapti ({document.document_type} / {document.file_name})"
+
+        if len(path_parts) >= 3 and path_parts[0] == "helpdesk" and path_parts[-1] == "status":
+            ticket_id = int(path_parts[1])
+            ticket = db.query(Ticket).filter(Ticket.id == ticket_id).first()
+            if ticket and ticket.creator:
+                creator_name = f"{ticket.creator.first_name} {ticket.creator.last_name}".strip()
+                return f"{creator_name} tarafindan acilan destek talebinin durumunu {ticket.status} yapti ({ticket.subject})"
+
+        if len(path_parts) >= 3 and path_parts[0] == "helpdesk" and path_parts[2] == "messages":
+            ticket_id = int(path_parts[1])
+            ticket = db.query(Ticket).filter(Ticket.id == ticket_id).first()
+            if ticket and ticket.creator:
+                creator_name = f"{ticket.creator.first_name} {ticket.creator.last_name}".strip()
+                return f"{creator_name} tarafindan acilan destek talebine mesaj ekledi ({ticket.subject})"
+
+        if len(path_parts) >= 4 and path_parts[0] == "helpdesk" and path_parts[2] == "messages" and path_parts[3] == "with-file":
+            ticket_id = int(path_parts[1])
+            ticket = db.query(Ticket).filter(Ticket.id == ticket_id).first()
+            if ticket and ticket.creator:
+                creator_name = f"{ticket.creator.first_name} {ticket.creator.last_name}".strip()
+                return f"{creator_name} tarafindan acilan destek talebine dosyali mesaj ekledi ({ticket.subject})"
+    except Exception:
+        return detail
+
+    return detail
+
+
+def _should_log_request(method: str, path: str) -> bool:
+    method = method.upper()
+
+    noisy_prefixes = (
+        "/static",
+        "/uploads",
+        "/openapi",
+        "/docs",
+        "/redoc",
+    )
+    noisy_exact_paths = {
+        "/",
+        "/notification/unread-count",
+        "/audit-logs/",
+        "/audit-logs/filters",
+    }
+
+    if path.startswith(noisy_prefixes) or path in noisy_exact_paths:
+        return False
+
+    # GET isteklerinde sadece gerçekten delil/çıktı niteliği olan indirme ve raporları tut.
+    if method == "GET":
+        important_get_patterns = (
+            "/download-pdf/",
+            "/poster",
+            "/participants-report",
+            "/export",
+            "/email-report",
+            "/cv",
+            "/report/",
+        )
+        return any(pattern in path for pattern in important_get_patterns)
+
+    # Yönetimsel ve veri üreten tüm mutasyonları tut.
+    return method in {"POST", "PUT", "PATCH", "DELETE"}
+
+
+@app.middleware("http")
+async def audit_log_middleware(request: Request, call_next):
+    response = await call_next(request)
+
+    path = request.url.path or "/"
+    if not _should_log_request(request.method, path):
+        return response
+
+    db = SessionLocal()
+    try:
+        actor = _resolve_audit_actor(request, db) or {}
+        query_string = request.url.query or None
+        audit_row = AuditLog(
+            company_id=actor.get("company_id"),
+            company_name=actor.get("company_name"),
+            actor_employee_id=actor.get("actor_employee_id"),
+            actor_name=actor.get("actor_name"),
+            actor_role=actor.get("actor_role"),
+            actor_department_id=actor.get("actor_department_id"),
+            actor_department_name=actor.get("actor_department_name"),
+            action_type=_derive_action_type(request.method, path),
+            resource_type=_derive_resource_type(path),
+            http_method=request.method,
+            path=path,
+            query_string=query_string,
+            status_code=response.status_code,
+            ip_address=request.client.host if request.client else None,
+            detail=_describe_audit_event_with_context(request.method, path, response.status_code, db),
+        )
+        db.add(audit_row)
+        db.commit()
+    except Exception as e:
+        print(f"Audit Log Hatası: {e}")
+        db.rollback()
+    finally:
+        db.close()
+
+    return response
+
+# --- ROTALAR (API ENDPOINTS) ---
+app.include_router(auth.router, prefix="/auth", tags=["Auth"])
+app.include_router(company_api.router, prefix="/company", tags=["Company"])
+app.include_router(company_api.router, prefix="/api/v1/company", tags=["Company V1"])
+app.include_router(employee_api.router, prefix="/employee", tags=["Employee"])
+app.include_router(attendance_api.router, prefix="/attendance", tags=["Attendance"])
+app.include_router(asset_api.router, prefix="/asset", tags=["Assets"]) 
+app.include_router(admin.router, prefix="/admin", tags=["Admin Settings"])
+app.include_router(dashboard_api.router, prefix="/dashboard", tags=["Dashboard"])
+app.include_router(ats_api.router, prefix="/ats", tags=["ATS"])
+# NOT: ats_router (v1) aynı prefix kullanıyor, gereksiz çakışmayı önlemek için
+# sadece ana ats_api.router aktiftir. v1 ATS endpoint'leri ats_api.router içinde birleştirilmeli.
+app.include_router(document_api.router, prefix="/document", tags=["E-Dossier"])
+app.include_router(expense_api.router, prefix="/expense", tags=["Expense"])
+app.include_router(purchase_request_api.router, prefix="/purchase-request", tags=["Purchase Request"])
+app.include_router(generic_request_api.router, prefix="/generic-request", tags=["Generic Request"])
+app.include_router(kpi_api.router, prefix="/kpi", tags=["KPI"])
+app.include_router(knowledge_base_api.router, prefix="/knowledge-base", tags=["Knowledge Base"])
+app.include_router(performance_api.router, prefix="/performance", tags=["Performance"])
+app.include_router(training_api.router, prefix="/training", tags=["Training Management"])
+app.include_router(social.router, prefix="/social", tags=["Social & Motivation"])
+app.include_router(report.router, prefix="/report", tags=["PDF Reports"])
+app.include_router(location_api.router, prefix="/location", tags=["Locations (Şantiyeler & QR)"])
+app.include_router(leave_api.router, prefix="/leave", tags=["İzin Yönetimi"])
+# HELPDESK DEVRE DISI: app.include_router(helpdesk_api.router, prefix="/helpdesk", tags=["Helpdesk"])
+app.include_router(notification.router, prefix="/notification", tags=["Notification"])
+app.include_router(mobile_api.router, prefix="/mobile", tags=["Mobile"])
+app.include_router(attendance_export.router, prefix="/attendance", tags=["Attendance Export"])
+app.include_router(work_schedule_api.router, prefix="/work-schedule", tags=["Work Schedule"])
+app.include_router(audit_log_api.router, prefix="/audit-logs", tags=["Audit Logs"])
+app.include_router(executive_api.router, prefix="/executive", tags=["Executive Console"])
+app.include_router(support_api.router, prefix="/support", tags=["Support"])
+app.include_router(paddle_api.router, prefix="/paddle", tags=["Paddle"])
+# company.router kaldırıldı — v1/company endpoint app.api.company içinde
+
+
+@app.get("/")
+def root(): 
+    return {"status": "Sistem Aktif"}
