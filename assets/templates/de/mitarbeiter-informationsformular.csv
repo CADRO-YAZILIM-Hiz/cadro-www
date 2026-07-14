@@ -1,0 +1,68 @@
+﻿MITARBEITER-INFORMATIONSFORMULAR - CADRO
+
+PERSÖNLICHE DATEN
+Feld,Information
+Vorname:,
+Nachname:,
+Personalausweisnummer:,
+Geburtsdatum:,
+Geburtsort:,
+Geschlecht:,
+Familienstand:,
+Staatsangehörigkeit:,
+Blutgruppe:,
+Führerscheinklasse:,
+
+KONTAKTINFORMATIONEN
+Feld,Information
+Mobiltelefon:,
+Festnetz:,
+E-Mail (Privat):,
+E-Mail (Geschäftlich):,
+Adresse:,
+Stadt:,
+Bundesland:,
+Postleitzahl:,
+
+NOTFALLKONTAKT
+Feld,Information
+Verwandtschaftsgrad:,
+Vollständiger Name:,
+Telefon:,
+Adresse:,
+
+BESCHÄFTIGUNGSDATEN
+Feld,Information
+Unternehmen:,
+Abteilung:,
+Position:,
+Eintrittsdatum:,
+Beschäftigungsart:,
+Vertragsart:,
+Arbeitsort:,
+Vorgesetzter:,
+Personalnummer:,
+
+AUSBILDUNG
+Abschluss,Bildungseinrichtung,Fachbereich,Abschlussjahr
+,,, 
+,,, 
+,,, 
+
+BANKVERBINDUNG
+Feld,Information
+Bankname:,
+Filiale:,
+IBAN:,
+
+ZERTIFIKATE UND QUALIFIKATIONEN
+Zertifikat / Qualifikation,Ausstellende Organisation,Datum
+,, 
+,, 
+,, 
+
+Ich bestätige die Richtigkeit und Vollständigkeit der oben genannten Angaben.
+
+Unterschrift Mitarbeiter:,Datum:
+
+Diese Vorlage wird von CADRO kostenlos bereitgestellt. www.cadro.io

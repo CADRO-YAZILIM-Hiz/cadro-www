@@ -1,0 +1,138 @@
+# CADRO — Modern İnsan Kaynakları Yazılımı
+
+> CADRO; işe alım, performans, izin, puantaj, bordro ve özlük yönetimini tek
+> bir bulut platformunda toplayan, AES-256 şifrelemeli, KVKK uyumlu, Türkiye
+> merkezli İK yazılımıdır. 10 kişilik startuplardan 1.000+ çalışanlı kurumsal
+> firmalara kadar ölçeklenir. 4 dilde (TR, EN, DE, AR) hizmet verir.
+> Kurulum süresi 3-5 iş günüdür. Müşterilerde ortalama ROI geri dönüş süresi
+> 3-6 aydır. Hedef kitle: KOBİ'ler, kurumsal İK departmanları, muhasebe
+> büroları.
+
+## Temel Sayfalar
+
+- [Ana Sayfa](https://www.cadro.io/): CADRO platform tanıtımı, özellikler, çözümler, karşılaştırma ve kaynaklar
+- [İK Yazılımı](https://www.cadro.io/ik-yazilimi.html): Modül detayları ve teknik özellikler
+- [Fiyatlandırma](https://www.cadro.io/pricing.html): Basic / Pro / Enterprise plan karşılaştırması
+- [Blog](https://www.cadro.io/blog.html): Tüm İK makaleleri ve rehberler
+- [SSS](https://www.cadro.io/faq.html): Sık sorulan sorular ve yanıtları
+- [İK Sözlüğü](https://www.cadro.io/ik-sozlugu.html): İK terimleri ve tanımları sözlüğü
+- [Vaka Çalışmaları](https://www.cadro.io/vaka-calismalari.html): Müşteri başarı hikayeleri
+
+## Çözüm Sayfaları
+
+- [ATS ve İşe Alım Yazılımı](https://www.cadro.io/ats-ise-alim-yazilimi.html): Aday takip sistemi, CV havuzu, mülakat yönetimi
+- [Bordro Yazılımı](https://www.cadro.io/bordro-yazilimi.html): Bordro hesaplama ve yönetim sistemi
+- [Puantaj ve Vardiya Yazılımı](https://www.cadro.io/puantaj-ve-vardiya-yazilimi.html): Puantaj, vardiya ve devamsızlık takibi
+- [Dijital Özlük ve İzin](https://www.cadro.io/dijital-ozluk-ve-izin.html): e-özlük dosyası ve izin yönetimi
+- [Kurumsal Bilgi Bankası ve Onboarding](https://www.cadro.io/kurumsal-bilgi-bankasi-ve-onboarding.html): Bilgi bankası ve işe alıştırma
+- [İK Analitiği](https://www.cadro.io/ik-analitigi.html): İK veri analizi ve raporlama panelleri
+- [İK ROI Hesaplama](https://www.cadro.io/ik-roi-hesaplama.html): İnteraktif yatırım getirisi hesaplama aracı
+- [Performans Yönetimi](https://www.cadro.io/performans-degerlendirme-okr.html): OKR ve performans değerlendirme
+- [Masraf ve Satın Alma](https://www.cadro.io/masraf-ve-satin-alma.html): Masraf takibi ve satın alma onay süreçleri
+- [Excel vs CADRO](https://www.cadro.io/excel-vs-cadro.html): Manuel Excel ile dijital İK karşılaştırması
+
+## Araçlar ve Hesaplayıcılar
+
+- [Asgari Ücret Hesaplama](https://www.cadro.io/asgari-ucret-hesaplama.html): 2026 asgari ücret net/brüt hesaplama
+- [Bordro Maliyet Hesaplama](https://www.cadro.io/bordro-maliyet-hesaplama.html): Çalışan başına bordro maliyet analizi
+- [Kıdem Tazminatı Hesaplama](https://www.cadro.io/kidem-tazminati-hesaplama.html): Kıdem tazminatı hesaplama aracı
+- [SGK Prim Hesaplama](https://www.cadro.io/sgk-prim-hesaplama.html): SGK işveren primi hesaplama
+- [Net-Brüt Maaş Hesaplama](https://www.cadro.io/net-brut-maas-hesaplama.html): Net ve brüt maaş dönüşümü
+
+## Makaleler — Bordro & Ücret
+
+- [2026 Asgari Ücret Net Hesabı](https://www.cadro.io/makale-2026-asgari-ucret-net-hesabi.html): Adım adım SGK kesintileri, gelir vergisi istisnası ve damga vergisi muafiyeti
+- [2026 SGK Tavan ve Taban Ücret](https://www.cadro.io/makale-2026-sgk-tavan-taban.html): Güncel SGK tavan/taban tablosu ve hesaplama örnekleri
+- [Ücret Değerlendirme Süreci](https://www.cadro.io/makale-ucret-degerlendirme-sureci.html): Maaş değerlendirme ve piyasa kıyaslaması
+- [Ücret Adaleti ve Analitik](https://www.cadro.io/makale-ucret-adaleti-ve-analitik.html): Ücret adaleti ölçümü ve analitik yaklaşım
+- [Ücret Değerlendirme ve Piyasa Karşılaştırması](https://www.cadro.io/makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi.html): Sektörel maaş karşılaştırması
+
+## Makaleler — Bordro & Entegrasyon
+
+- [Bordro Yazılımı Nasıl Seçilir?](https://www.cadro.io/makale-bordro-yazilimi-nasil-secilir.html): 2026 bordro yazılımı alıcı rehberi
+- [Bordro Yazılımı Entegrasyon Listesi](https://www.cadro.io/makale-bordro-yazilimi-entegrasyon-listesi.html): Muhasebe + İK entegrasyon kontrol listesi
+- [Excel Bordro Sızıntıları](https://www.cadro.io/makale-excel-bordro-sizintilari.html): Manuel Excel bordro riskleri ve veri sızıntıları
+- [PDKS ile Bordro Entegrasyonu](https://www.cadro.io/makale-pdks-ile-bordro-entegrasyonu.html): Puantaj-bordro otomasyon entegrasyonu
+
+## Makaleler — İK Yazılımı Seçimi
+
+- [İK Yazılımı 2026 Trendleri](https://www.cadro.io/makale-ik-yazilimi-2026-trendler.html): Otomasyon, analitik, uyumluluk ve çalışan deneyimi trendleri
+- [İK Yazılımı Seçim Rehberi 2026](https://www.cadro.io/makale-ik-yazilimi-secim-rehberi-2026.html): Kapsamlı seçim kriterleri ve karar çerçevesi
+- [İK Yazılımı Karşılaştırma 2026](https://www.cadro.io/makale-ik-yazilimi-karsilastirma-2026.html): Piyasadaki İK yazılımlarının detaylı karşılaştırması
+- [İK Yazılımı Uygulama Takvimi — 90 Gün](https://www.cadro.io/makale-ik-yazilimi-uygulama-takvimi-90-gun.html): Hazırlık, pilot, yaygınlaştırma ve ölçüm adımları
+- [İK Yazılımı Fiyatlama Modeli](https://www.cadro.io/makale-insan-kaynaklari-yazilimi-fiyatlama-modeli.html): Per-user, modül bazlı ve karma modeller
+- [HR Yazılımı Maliyet Hesabı](https://www.cadro.io/makale-hr-yazilimi-maliyet-hesabi.html): TCO yaklaşımıyla lisans, entegrasyon ve operasyon maliyetleri
+- [HR Yazılımı Global-Lokal Farkı](https://www.cadro.io/makale-hr-yazilimi-global-lokal-fark.html): Global ve yerel İK yazılımlarının karşılaştırması
+- [KOBİ için İK Programı](https://www.cadro.io/makale-kobi-icin-ik-programi.html): Küçük işletmeler için İK yazılımı seçim rehberi
+
+## Makaleler — Dijital Dönüşüm & KVKK
+
+- [İK Dijital Dönüşüm 2026](https://www.cadro.io/makale-ik-dijital-donusum-2026.html): İK'da dijitalleşme yol haritası
+- [Dijital Özlük ve KVKK](https://www.cadro.io/makale-dijital-ozluk-ve-kvkk.html): KVKK uyumlu dijital personel dosyası yönetimi
+- [Dijital Özlük Dönüş Süresi](https://www.cadro.io/makale-dijital-ozluk-donusu-suresi.html): Dijital özlüğe geçiş süresi hesaplama
+- [AI ve KVKK Uyumu](https://www.cadro.io/makale-ai-ve-kvkk-uyumu.html): Çalışan verilerini işlerken AI kaynaklı hukuki riskler
+- [İK Yazılımı KVKK Kontrol Listesi](https://www.cadro.io/makale-insan-kaynaklari-yazilimi-kvkk-kontrol-listesi.html): KVKK uyumluluk kontrol maddeleri
+- [İzin Yönetimi Hataları](https://www.cadro.io/makale-izin-yonetimi-hatalari.html): Manuel izin takibinde sık yapılan hatalar
+
+## Makaleler — İK Analitiği & ROI
+
+- [İK Analitiği 12 KPI](https://www.cadro.io/makale-ik-analitigi-12-kpi.html): Turnover, time-to-hire, devamsızlık ve verimlilik metrikleri
+- [İK Analitiği Raporlama — Sık Hatalar](https://www.cadro.io/makale-ik-analitigi-raporlama-sik-hatalar.html): İK raporlamasında kaçınılması gereken hatalar
+- [İK Raporlama Dashboard Kurgusu](https://www.cadro.io/makale-ik-raporlama-dashboard-kurgusu.html): C-level, İK ekibi ve operasyon için farklı dashboard tasarımı
+- [İK ROI Hesaplama Formülü](https://www.cadro.io/makale-ik-roi-hesaplama-formulu.html): İK yatırım getirisi hesaplama metodolojisi
+- [İK ROI Örnek Senaryolar](https://www.cadro.io/makale-ik-roi-hesaplama-ornek-senaryolar.html): Farklı şirket büyüklükleri için ROI simülasyonları
+- [Prediktif İK](https://www.cadro.io/makale-prediktif-ik.html): Tahmine dayalı İK analitiği ve erken uyarı sistemleri
+
+## Makaleler — İşe Alım & Yetenek Yönetimi
+
+- [İşe Alım Süreci KPI Metrikleri](https://www.cadro.io/makale-ise-alim-sureci-kpi-metrikleri.html): İşe alım performans ölçüm metrikleri
+- [İşe Alım Yazılımı Aday Deneyimi](https://www.cadro.io/makale-ise-alim-yazilimi-aday-deneyimi.html): Aday odaklı işe alım süreci tasarımı
+- [ATS Kontrol Listesi](https://www.cadro.io/makale-ise-alim-yazilimi-ats-kontrol-listesi.html): Aday takip sistemi seçiminde kontrol maddeleri
+- [İşe Alımda AI Etik](https://www.cadro.io/makale-ise-alimda-ai-etik.html): Yapay zeka destekli işe alımda etik sorunlar
+- [Turnover Düşürme Yolları](https://www.cadro.io/makale-turnover-dusurme-yollari.html): Çalışan devir hızını azaltma stratejileri
+- [Sessiz İstifa Maliyeti](https://www.cadro.io/makale-sessiz-istifa-maliyeti.html): Quiet quitting'in şirkete maliyeti ve önlemler
+- [Onboarding Dijitalleştirme](https://www.cadro.io/makale-onboarding-dijitallestirme.html): Dijital işe alıştırma süreci
+
+## Makaleler — Performans & Çalışma Modelleri
+
+- [Performans Yönetimi OKR Modeli](https://www.cadro.io/makale-performans-yonetimi-okr-modeli.html): OKR ile performans yönetimi kurulumu
+- [Yıllık Performans Değerlendirme](https://www.cadro.io/makale-yillik-performans-degerlendirme.html): Etkin yıllık değerlendirme sistemi
+- [Performans ve Prim Modeli](https://www.cadro.io/makale-performans-ve-prim-modeli.html): Performansa dayalı ücretlendirme modelleri
+- [Esnek Çalışma Saatleri 2026](https://www.cadro.io/makale-esnek-calisma-saatleri-2026.html): Hibrit ve esnek çalışma modelleri
+- [PDKS ve Uzaktan Çalışma Yönetimi](https://www.cadro.io/makale-pdks-ve-uzaktan-calisma-yonetimi.html): Uzaktan ekiplerde puantaj takibi
+- [PDKS Seçim Kriterleri](https://www.cadro.io/makale-pdks-secim-kriterleri.html): Personel devam kontrol sistemi seçimi
+- [Puantaj ve Vardiya Optimizasyonu](https://www.cadro.io/makale-puantaj-ve-vardiya-optimizasyonu.html): Vardiya planlama ve optimizasyon
+
+## Makaleler — Teknoloji & İnovasyon
+
+- [Yapay Zeka — GenAI](https://www.cadro.io/makale-yapay-zeka-genai.html): Üretken yapay zeka ve İK uygulamaları
+- [Personel Takip Programı Nedir?](https://www.cadro.io/makale-personel-takip-programi-nedir.html): Personel takip yazılımlarına giriş
+- [Personel Takip Programı Kurulum Rehberi](https://www.cadro.io/makale-personel-takip-programi-kurulum-rehberi.html): Adım adım kurulum kılavuzu
+
+## Yasal & Kurumsal
+
+- [Gizlilik Politikası](https://www.cadro.io/privacy.html)
+- [Kullanım Koşulları](https://www.cadro.io/terms.html)
+- [Güvenlik](https://www.cadro.io/security.html)
+- [Uyumluluk](https://www.cadro.io/compliance.html)
+- [İade Politikası](https://www.cadro.io/refund.html)
+
+## Site Haritaları
+
+- [Sitemap XML](https://www.cadro.io/sitemap.xml)
+- [Video Sitemap XML](https://www.cadro.io/video-sitemap.xml)
+
+## AI ve Geliştirici Kaynakları
+
+- [AI Citation Guide](https://www.cadro.io/AI-CITATION-GUIDE.md): Yapay zeka sistemleri için CADRO hakkında alıntılanabilir veriler, istatistikler ve vaka örnekleri
+- [LLMs Full Context](https://www.cadro.io/llms-full.txt): Tüm site içeriğinin tek dosyada birleştirilmiş hali (146 KB, ~37K token)
+- [Sosyal Medya Paylaşım Şablonları](https://www.cadro.io/social-sharing-templates.md): LinkedIn ve X için optimize paylaşım şablonları
+- [İçerik Güncelleme Takvimi](https://www.cadro.io/content-update-calendar.md): Aylık içerik güncelleme rotasyonu ve kontrol listesi
+- [Blog Yayın Sistemi](https://www.cadro.io/BLOG-PUBLISHING-SYSTEM.md): Blog otomasyon dokümantasyonu
+
+## Dil Kökleri
+
+- TR: https://www.cadro.io/
+- EN: https://www.cadro.io/en/
+- DE: https://www.cadro.io/de/
+- AR: https://www.cadro.io/ar/

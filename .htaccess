@@ -1,0 +1,148 @@
+# CADRO - Apache Server Configuration
+# Security, Performance & SEO Optimizations
+
+# ----------------------------------------------------------------------
+# REDIRECTS
+# ----------------------------------------------------------------------
+
+# HTTPS Redirect
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# WWW Redirect (non-www -> www)
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Trailing Slash Cleanup
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
+
+# ----------------------------------------------------------------------
+# SECURITY HEADERS
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+  # HSTS (Strict-Transport-Security)
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Prevent MIME-type sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Clickjacking protection
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # XSS Protection
+  Header always set X-XSS-Protection "1; mode=block"
+
+  # Referrer Policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Permissions Policy
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+</IfModule>
+
+# ----------------------------------------------------------------------
+# CACHE CONTROL
+# ----------------------------------------------------------------------
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Default: 1 hour
+  ExpiresDefault "access plus 1 hour"
+
+  # HTML: 10 minutes (revalidated)
+  ExpiresByType text/html "access plus 10 minutes"
+
+  # CSS & JS: 1 year (fingerprinted via .min files)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+
+  # Images: 1 year
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Fonts: 1 year
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+
+  # Video: 1 month
+  ExpiresByType video/mp4 "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Cache-Control overrides for static assets
+  <FilesMatch "\.(min\.css|min\.js|webp|svg|ico)$">
+    Header set Cache-Control "public, immutable, max-age=31536000"
+  </FilesMatch>
+
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "public, must-revalidate, max-age=600"
+  </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# COMPRESSION
+# ----------------------------------------------------------------------
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ----------------------------------------------------------------------
+# ERROR PAGES
+# ----------------------------------------------------------------------
+
+ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+ErrorDocument 500 /404.html
+
+# ----------------------------------------------------------------------
+# ROBOTS & SECURITY FILES
+# ----------------------------------------------------------------------
+
+<FilesMatch "^(site-config\.js\.live\.backup|page-content\.js\.bak|index\.nginx-debian\.html)$">
+  Require all denied
+</FilesMatch>
+
+# Block access to backup files
+<FilesMatch "\.(bak|backup|old|swp|save)$">
+  Require all denied
+</FilesMatch>
+
+# ----------------------------------------------------------------------
+# CORS HEADERS FOR FONTS & CDN
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(woff2|woff)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# CHARACTER SET
+# ----------------------------------------------------------------------
+
+AddDefaultCharset UTF-8
+
+# ----------------------------------------------------------------------
+# REWRITE RULES FOR MULTILANGUAGE
+# ----------------------------------------------------------------------
+
+# Serve language-specific 404 pages
+RewriteCond %{REQUEST_URI} ^/(en|de|ar)/(.*)$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(en|de|ar)/(.*)$ /$1/404.html [L]
+
+# ----------------------------------------------------------------------
+# DISABLE DIRECTORY LISTING
+# ----------------------------------------------------------------------
+
+Options -Indexes

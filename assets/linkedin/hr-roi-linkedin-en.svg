@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-labelledby="title desc">
+  <title id="title">CADRO HR ROI Calculator - LinkedIn Visual (EN)</title>
+  <desc id="desc">English social image showing sample HR ROI results in TRY and USD.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0e7490" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="url(#bg)" />
+  <circle cx="1030" cy="180" r="180" fill="#22d3ee" opacity="0.15" />
+  <circle cx="170" cy="1050" r="230" fill="#34d399" opacity="0.12" />
+
+  <text x="80" y="110" fill="#a5f3fc" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700">CADRO</text>
+  <text x="80" y="170" fill="#ffffff" font-size="56" font-family="Arial, Helvetica, sans-serif" font-weight="800">HR ROI Calculator</text>
+  <text x="80" y="220" fill="#d1fae5" font-size="30" font-family="Arial, Helvetica, sans-serif">Sample: 150 employees, 4 HR staff, 12 manual hrs/week, 35 hires/year</text>
+
+  <rect x="80" y="280" width="1040" height="280" rx="24" fill="#ffffff" opacity="0.1" />
+  <text x="120" y="350" fill="#99f6e4" font-size="32" font-family="Arial, Helvetica, sans-serif" font-weight="700">TRY Output</text>
+  <text x="120" y="410" fill="#ffffff" font-size="48" font-family="Arial, Helvetica, sans-serif" font-weight="800">Annual Savings: ₺690,360</text>
+  <text x="120" y="465" fill="#ffffff" font-size="42" font-family="Arial, Helvetica, sans-serif" font-weight="700">Payback Period: &lt; 1 month</text>
+  <text x="120" y="515" fill="#ccfbf1" font-size="30" font-family="Arial, Helvetica, sans-serif">Estimated Annual Software Cost: ₺25,200  |  ROI: 2,640%</text>
+
+  <rect x="80" y="610" width="1040" height="280" rx="24" fill="#ffffff" opacity="0.1" />
+  <text x="120" y="680" fill="#99f6e4" font-size="32" font-family="Arial, Helvetica, sans-serif" font-weight="700">USD Output</text>
+  <text x="120" y="740" fill="#ffffff" font-size="48" font-family="Arial, Helvetica, sans-serif" font-weight="800">Annual Savings: $19,724</text>
+  <text x="120" y="795" fill="#ffffff" font-size="42" font-family="Arial, Helvetica, sans-serif" font-weight="700">Estimated Software Cost: $720/year</text>
+  <text x="120" y="845" fill="#ccfbf1" font-size="30" font-family="Arial, Helvetica, sans-serif">Assumption: 1 USD = 35 TRY  |  Payback: &lt; 1 month</text>
+
+  <text x="80" y="980" fill="#ffffff" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700">Try it now: cadro.io/ik-roi-hesaplama.html</text>
+  <text x="80" y="1030" fill="#99f6e4" font-size="24" font-family="Arial, Helvetica, sans-serif">Note: Values are illustrative estimates based on sample inputs.</text>
+</svg>

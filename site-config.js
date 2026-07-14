@@ -1,0 +1,34 @@
+/**
+ * CADRO — Marketing Site Paddle Konfigürasyonu
+ * Dosya: site-config.js
+ * Deploy konumu: cadro.io kök dizini (index.html ile aynı klasör)
+ *
+ * ⚠️  GÜVENLİK NOTU:
+ * Bu dosyadaki değerler herkese açık (public) client-side değerlerdir.
+ * API key veya Webhook Secret BURAYA YAZILMAZ.
+ * Client-side token Paddle Dashboard > Developer Tools > Client-side tokens bölümünden alınır.
+ */
+window.CADRO_CONFIG = {
+  paddle: {
+    clientToken: 'live_ebbebbb9904b2e3d33d482bcce1',
+    environment: 'production',
+    prices: {
+      start: {
+        monthly: 'pri_01kmzvhsbtz5a205s485qt0erx',
+        yearly: 'pri_01kmzvmr4n44wek5556vx6j11t',
+      },
+      growth: {
+        monthly: 'pri_01kmzwyw1c423sp30zw8xcza05',
+        yearly: 'pri_01kmzx1aymgyfxh5yqtrwhb4dc',
+      },
+      scale: {
+        monthly: 'pri_01kmzxaatyd7w1g745fznjzxsp',
+        yearly: 'pri_01kmzxdheambt985v5b5kk47c7',
+      },
+    },
+    successRedirectUrl: 'https://app.cadro.io/login?mode=setup',
+  },
+  api: {
+    baseUrl: 'https://api.cadro.io',
+  },
+};

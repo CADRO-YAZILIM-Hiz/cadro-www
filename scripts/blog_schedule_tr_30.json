@@ -1,0 +1,421 @@
+[
+  {
+    "publish_date": "2026-05-26",
+    "slug": "makale-ik-yazilimi-secim-rehberi-2026.html",
+    "title": "İK Yazılımı Seçim Rehberi 2026: 12 Kritik Kriter",
+    "excerpt": "İK yazılımı seçerken fiyatın ötesinde bakmanız gereken 12 teknik ve operasyonel kriteri adım adım anlatıyoruz.",
+    "category": "İK Teknolojisi",
+    "keywords": [
+      "ik yazılımı",
+      "insan kaynakları yazılımı",
+      "ik yazılımı seçimi"
+    ],
+    "published": true,
+    "published_at": "2026-05-26"
+  },
+  {
+    "publish_date": "2026-05-27",
+    "slug": "makale-personel-takip-programi-nedir.html",
+    "title": "Personel Takip Programı Nedir? Excel'den Geçiş Planı",
+    "excerpt": "Personel takip programı ile izin, puantaj ve evrak süreçlerini tek ekranda yönetmek için pratik geçiş planı.",
+    "category": "Operasyon",
+    "keywords": [
+      "personel takip programı",
+      "ik programı",
+      "puantaj"
+    ],
+    "published": true,
+    "published_at": "2026-05-27"
+  },
+  {
+    "publish_date": "2026-05-28",
+    "slug": "makale-ise-alim-yazilimi-ats-kontrol-listesi.html",
+    "title": "İşe Alım Yazılımı (ATS) Kontrol Listesi",
+    "excerpt": "Aday takip sistemi seçerken aday deneyimi, raporlama ve entegrasyon tarafında nelere bakılmalı?",
+    "category": "İşe Alım",
+    "keywords": [
+      "işe alım yazılımı",
+      "aday takip sistemi",
+      "ats"
+    ],
+    "published": true,
+    "published_at": "2026-05-28"
+  },
+  {
+    "publish_date": "2026-05-29",
+    "slug": "makale-ik-analitigi-12-kpi.html",
+    "title": "İK Analitiği için Takip Edilmesi Gereken 12 KPI",
+    "excerpt": "Turnover, time-to-hire, devamsızlık ve verimlilik dahil 12 KPI ile İK analitiği sisteminizi kurun.",
+    "category": "İK Analitiği",
+    "keywords": [
+      "ik analitiği",
+      "workforce analytics",
+      "ik raporlama"
+    ],
+    "published": true,
+    "published_at": "2026-05-29"
+  },
+  {
+    "publish_date": "2026-05-30",
+    "slug": "makale-ik-roi-hesaplama-formulu.html",
+    "title": "İK ROI Hesaplama Formülü: Yatırımın Geri Dönüşünü Ölçme",
+    "excerpt": "İK ROI hesaplama için tasarruf kalemleri, yazılım maliyeti ve geri ödeme süresini tek formülde birleştirin.",
+    "category": "Finans",
+    "keywords": [
+      "ik roi hesaplama",
+      "ik yazılımı maliyeti",
+      "hr roi"
+    ],
+    "published": true,
+    "published_at": "2026-05-30"
+  },
+  {
+    "publish_date": "2026-05-31",
+    "slug": "makale-pdks-secim-kriterleri.html",
+    "title": "PDKS Yazılımı Seçerken Dikkat Edilmesi Gerekenler",
+    "excerpt": "PDKS altyapısında cihaz uyumu, vardiya kurgusu ve bordro entegrasyonu için seçim kriterlerini derledik.",
+    "category": "PDKS",
+    "keywords": [
+      "pdks",
+      "personel devam kontrol sistemi",
+      "vardiya"
+    ],
+    "published": true,
+    "published_at": "2026-05-31"
+  },
+  {
+    "publish_date": "2026-06-01",
+    "slug": "makale-bordro-yazilimi-entegrasyon-listesi.html",
+    "title": "Bordro Yazılımı Entegrasyon Listesi: Muhasebe + İK",
+    "excerpt": "Bordro yazılımı ile muhasebe, puantaj ve İK süreçlerini bağlamak için pratik entegrasyon listesi.",
+    "category": "Bordro",
+    "keywords": [
+      "bordro yazılımı",
+      "bordro entegrasyonu",
+      "sgk"
+    ],
+    "published": true,
+    "published_at": "2026-06-01"
+  },
+  {
+    "publish_date": "2026-06-02",
+    "slug": "makale-ucret-degerlendirme-sureci.html",
+    "title": "Ücret Değerlendirme Süreci Nasıl Kurgulanır?",
+    "excerpt": "Ücret bantları, piyasa kıyasları ve ücret adaleti metrikleri ile sürdürülebilir ücret değerlendirme süreci.",
+    "category": "Ücret Yönetimi",
+    "keywords": [
+      "ücret değerlendirme",
+      "ücret yönetimi",
+      "pay equity"
+    ],
+    "published": true,
+    "published_at": "2026-06-02"
+  },
+  {
+    "publish_date": "2026-06-03",
+    "slug": "makale-izin-yonetimi-hatalari.html",
+    "title": "İzin Yönetiminde En Sık Yapılan 10 Hata",
+    "excerpt": "İzin yönetimi akışında biriken operasyonel hataları azaltmak için kontrol noktaları ve onay tasarımı önerileri.",
+    "category": "Operasyon",
+    "keywords": [
+      "izin yönetimi",
+      "ik süreçleri",
+      "çalışan deneyimi"
+    ],
+    "published": true,
+    "published_at": "2026-06-03"
+  },
+  {
+    "publish_date": "2026-06-04",
+    "slug": "makale-puantaj-ve-vardiya-optimizasyonu.html",
+    "title": "Puantaj ve Vardiya Optimizasyonu: 5 Pratik Senaryo",
+    "excerpt": "Puantaj kayıtlarını bordroya hazır hale getirmek için vardiya planı, mesai ve devamsızlık senaryoları.",
+    "category": "PDKS",
+    "keywords": [
+      "puantaj",
+      "vardiya",
+      "pdks"
+    ],
+    "published": true,
+    "published_at": "2026-06-04"
+  },
+  {
+    "publish_date": "2026-06-05",
+    "slug": "makale-kobi-icin-ik-programi.html",
+    "title": "KOBİ'ler İçin İK Programı: Nereden Başlamalı?",
+    "excerpt": "KOBİ ölçeğinde insan kaynakları yazılımı kurulumunda modül önceliği ve 90 günlük yol haritası.",
+    "category": "KOBİ",
+    "keywords": [
+      "ik programı",
+      "insan kaynakları yazılımı",
+      "kobi"
+    ],
+    "published": true,
+    "published_at": "2026-06-05"
+  },
+  {
+    "publish_date": "2026-06-06",
+    "slug": "makale-ise-alim-sureci-kpi-metrikleri.html",
+    "title": "İşe Alım Sürecinde KPI Yönetimi: Time-to-Hire'dan Offer Rate'e",
+    "excerpt": "Aday takip sistemi kullanan ekipler için ölçülmesi gereken işe alım KPI metrikleri ve eşik değerler.",
+    "category": "İşe Alım",
+    "keywords": [
+      "aday takip sistemi",
+      "işe alım yazılımı",
+      "kpi"
+    ],
+    "published": true,
+    "published_at": "2026-06-06"
+  },
+  {
+    "publish_date": "2026-06-07",
+    "slug": "makale-performans-yonetimi-okr-modeli.html",
+    "title": "Performans Yönetimi ve OKR Modelini Birlikte Kullanmak",
+    "excerpt": "Performans görüşmeleri ile OKR takibini aynı ritimde yürütmek için dönemsel model önerisi.",
+    "category": "Performans",
+    "keywords": [
+      "performans yönetimi",
+      "okr",
+      "ik yazılımı"
+    ],
+    "published": true,
+    "published_at": "2026-06-07"
+  },
+  {
+    "publish_date": "2026-06-08",
+    "slug": "makale-dijital-ozluk-donusu-suresi.html",
+    "title": "Dijital Özlük Sistemine Geçişte Dönüş Süresi Nasıl Hesaplanır?",
+    "excerpt": "Dijital özlük dönüşümünde operasyonel kazanç, denetim kolaylığı ve toplam sahip olma maliyeti hesabı.",
+    "category": "Dijital Özlük",
+    "keywords": [
+      "dijital özlük",
+      "ik roi",
+      "kvkk"
+    ],
+    "published": true,
+    "published_at": "2026-06-08"
+  },
+  {
+    "publish_date": "2026-06-09",
+    "slug": "makale-insan-kaynaklari-yazilimi-fiyatlama-modeli.html",
+    "title": "İnsan Kaynakları Yazılımı Fiyatlama Modelleri",
+    "excerpt": "Kullanıcı başı, modül bazlı ve hibrit fiyatlama modellerini toplam maliyet açısından karşılaştırıyoruz.",
+    "category": "Fiyatlandırma",
+    "keywords": [
+      "insan kaynakları yazılımı",
+      "ik yazılımı fiyat",
+      "saas"
+    ],
+    "published": true,
+    "published_at": "2026-06-09"
+  },
+  {
+    "publish_date": "2026-06-10",
+    "slug": "makale-hr-yazilimi-global-lokal-fark.html",
+    "title": "HR Yazılımı Seçiminde Global vs Lokal Çözüm Kararı",
+    "excerpt": "HR yazılımı seçiminde mevzuat uyumu, destek ve entegrasyon açısından global-lokal farklarını analiz ediyoruz.",
+    "category": "Strateji",
+    "keywords": [
+      "hr yazılımı",
+      "ik yazılımı",
+      "kvkk"
+    ],
+    "published": true,
+    "published_at": "2026-06-10"
+  },
+  {
+    "publish_date": "2026-06-11",
+    "slug": "makale-personel-takip-programi-kurulum-rehberi.html",
+    "title": "Personel Takip Programı Kurulum Rehberi (Adım Adım)",
+    "excerpt": "Personel takip programı kurulumunda veri hazırlığı, yetki tasarımı ve pilot geçiş adımlarını planlayın.",
+    "category": "Kurulum",
+    "keywords": [
+      "personel takip programı",
+      "pdks",
+      "ik sistemi"
+    ],
+    "published": true,
+    "published_at": "2026-06-11"
+  },
+  {
+    "publish_date": "2026-06-12",
+    "slug": "makale-ik-raporlama-dashboard-kurgusu.html",
+    "title": "İK Raporlama Dashboard Kurgusu: Yöneticiye Hangi Veri Sunulmalı?",
+    "excerpt": "İK raporlama ekranlarını C-level, İK ekibi ve operasyon yöneticisi için farklılaştırma yöntemi.",
+    "category": "İK Analitiği",
+    "keywords": [
+      "ik analitiği",
+      "workforce analytics",
+      "dashboard"
+    ],
+    "published": true,
+    "published_at": "2026-06-12"
+  },
+  {
+    "publish_date": "2026-06-13",
+    "slug": "makale-ucret-adaleti-ve-analitik.html",
+    "title": "Ücret Adaleti ve Analitik: Nereden Başlamalı?",
+    "excerpt": "Ücret değerlendirme süreçlerinde adalet, şeffaflık ve veri odaklı karar mekanizması oluşturma rehberi.",
+    "category": "Ücret Yönetimi",
+    "keywords": [
+      "ücret değerlendirme",
+      "ücret adaleti",
+      "ik analitiği"
+    ],
+    "published": true,
+    "published_at": "2026-06-13"
+  },
+  {
+    "publish_date": "2026-06-14",
+    "slug": "makale-ik-roi-hesaplama-ornek-senaryolar.html",
+    "title": "İK ROI Hesaplama: 5 Örnek Senaryo",
+    "excerpt": "Perakende, lojistik, sağlık, üretim ve teknoloji şirketleri için örnek İK ROI hesaplama senaryoları.",
+    "category": "Finans",
+    "keywords": [
+      "ik roi hesaplama",
+      "ik yazılımı",
+      "tasarruf"
+    ],
+    "published": true,
+    "published_at": "2026-06-14"
+  },
+  {
+    "publish_date": "2026-06-15",
+    "slug": "makale-pdks-ile-bordro-entegrasyonu.html",
+    "title": "PDKS ile Bordro Entegrasyonu: Kaçak Maliyetleri Azaltma",
+    "excerpt": "PDKS verisini bordro süreçleriyle doğru eşleştirerek kaçak maliyet ve itirazları nasıl düşürebilirsiniz?",
+    "category": "Bordro",
+    "keywords": [
+      "pdks",
+      "bordro yazılımı",
+      "puantaj"
+    ],
+    "published": true,
+    "published_at": "2026-06-15"
+  },
+  {
+    "publish_date": "2026-06-16",
+    "slug": "makale-ise-alim-yazilimi-aday-deneyimi.html",
+    "title": "İşe Alım Yazılımında Aday Deneyimi Nasıl İyileştirilir?",
+    "excerpt": "Aday takip sistemi kullanan ekiplerde hızlı geri dönüş, net süreç ve güçlü aday deneyimi tasarımı.",
+    "category": "İşe Alım",
+    "keywords": [
+      "işe alım yazılımı",
+      "aday takip sistemi",
+      "aday deneyimi"
+    ],
+    "published": true,
+    "published_at": "2026-06-16"
+  },
+  {
+    "publish_date": "2026-06-17",
+    "slug": "makale-insan-kaynaklari-yazilimi-kvkk-kontrol-listesi.html",
+    "title": "İnsan Kaynakları Yazılımı için KVKK Kontrol Listesi",
+    "excerpt": "İnsan kaynakları yazılımı kullanımında veri minimizasyonu, erişim yetkisi ve saklama politikası kontrol listesi.",
+    "category": "Uyumluluk",
+    "keywords": [
+      "insan kaynakları yazılımı",
+      "kvkk",
+      "güvenlik"
+    ],
+    "published": true,
+    "published_at": "2026-06-17"
+  },
+  {
+    "publish_date": "2026-06-18",
+    "slug": "makale-ik-yazilimi-uygulama-takvimi-90-gun.html",
+    "title": "İK Yazılımı Uygulama Takvimi: 90 Günde Canlıya Geçiş",
+    "excerpt": "İK yazılımı projelerinde 90 günlük uygulama takvimi: hazırlık, pilot, yaygınlaştırma ve ölçüm adımları.",
+    "category": "Kurulum",
+    "keywords": [
+      "ik yazılımı",
+      "uygulama planı",
+      "dijital dönüşüm"
+    ],
+    "published": true,
+    "published_at": "2026-06-18"
+  },
+  {
+    "publish_date": "2026-06-19",
+    "slug": "makale-hr-yazilimi-maliyet-hesabi.html",
+    "title": "HR Yazılımı Maliyet Hesabı: TCO Yaklaşımı",
+    "excerpt": "HR yazılımı yatırımında lisans, entegrasyon, eğitim ve operasyon maliyetlerini TCO yaklaşımıyla hesaplayın.",
+    "category": "Finans",
+    "keywords": [
+      "hr yazılımı",
+      "tco",
+      "ik roi"
+    ],
+    "published": true,
+    "published_at": "2026-06-19"
+  },
+  {
+    "publish_date": "2026-06-20",
+    "slug": "makale-performans-ve-prim-modeli.html",
+    "title": "Performans Yönetimi ile Prim Modelini Eşleştirme",
+    "excerpt": "Performans yönetimi sonuçlarını prim modelleriyle birleştirmek için adil ve ölçülebilir kurgular.",
+    "category": "Performans",
+    "keywords": [
+      "performans yönetimi",
+      "okr",
+      "prim"
+    ],
+    "published": true,
+    "published_at": "2026-06-20"
+  },
+  {
+    "publish_date": "2026-06-21",
+    "slug": "makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi.html",
+    "title": "Ücret Değerlendirme ve Piyasa Karşılaştırması",
+    "excerpt": "Ücret değerlendirme sürecinde rol aileleri, bant yapısı ve dış piyasa benchmark metodolojisi.",
+    "category": "Ücret Yönetimi",
+    "keywords": [
+      "ücret değerlendirme",
+      "piyasa karşılaştırması",
+      "compensation"
+    ],
+    "published": true,
+    "published_at": "2026-06-21"
+  },
+  {
+    "publish_date": "2026-06-22",
+    "slug": "makale-ik-analitigi-raporlama-sik-hatalar.html",
+    "title": "İK Analitiği Raporlamasında Sık Yapılan Hatalar",
+    "excerpt": "İK analitiği raporlarında yanlış KPI seçimi, eksik segmentasyon ve aksiyon üretmeyen dashboard sorunları.",
+    "category": "İK Analitiği",
+    "keywords": [
+      "ik analitiği",
+      "workforce analytics",
+      "kpi"
+    ],
+    "published": true,
+    "published_at": "2026-06-22"
+  },
+  {
+    "publish_date": "2026-06-23",
+    "slug": "makale-pdks-ve-uzaktan-calisma-yonetimi.html",
+    "title": "PDKS ve Uzaktan Çalışma Yönetimi",
+    "excerpt": "Uzaktan ve hibrit çalışmada PDKS süreçlerini mevzuata uygun ve operasyonel olarak sürdürülebilir hale getirin.",
+    "category": "PDKS",
+    "keywords": [
+      "pdks",
+      "uzaktan çalışma",
+      "personel takip"
+    ],
+    "published": true,
+    "published_at": "2026-06-23"
+  },
+  {
+    "publish_date": "2026-06-24",
+    "slug": "makale-ik-yazilimi-2026-trendler.html",
+    "title": "İK Yazılımı 2026 Trendleri: Ne Değişiyor?",
+    "excerpt": "İK yazılımı tarafında 2026'da öne çıkan otomasyon, analitik, uyumluluk ve çalışan deneyimi trendleri.",
+    "category": "Trend",
+    "keywords": [
+      "ik yazılımı",
+      "insan kaynakları yazılımı",
+      "hr tech"
+    ],
+    "published": false
+  }
+]

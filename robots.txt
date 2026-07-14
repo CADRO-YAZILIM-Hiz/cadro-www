@@ -1,0 +1,85 @@
+User-agent: *
+Allow: /
+Disallow: /index.nginx-debian.html
+Disallow: /RAKIP-ANALIZ-RAPORU.md
+Disallow: /page-content.js.bak
+Disallow: /node_modules/
+Disallow: /*.bak$
+Disallow: /site-config.js.live.backup
+
+# AI search & training crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: GoogleOther-Image
+Allow: /
+
+User-agent: GoogleOther-Video
+Allow: /
+
+User-agent: AppleBot
+Allow: /
+
+User-agent: AppleBot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+# Sitemaps & references
+Sitemap: https://www.cadro.io/sitemap.xml
+Sitemap: https://www.cadro.io/video-sitemap.xml
+Host: www.cadro.io
+
+# AI reference files (for AI crawlers)
+# AI Citation Guide: https://www.cadro.io/AI-CITATION-GUIDE.md
+# Content Update Calendar: https://www.cadro.io/content-update-calendar.md
+# Social Sharing Templates: https://www.cadro.io/social-sharing-templates.md

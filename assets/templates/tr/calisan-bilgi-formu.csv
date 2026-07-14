@@ -1,0 +1,69 @@
+﻿ÇALIŞAN BİLGİ FORMU - CADRO
+
+KİŞİSEL BİLGİLER
+Alan,Bilgi
+Ad:,
+Soyad:,
+T.C. Kimlik No:,
+Doğum Tarihi:,
+Doğum Yeri:,
+Cinsiyet:,
+Medeni Durum:,
+Uyruk:,
+Kan Grubu:,
+Ehliyet Sınıfı:,
+Askerlik Durumu:,
+
+İLETİŞİM BİLGİLERİ
+Alan,Bilgi
+Cep Telefonu:,
+Ev Telefonu:,
+E-posta (Kişisel):,
+E-posta (İş):,
+Adres:,
+İlçe:,
+İl:,
+Posta Kodu:,
+
+ACİL DURUM İLETİŞİM
+Alan,Bilgi
+Yakınlık Derecesi:,
+Ad Soyad:,
+Telefon:,
+Adres:,
+
+İŞ BİLGİLERİ
+Alan,Bilgi
+Şirket:,
+Departman:,
+Pozisyon:,
+İşe Giriş Tarihi:,
+Çalışma Tipi:,
+Sözleşme Türü:,
+Çalışma Lokasyonu:,
+Yönetici:,
+Sicil No:,
+
+EĞİTİM BİLGİLERİ
+Eğitim Düzeyi,Okul Adı,Bölüm,Mezuniyet Yılı
+,,, 
+,,, 
+,,, 
+
+BANKA BİLGİLERİ
+Alan,Bilgi
+Banka Adı:,
+Şube:,
+IBAN:,
+
+SERTİFİKA VE YETKİNLİKLER
+Sertifika / Yetkinlik,Kurum,Tarih
+,, 
+,, 
+,, 
+
+Yukarıdaki bilgilerin doğru olduğunu beyan ederim.
+
+Çalışan İmzası:,Tarih:
+
+Bu şablon CADRO tarafından ücretsiz olarak sunulmaktadır. www.cadro.io
