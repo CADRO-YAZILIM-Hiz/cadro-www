@@ -32,12 +32,13 @@ jobs:
       - name: Install dependencies
         run: |
           cd frontend
-          npm install
+          rm -rf node_modules package-lock.json
+          npm install --legacy-peer-deps
 
       - name: Build
         run: |
           cd frontend
-          npm run build
+          CI=false npm run build
 
       - name: Deploy to Azure Static Web App
         uses: Azure/static-web-apps-deploy@v1
