@@ -1,0 +1,106 @@
+# backend/app/models/asset_expense.py
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, Date, Boolean
+from sqlalchemy.orm import relationship
+from datetime import date
+from app.core.database import Base
+
+# ==============================================================
+# 💻 ZİMMET (ASSET) MODELİ
+# ==============================================================
+class Asset(Base):
+    __tablename__ = "assets"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    company_id = Column(Integer, ForeignKey("companies.id"), nullable=False)
+    employee_id = Column(Integer, ForeignKey("employees.id"), nullable=True) # Zimmet boştaysa null olabilir
+    
+    asset_name = Column(String, nullable=False) # Örn: MacBook Pro M3
+    category = Column(String, nullable=False)   # Örn: Elektronik, Araç, Telefon
+    serial_number = Column(String, nullable=True)
+    
+    issue_date = Column(Date, default=date.today)
+    return_date = Column(Date, nullable=True)
+    
+    status = Column(String, default="ASSIGNED") # ASSIGNED (Zimmetli), RETURNED (İade Edildi), DAMAGED (Hasarlı)
+    
+    # --- İLİŞKİLER ---
+    company = relationship("Company", back_populates="assets")
+    employee = relationship("Employee", back_populates="assets")
+
+
+# ==============================================================
+# 💸 MASRAF BEYANI (EXPENSE) MODELİ
+# ==============================================================
+class Expense(Base):
+    __tablename__ = "expenses"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    company_id = Column(Integer, ForeignKey("companies.id"), nullable=False)
+    employee_id = Column(Integer, ForeignKey("employees.id"), nullable=False)
+    
+    amount = Column(Float, nullable=False)
+    currency = Column(String(3), default="TRY")  # 🎯 Döviz Türü (TRY, USD, EUR vb.)
+    category = Column(String, nullable=False)    # 🎯 Kategori (Konaklama, Yemek, Ulaşım vb.)
+    description = Column(String, nullable=True)
+    expense_date = Column(Date, nullable=False)
+    
+    receipt_url = Column(String, nullable=True)  # 📸 Fiş/Fatura Görselinin Sunucudaki Yolu
+    status = Column(String, default="PENDING")   # PENDING, APPROVED, REJECTED
+    is_paid = Column(Boolean, default=False)     # Bordroya yansıtılıp ödendi mi?
+    
+    # --- İLİŞKİLER ---
+    company = relationship("Company", back_populates="expenses")
+    employee = relationship("Employee", back_populates="expenses")
+# ==============================================================
+# 🛒 SATIN ALMA TALEBİ (PURCHASE REQUEST) MODELİ
+# ==============================================================
+from sqlalchemy import Numeric, DateTime, Text
+from datetime import datetime
+
+class PurchaseRequest(Base):
+    __tablename__ = "purchase_requests"
+
+    id = Column(Integer, primary_key=True, index=True)
+    company_id = Column(Integer, ForeignKey("companies.id"), nullable=False)
+    employee_id = Column(Integer, ForeignKey("employees.id"), nullable=False)
+    finance_approver_id = Column(Integer, ForeignKey("employees.id"), nullable=True)
+    approved_by = Column(Integer, ForeignKey("employees.id"), nullable=True)
+
+    item_name = Column(String, nullable=False)
+    item_url = Column(String, nullable=True)
+    vendor_name = Column(String, nullable=True)
+    quantity = Column(Integer, default=1)
+    unit_price = Column(Numeric(12, 2), nullable=False)
+    total_amount = Column(Numeric(12, 2), nullable=False)
+    currency = Column(String(3), default="TRY")
+    justification = Column(Text, nullable=True)
+    needed_by = Column(Date, nullable=True)
+    status = Column(String, default="PENDING")  # PENDING, APPROVED, REJECTED
+    rejection_reason = Column(Text, nullable=True)
+    converted_expense_id = Column(Integer, ForeignKey("expenses.id"), nullable=True)
+
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+
+    company = relationship("Company", foreign_keys=[company_id])
+    employee = relationship("Employee", foreign_keys=[employee_id])
+    finance_approver = relationship("Employee", foreign_keys=[finance_approver_id])
+
+
+# ==============================================================
+# 📋 SATIN ALMA TALEBİ AKSİYON LOGU
+# ==============================================================
+class PurchaseRequestActionLog(Base):
+    __tablename__ = "purchase_request_action_logs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    company_id = Column(Integer, ForeignKey("companies.id"), nullable=False)
+    purchase_request_id = Column(Integer, ForeignKey("purchase_requests.id"), nullable=False)
+    actor_employee_id = Column(Integer, ForeignKey("employees.id"), nullable=True)
+
+    action = Column(String, nullable=False)
+    previous_status = Column(String, nullable=True)
+    new_status = Column(String, nullable=True)
+    detail = Column(Text, nullable=True)
+
+    created_at = Column(DateTime, default=datetime.utcnow)

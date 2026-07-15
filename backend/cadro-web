@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    server_name cadro.io www.cadro.io;
+
+    root /var/www/cadro/frontend;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
+
