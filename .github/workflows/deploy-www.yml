@@ -18,6 +18,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Prepare deploy folder
+        run: |
+          mkdir deploy
+          find . -maxdepth 1 -type f \( -name "*.html" -o -name "*.js" -o -name "*.css" -o -name "*.txt" -o -name "*.xml" -o -name "*.json" -o -name "*.csv" -o -name "*.md" -o -name "*.ico" -o -name "*.png" -o -name "*.svg" -o -name "*.webp" -o -name "*.webmanifest" -o -name ".htaccess" -o -name "llms.txt" \) -exec cp {} deploy/ \; 2>/dev/null || true
+          cp -r ar de en assets scripts ik-yazilimi images deploy/ 2>/dev/null || true
+          echo "Deploy folder size: $(du -sh deploy/)"
+          echo "File count: $(find deploy -type f | wc -l)"
+
       - name: Deploy to Azure Static Web App
         uses: Azure/static-web-apps-deploy@v1
         with:
@@ -25,4 +33,4 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: upload
           skip_app_build: true
-          app_location: .
+          app_location: deploy
