@@ -1,0 +1,22 @@
+{
+  "name": "CADRO Static Cloud Dev",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "forwardPorts": [8080],
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ritwickdey.liveserver",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+  "portsAttributes": {
+    "8080": {
+      "label": "Static Preview",
+      "onAutoForward": "openPreview"
+    }
+  }
+}
