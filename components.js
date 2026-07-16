@@ -7,7 +7,7 @@ window.CADRO_NAVBAR_HTML = `<header class="topbar">
           <a href="/#compare" data-i18n-key="nav_compare">Neden Cadro?</a>
           <a href="pricing.html" data-i18n-key="nav_pricing">Fiyatlar</a>
           <a href="/#resources" data-i18n-key="nav_resources">Kaynaklar</a>
-          <a href="vaka-calismalari.html">Vaka &Ccedil;al&iect;&inodot;maları</a><a href="faq.html">SSS</a><a href="blog.html">Blog</a>
+          <a href="vaka-calismalari.html" data-i18n-key="nav_case_studies">Vaka &Ccedil;al&iect;&inodot;maları</a><a href="faq.html">SSS</a><a href="blog.html">Blog</a>
         </nav>
         <div class="topbar-actions">
           <select id="lang-switch" class="lang-switch" aria-label="Language">
