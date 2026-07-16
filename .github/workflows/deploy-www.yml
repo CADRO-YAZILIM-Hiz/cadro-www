@@ -3,8 +3,6 @@ name: www.cadro.io Deploy - Static Site
 on:
   push:
     branches: [main]
-    paths-ignore:
-      - '.github/**'
   workflow_dispatch:
 
 jobs:
