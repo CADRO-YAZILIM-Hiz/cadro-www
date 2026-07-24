@@ -444,6 +444,31 @@ function applyImageLoadingHints() {
   });
 }
 
+function translateBlogCards(dict) {
+  document.querySelectorAll('.blog-card').forEach((card) => {
+    // Translate blog meta
+    const meta = card.querySelector('.blog-meta');
+    if (meta && meta.dataset.i18nKey && dict[meta.dataset.i18nKey]) {
+      meta.textContent = dict[meta.dataset.i18nKey];
+    }
+    // Translate blog title
+    const title = card.querySelector('h3');
+    if (title && title.dataset.i18nKey && dict[title.dataset.i18nKey]) {
+      title.textContent = dict[title.dataset.i18nKey];
+    }
+    // Translate blog description
+    const desc = card.querySelector('p');
+    if (desc && desc.dataset.i18nKey && dict[desc.dataset.i18nKey]) {
+      desc.textContent = dict[desc.dataset.i18nKey];
+    }
+    // Translate read more link
+    const readMore = card.querySelector('.read-more');
+    if (readMore && readMore.dataset.i18nKey && dict[readMore.dataset.i18nKey]) {
+      readMore.textContent = dict[readMore.dataset.i18nKey];
+    }
+  });
+}
+
 function applyTranslations(lang) {
   lang = normalizeLanguageCode(lang);
   const dict = translations[lang] || translations.tr;
@@ -462,6 +487,7 @@ function applyTranslations(lang) {
   }
 
   translateNodes(document, dict);
+  if (page === 'blog') translateBlogCards(dict);
   updateHomepageScreenshots(lang);
   updateModuleLandingScreenshots(lang);
 
