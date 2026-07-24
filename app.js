@@ -206,6 +206,15 @@ function syncStructuredDataLanguage(lang, page, dict) {
         if (node.headline) node.headline = meta.title;
         if (node.description) node.description = meta.description;
       }
+      // Sync ItemList entries from live blog-card headings so they always match the visible language.
+      if (node['@type'] === 'ItemList' && Array.isArray(node.itemListElement) && page === 'blog') {
+        const headings = Array.from(document.querySelectorAll('.blog-card h3'));
+        node.itemListElement.forEach((item, index) => {
+          if (headings[index]) {
+            item.name = headings[index].textContent.trim();
+          }
+        });
+      }
       script.textContent = JSON.stringify(node);
     } catch (error) {
       // Keep static schema untouched if parsing fails.
