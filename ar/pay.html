@@ -7,7 +7,7 @@
 <link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/pay.html">
 <link rel="alternate" hreflang="x-default" href="https://www.cadro.io/pay.html"><meta content="noindex, nofollow, noarchive" name="robots"><meta content="website" property="og:type"><meta content="CADRO | دفع آمن" property="og:title"><meta content="صفحة CADRO الآمنة للدفع والاشتراك." property="og:description"><meta property="og:url" content="https://www.cadro.io/ar/pay.html"><meta content="https://www.cadro.io/assets/screenshots/phase2/ar/dashboard.webp" property="og:image">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630"><meta content="CADRO ödeme ve sipariş sayfası" property="og:image:alt"><meta content="summary_large_image" name="twitter:card"><meta content="CADRO | دفع آمن" name="twitter:title"><meta content="صفحة CADRO الآمنة للدفع والاشتراك." name="twitter:description"><meta content="https://www.cadro.io/assets/screenshots/phase2/ar/dashboard.webp" name="twitter:image">
+<meta property="og:image:height" content="630"><meta content="صفحة الدفع والطلب من CADRO" property="og:image:alt"><meta content="summary_large_image" name="twitter:card"><meta content="CADRO | دفع آمن" name="twitter:title"><meta content="صفحة CADRO الآمنة للدفع والاشتراك." name="twitter:description"><meta content="https://www.cadro.io/assets/screenshots/phase2/ar/dashboard.webp" name="twitter:image">
 
 <title>CADRO | دفع آمن</title>
 <link href="../styles.min.css" rel="stylesheet">
@@ -17,14 +17,14 @@
 <style>
       .brand-logo-img {
         display: block;
-        height: 32px; /* Navbar yüksekliğine göre logo boyutu */
+        height: 32px;
         width: auto;
       }
       .footer .brand-logo-img {
-        height: 48px; /* Footer'daki logo boyutu */
+        height: 48px;
         margin-bottom: 1rem;
       }
-      /* Footer sütun yapısı ve link hizalaması */
+      /* Footer columns and link alignment */
       .footer {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
@@ -99,8 +99,8 @@
 <p data-i18n-key="pay_checkout_ready_text">أكمل معاملتك بأمان عبر مزود الدفع العالمي الخاص بنا.</p>
 </div>
 <div class="checkout-form" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
-<input id="checkout-company" placeholder="Şirket Adı" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="text">
-<input id="checkout-email" placeholder="E-Posta Adresi" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="email">
+<input id="checkout-company" placeholder="اسم الشركة" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="text">
+<input id="checkout-email" placeholder="عنوان البريد الإلكتروني" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="email">
 </div>
 <div class="billing-toggle" data-billing-toggle="">
 <button class="billing-chip is-active" data-billing-option="monthly" data-i18n-key="billing_monthly" type="button">شهري</button>
@@ -146,36 +146,36 @@
 </section>
   <section class="section reveal-on-scroll">
     <div class="section-head narrow">
-      <p class="eyebrow">GÜVENCE</p>
-      <h2>Ödeme güvenliği ve sık sorulan sorular</h2>
+      <p class="eyebrow">الأمان</p>
+      <h2>أمان الدفع والأسئلة الشائعة</h2>
     </div>
     <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
       <article class="feature-card">
-        <h3>Ödemeler güvenli mi?</h3>
-        <p>Evet. Tüm ödeme işlemleri PCI DSS Seviye 1 sertifikalı ödeme sağlayıcımız Paddle üzerinden gerçekleşir. Kredi kartı bilgileriniz doğrudan Paddle altyapısında işlenir, CADRO sunucularında saklanmaz. SSL şifreleme ile veri aktarımınız korunur.</p>
+        <h3>هل المدفوعات آمنة؟</h3>
+        <p>نعم. تتم جميع عمليات الدفع عبر مزود الدفع Paddle المعتمد بمستوى PCI DSS 1. تتم معالجة بيانات البطاقة مباشرة لدى Paddle ولا يتم تخزينها على خوادم CADRO. كما يتم تأمين نقل البيانات عبر تشفير SSL.</p>
       </article>
       <article class="feature-card">
-        <h3>Fatura nasıl kesilir?</h3>
-        <p>Ödeme işleminiz tamamlandıktan sonra Paddle tarafından e-posta adresinize dijital fatura gönderilir. Şirket faturası için ödeme sırasında vergi bilgilerinizi ekleyebilirsiniz. Faturalarınıza Paddle müşteri panelinden de erişebilirsiniz.</p>
+        <h3>كيف أحصل على الفاتورة؟</h3>
+        <p>بعد اكتمال الدفع، يرسل Paddle فاتورة رقمية إلى بريدك الإلكتروني. ويمكنك إدخال بياناتك الضريبية أثناء الدفع للحصول على فاتورة شركة، كما يمكنك الوصول إلى فواتيرك من لوحة عميل Paddle.</p>
       </article>
       <article class="feature-card">
-        <h3>Plan değişikliği yapabilir miyim?</h3>
-        <p>Evet, dilediğiniz zaman planınızı yükseltebilir veya düşürebilirsiniz. Plan yükseltme anında aktif olur ve fark ücreti otomatik hesaplanır. Plan düşürme işlemi mevcut fatura döneminin sonunda geçerli olur.</p>
+        <h3>هل يمكنني تغيير الخطة؟</h3>
+        <p>نعم، يمكنك الترقية أو التخفيض في أي وقت. يتم تفعيل الترقية فورًا مع احتساب فرق السعر تلقائيًا، بينما يسري التخفيض عند نهاية دورة الفوترة الحالية.</p>
       </article>
       <article class="feature-card">
-        <h3>İptal durumunda ne olur?</h3>
-        <p>Aboneliğinizi istediğiniz zaman iptal edebilirsiniz. İptal sonrası hesabınız fatura dönemi sonuna kadar aktif kalır. Verilerinizi bu süre içinde dışa aktarabilirsiniz. İade politikamız hakkında detaylı bilgi için lütfen ilgili sayfayı ziyaret edin.</p>
+        <h3>ماذا يحدث عند الإلغاء؟</h3>
+        <p>يمكنك إلغاء اشتراكك في أي وقت. بعد الإلغاء يبقى حسابك نشطًا حتى نهاية دورة الفوترة، ويمكنك تصدير بياناتك خلال هذه المدة. لمزيد من التفاصيل راجع سياسة الاسترداد.</p>
       </article>
     </div>
     <div class="contact-card" style="margin-top: 24px; text-align: center;">
       <div>
-        <p class="eyebrow">DESTEK</p>
-        <h2>Başka bir sorunuz mu var?</h2>
-        <p>Ödeme, plan seçimi veya abonelik yönetimi ile ilgili tüm sorularınız için destek ekibimiz size yardımcı olmaktan mutluluk duyar.</p>
+        <p class="eyebrow">الدعم</p>
+        <h2>هل لديك سؤال آخر؟</h2>
+        <p>يسعد فريق الدعم لدينا بمساعدتك في جميع أسئلتك حول الدفع أو اختيار الخطة أو إدارة الاشتراك.</p>
       </div>
       <div class="contact-actions" style="justify-content: center;">
-        <a class="ghost-button" href="mailto:info@cadro.io?subject=Ödeme%20ve%20Abonelik%20Sorusu">E-posta Gönder</a>
-        <a class="ghost-button" href="faq.html">SSS Sayfası</a>
+        <a class="ghost-button" href="mailto:info@cadro.io?subject=استفسار%20حول%20الدفع%20والاشتراك">إرسال بريد إلكتروني</a>
+        <a class="ghost-button" href="faq.html">صفحة الأسئلة الشائعة</a>
       </div>
     </div>
   </section>

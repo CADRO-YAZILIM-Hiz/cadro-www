@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"><meta content="CADRO sichere Zahlungs- und Abonnementseite." name="description"><link href="https://www.cadro.io/de/pay.html" rel="canonical"><link rel="alternate" hreflang="tr" href="https://www.cadro.io/pay.html"><link rel="alternate" hreflang="en" href="https://www.cadro.io/en/pay.html"><link rel="alternate" hreflang="de" href="https://www.cadro.io/de/pay.html"><link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/pay.html"><link rel="alternate" hreflang="x-default" href="https://www.cadro.io/pay.html"><meta content="noindex, nofollow, noarchive" name="robots"><meta content="website" property="og:type"><meta content="CADRO | Sicherer Checkout" property="og:title"><meta content="CADRO sichere Zahlungs- und Abonnementseite." property="og:description"><meta content="https://www.cadro.io/de/pay.html" property="og:url"><meta content="https://www.cadro.io/assets/screenshots/phase2/de/dashboard.webp" property="og:image">
 <meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630"><meta content="CADRO ödeme ve sipariş sayfası" property="og:image:alt"><meta content="summary_large_image" name="twitter:card"><meta content="CADRO | Sicherer Checkout" name="twitter:title"><meta content="CADRO sichere Zahlungs- und Abonnementseite." name="twitter:description"><meta content="https://www.cadro.io/assets/screenshots/phase2/de/dashboard.webp" name="twitter:image">
+<meta property="og:image:height" content="630"><meta content="CADRO Zahlungs- und Bestellseite" property="og:image:alt"><meta content="summary_large_image" name="twitter:card"><meta content="CADRO | Sicherer Checkout" name="twitter:title"><meta content="CADRO sichere Zahlungs- und Abonnementseite." name="twitter:description"><meta content="https://www.cadro.io/assets/screenshots/phase2/de/dashboard.webp" name="twitter:image">
 
 <title>CADRO | Sicherer Checkout</title>
 <link href="../styles.min.css" rel="stylesheet">
@@ -94,8 +94,8 @@
 <p data-i18n-key="pay_checkout_ready_text">Schließen Sie Ihre Transaktion sicher über unseren globalen Zahlungsanbieter ab.</p>
 </div>
 <div class="checkout-form" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
-<input id="checkout-company" placeholder="Şirket Adı" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="text">
-<input id="checkout-email" placeholder="E-Posta Adresi" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="email">
+<input id="checkout-company" placeholder="Firmenname" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="text">
+<input id="checkout-email" placeholder="E-Mail-Adresse" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="email">
 </div>
 <div class="billing-toggle" data-billing-toggle="">
 <button class="billing-chip is-active" data-billing-option="monthly" data-i18n-key="billing_monthly" type="button">Monatlich</button>
@@ -141,36 +141,36 @@
 </section>
   <section class="section reveal-on-scroll">
     <div class="section-head narrow">
-      <p class="eyebrow">GÜVENCE</p>
-      <h2>Ödeme güvenliği ve sık sorulan sorular</h2>
+      <p class="eyebrow">SICHERHEIT</p>
+      <h2>Zahlungssicherheit und häufige Fragen</h2>
     </div>
     <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
       <article class="feature-card">
-        <h3>Ödemeler güvenli mi?</h3>
-        <p>Evet. Tüm ödeme işlemleri PCI DSS Seviye 1 sertifikalı ödeme sağlayıcımız Paddle üzerinden gerçekleşir. Kredi kartı bilgileriniz doğrudan Paddle altyapısında işlenir, CADRO sunucularında saklanmaz. SSL şifreleme ile veri aktarımınız korunur.</p>
+        <h3>Sind Zahlungen sicher?</h3>
+        <p>Ja. Alle Zahlungen werden über unseren PCI-DSS-Level-1-zertifizierten Zahlungsanbieter Paddle abgewickelt. Ihre Kartendaten werden direkt bei Paddle verarbeitet und nicht auf CADRO-Servern gespeichert. Die Datenuebertragung ist per SSL verschluesselt.</p>
       </article>
       <article class="feature-card">
-        <h3>Fatura nasıl kesilir?</h3>
-        <p>Ödeme işleminiz tamamlandıktan sonra Paddle tarafından e-posta adresinize dijital fatura gönderilir. Şirket faturası için ödeme sırasında vergi bilgilerinizi ekleyebilirsiniz. Faturalarınıza Paddle müşteri panelinden de erişebilirsiniz.</p>
+        <h3>Wie erhalte ich meine Rechnung?</h3>
+        <p>Nach Abschluss der Zahlung sendet Paddle eine digitale Rechnung an Ihre E-Mail-Adresse. Fuer Firmenrechnungen koennen Sie beim Checkout Ihre Steuerdaten angeben. Ihre Rechnungen sind auch im Paddle-Kundenbereich abrufbar.</p>
       </article>
       <article class="feature-card">
-        <h3>Plan değişikliği yapabilir miyim?</h3>
-        <p>Evet, dilediğiniz zaman planınızı yükseltebilir veya düşürebilirsiniz. Plan yükseltme anında aktif olur ve fark ücreti otomatik hesaplanır. Plan düşürme işlemi mevcut fatura döneminin sonunda geçerli olur.</p>
+        <h3>Kann ich meinen Plan wechseln?</h3>
+        <p>Ja, Sie koennen Ihren Plan jederzeit hoch- oder herunterstufen. Upgrades werden sofort aktiv, der Differenzbetrag wird automatisch berechnet. Downgrades gelten zum Ende des aktuellen Abrechnungszeitraums.</p>
       </article>
       <article class="feature-card">
-        <h3>İptal durumunda ne olur?</h3>
-        <p>Aboneliğinizi istediğiniz zaman iptal edebilirsiniz. İptal sonrası hesabınız fatura dönemi sonuna kadar aktif kalır. Verilerinizi bu süre içinde dışa aktarabilirsiniz. İade politikamız hakkında detaylı bilgi için lütfen ilgili sayfayı ziyaret edin.</p>
+        <h3>Was passiert bei einer Kuendigung?</h3>
+        <p>Sie koennen Ihr Abonnement jederzeit kuendigen. Ihr Konto bleibt bis zum Ende des Abrechnungszeitraums aktiv. In dieser Zeit koennen Sie Ihre Daten exportieren. Details finden Sie in unserer Rueckerstattungsrichtlinie.</p>
       </article>
     </div>
     <div class="contact-card" style="margin-top: 24px; text-align: center;">
       <div>
-        <p class="eyebrow">DESTEK</p>
-        <h2>Başka bir sorunuz mu var?</h2>
-        <p>Ödeme, plan seçimi veya abonelik yönetimi ile ilgili tüm sorularınız için destek ekibimiz size yardımcı olmaktan mutluluk duyar.</p>
+        <p class="eyebrow">SUPPORT</p>
+        <h2>Haben Sie weitere Fragen?</h2>
+        <p>Unser Support-Team hilft Ihnen gerne bei Fragen zu Zahlung, Planauswahl oder Abonnementverwaltung.</p>
       </div>
       <div class="contact-actions" style="justify-content: center;">
-        <a class="ghost-button" href="mailto:info@cadro.io?subject=Ödeme%20ve%20Abonelik%20Sorusu">E-posta Gönder</a>
-        <a class="ghost-button" href="faq.html">SSS Sayfası</a>
+        <a class="ghost-button" href="mailto:info@cadro.io?subject=Frage%20zu%20Zahlung%20und%20Abonnement">E-Mail senden</a>
+        <a class="ghost-button" href="faq.html">FAQ-Seite</a>
       </div>
     </div>
   </section>
