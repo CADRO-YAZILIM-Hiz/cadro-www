@@ -26,6 +26,11 @@ window.CADRO_FOOTER_HTML = `<footer class="footer">
       <div class="footer-brand">
         <img src="./Cadro Logo.png" alt="CADRO" class="footer-logo" loading="lazy">
         <p data-i18n-key="footer_tagline">T&uuml;rkiye&rsquo;nin yerli bulut tabanlı &İK; yazılımı.</p>
+        <div class="footer-contact">
+          <span class="footer-contact-item">&#x1F4DE; <a href="tel:+905428842102" data-i18n-key="footer_phone">+90 542 884 21 06</a></span>
+          <span class="footer-contact-item" data-i18n-key="footer_address">&#x1F4CD; Ankara, T&uuml;rkiye</span>
+          <span class="footer-contact-item" data-i18n-key="footer_yerli">&#x1F1F9;&#x1F1F7; Yerli &Uuml;retim</span>
+        </div>
       </div>
       <div class="footer-links">
         <div class="footer-col">
@@ -46,6 +51,11 @@ window.CADRO_FOOTER_HTML = `<footer class="footer">
           <a href="terms.html" data-i18n-key="footer_terms_link">Kullanım &Scedil;artları</a>
           <a href="refund.html" data-i18n-key="footer_refund_link">&İade; Politikası</a>
         </div>
+      </div>
+      <div class="footer-trust-bar">
+        <span class="footer-trust-item" data-i18n-key="footer_ssl">&#x1F512; 256-bit SSL</span>
+        <span class="footer-trust-item" data-i18n-key="footer_hosting">&#x2601;&#xFE0F; ISO 27001 Hosting</span>
+        <span class="footer-trust-item" data-i18n-key="footer_gdpr">&#x1F6E1;&#xFE0F; GDPR & KVKK</span>
       </div>
     </div>
   </footer>`;
