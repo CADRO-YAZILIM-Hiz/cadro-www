@@ -10,6 +10,16 @@
 - Pricing: https://www.cadro.io/pricing.html
 - Blog: https://www.cadro.io/blog.html
 - Case studies: https://www.cadro.io/vaka-calismalari.html
+- Demo: https://www.cadro.io/demo.html
+
+## Global Calculators (SEO Tools)
+- UAE Gratuity: https://www.cadro.io/en/gratuity-calculator-uae.html
+- German Payroll Tax: https://www.cadro.io/de/lohnsteuer-rechner.html
+- German Payroll Tax (EN): https://www.cadro.io/en/german-payroll-tax-calculator.html
+- UK Salary: https://www.cadro.io/en/uk-salary-calculator.html
+- Saudi GOSI (AR): https://www.cadro.io/ar/gosi-calculator-sa.html
+- Saudi GOSI (EN): https://www.cadro.io/en/gosi-calculator-sa.html
+- US Paycheck: https://www.cadro.io/en/us-paycheck-calculator.html
 
 ## Sitemaps
 - https://www.cadro.io/sitemap.xml

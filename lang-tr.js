@@ -105,6 +105,7 @@ window.CADRO_TR_tr = {
     nav_compare: 'Neden Cadro?',
     nav_pricing: 'Fiyatlar',
     nav_resources: 'Kaynaklar',
+    nav_demo: 'Demo',
     cta_ats_module: 'ATS Modülünü İncele →',
     cta_performance_module: 'Performans Modülünü İncele →',
     cta_dossier_module: 'Özlük ve İzin Modülünü İncele →',

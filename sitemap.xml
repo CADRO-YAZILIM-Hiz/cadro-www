@@ -3720,4 +3720,94 @@
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
     <priority>0.70</priority>
   </url>
+
+  <url>
+    <loc>https://www.cadro.io/en/demo.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/demo.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/demo.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/demo.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/demo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/demo.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/en/demo.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/demo.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/demo.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/demo.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/demo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/demo.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/en/demo.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/demo.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/demo.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/demo.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/demo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/demo.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/en/demo.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/demo.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/demo.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/demo.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/demo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/demo.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/en/gratuity-calculator-uae.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/gratuity-calculator-uae.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/en/gratuity-calculator-uae.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc></loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/lohnsteuer-rechner.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/de/lohnsteuer-rechner.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/en/german-payroll-tax-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/german-payroll-tax-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/en/german-payroll-tax-calculator.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/en/uk-salary-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/uk-salary-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/en/uk-salary-calculator.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc></loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/gosi-calculator-sa.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/ar/gosi-calculator-sa.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/en/gosi-calculator-sa.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/gosi-calculator-sa.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/en/gosi-calculator-sa.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/en/us-paycheck-calculator.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/us-paycheck-calculator.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/en/us-paycheck-calculator.html" />
+    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
 </urlset>
