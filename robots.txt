@@ -7,6 +7,9 @@ Disallow: /node_modules/
 Disallow: /*.bak$
 Disallow: /site-config.js.live.backup
 
+Sitemap: https://www.cadro.io/sitemap.xml
+Sitemap: https://www.cadro.io/video-sitemap.xml
+
 # AI search & training crawlers
 User-agent: GPTBot
 Allow: /
