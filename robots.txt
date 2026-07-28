@@ -13,24 +13,48 @@ Sitemap: https://www.cadro.io/video-sitemap.xml
 # AI search & training crawlers
 User-agent: GPTBot
 Allow: /
+Allow: /md/
 
 User-agent: Google-Extended
 Allow: /
+Allow: /md/
 
 User-agent: PerplexityBot
 Allow: /
+Allow: /md/
 
 User-agent: ClaudeBot
 Allow: /
+Allow: /md/
 
 User-agent: Claude-Web
 Allow: /
+Allow: /md/
 
 User-agent: OAI-SearchBot
 Allow: /
+Allow: /md/
 
 User-agent: ChatGPT-User
 Allow: /
+Allow: /md/
+
+User-agent: Applebot
+Allow: /
+Allow: /md/
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /md/
+
+User-agent: cohere-ai
+Allow: /
+Allow: /md/
+
+# LLMs.txt directive (AI crawlers için)
+# https://www.cadro.io/llms.txt
+# https://www.cadro.io/llms-full.txt
+# https://www.cadro.io/md/
 
 User-agent: Googlebot
 Allow: /

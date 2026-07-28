@@ -11,6 +11,23 @@
 - Blog: https://www.cadro.io/blog.html
 - Case studies: https://www.cadro.io/vaka-calismalari.html
 - Demo: https://www.cadro.io/demo.html
+- FAQ: https://www.cadro.io/faq.html
+- HR Glossary: https://www.cadro.io/ik-sozlugu.html
+
+## AI Reference Files (Markdown)
+- Home: https://www.cadro.io/md/index.md
+- Pricing: https://www.cadro.io/md/pricing.md
+- Features: https://www.cadro.io/md/features.md
+- FAQ: https://www.cadro.io/md/faq.md
+- Case Studies: https://www.cadro.io/md/case-studies.md
+
+## Developer & AI Resources
+- Full site content: https://www.cadro.io/llms-full.txt
+- AI Citation Guide: https://www.cadro.io/AI-CITATION-GUIDE.md
+- MCP Server: https://www.cadro.io/mcp-server/
+- Social Sharing Templates: https://www.cadro.io/social-sharing-templates.md
+- Content Update Calendar: https://www.cadro.io/content-update-calendar.md
+- Blog Publishing System: https://www.cadro.io/BLOG-PUBLISHING-SYSTEM.md
 
 ## Global Calculators (SEO Tools)
 - UAE Gratuity: https://www.cadro.io/en/gratuity-calculator-uae.html

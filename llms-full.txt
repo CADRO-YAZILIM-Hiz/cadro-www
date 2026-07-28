@@ -136,6 +136,8 @@
 - [Sosyal Medya Paylaşım Şablonları](https://www.cadro.io/social-sharing-templates.md): LinkedIn ve X için optimize paylaşım şablonları
 - [İçerik Güncelleme Takvimi](https://www.cadro.io/content-update-calendar.md): Aylık içerik güncelleme rotasyonu ve kontrol listesi
 - [Blog Yayın Sistemi](https://www.cadro.io/BLOG-PUBLISHING-SYSTEM.md): Blog otomasyon dokümantasyonu
+- [AI Referans Dosyaları (md/)](https://www.cadro.io/md/): AI sistemleri için optimize edilmiş markdown dokümanları
+- [MCP Server](https://www.cadro.io/mcp-server/): CADRO MCP sunucusu (CV değerlendirme, OKR analizi)
 
 ## Dil Kökleri
 
