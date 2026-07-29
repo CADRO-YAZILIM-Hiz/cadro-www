@@ -8,8 +8,7 @@ Disallow: /*.bak$
 Disallow: /site-config.js.live.backup
 
 Sitemap: https://www.cadro.io/sitemap.xml
-Sitemap: https://www.cadro.io/video-sitemap.xml
-
+Sitemap: https://www.cadro.io/video-sitemap.xmlSitemap: https://www.cadro.io/ai-sitemap.xml
 # AI search & training crawlers
 User-agent: GPTBot
 Allow: /
