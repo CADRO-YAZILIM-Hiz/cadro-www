@@ -1,162 +1,253 @@
-# CADRO - Apache Server Configuration
-# Security, Performance & SEO Optimizations
-
-# ----------------------------------------------------------------------
-# REDIRECTS
-# ----------------------------------------------------------------------
-
-# HTTPS Redirect
+# CADRO Multilingual Slug Redirects - Generated 2026-07-30
+# This file handles 301 redirects from old Turkish-based slugs to new language-appropriate slugs
 RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+RewriteBase /
 
-# WWW Redirect (non-www -> www)
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+# === ENGLISH (EN) Redirects ===
+RewriteRule ^en/araclar\.html$ /en/tools.html [R=301,L]
+RewriteRule ^en/asgari-ucret-hesaplama\.html$ /en/minimum-wage-calculator.html [R=301,L]
+RewriteRule ^en/ats-ise-alim-yazilimi\.html$ /en/ats-recruitment-software.html [R=301,L]
+RewriteRule ^en/bordro-maliyet-hesaplama\.html$ /en/payroll-cost-calculator.html [R=301,L]
+RewriteRule ^en/bordro-yazilimi\.html$ /en/payroll-software.html [R=301,L]
+RewriteRule ^en/dijital-ozluk-ve-izin\.html$ /en/digital-hr-dossier.html [R=301,L]
+RewriteRule ^en/ik-analitigi\.html$ /en/hr-analytics.html [R=301,L]
+RewriteRule ^en/ik-arastirma-raporu-2026\.html$ /en/hr-research-report-2026.html [R=301,L]
+RewriteRule ^en/ik-roi-hesaplama\.html$ /en/hr-roi-calculator.html [R=301,L]
+RewriteRule ^en/ik-sozlugu\.html$ /en/hr-glossary.html [R=301,L]
+RewriteRule ^en/ik-yazilimi\.html$ /en/hr-software.html [R=301,L]
+RewriteRule ^en/kidem-tazminati-hesaplama\.html$ /en/severance-pay-calculator.html [R=301,L]
+RewriteRule ^en/kurumsal-bilgi-bankasi-ve-onboarding\.html$ /en/knowledge-base-onboarding.html [R=301,L]
+RewriteRule ^en/makale-2026-asgari-ucret-net-hesabi\.html$ /en/article-2026-minimum-wage-net-calculation.html [R=301,L]
+RewriteRule ^en/makale-2026-sgk-tavan-taban\.html$ /en/article-2026-social-security-ceiling-floor.html [R=301,L]
+RewriteRule ^en/makale-ai-ve-kvkk-uyumu\.html$ /en/article-ai-and-kvkk-compliance.html [R=301,L]
+RewriteRule ^en/makale-bordro-yazilimi-entegrasyon-listesi\.html$ /en/article-payroll-software-integration-checklist.html [R=301,L]
+RewriteRule ^en/makale-bordro-yazilimi-nasil-secilir\.html$ /en/article-how-to-choose-payroll-software.html [R=301,L]
+RewriteRule ^en/makale-dijital-ozluk-donusu-suresi\.html$ /en/article-digital-hr-dossier-return-time.html [R=301,L]
+RewriteRule ^en/makale-dijital-ozluk-ve-kvkk\.html$ /en/article-digital-hr-dossier-and-kvkk.html [R=301,L]
+RewriteRule ^en/makale-esnek-calisma-saatleri-2026\.html$ /en/article-flexible-working-hours-2026.html [R=301,L]
+RewriteRule ^en/makale-excel-bordro-sizintilari\.html$ /en/article-excel-payroll-data-leaks.html [R=301,L]
+RewriteRule ^en/makale-hr-yazilimi-global-lokal-fark\.html$ /en/article-hr-software-global-vs-local.html [R=301,L]
+RewriteRule ^en/makale-hr-yazilimi-maliyet-hesabi\.html$ /en/article-hr-software-cost-calculation.html [R=301,L]
+RewriteRule ^en/makale-ik-ai-etik-2026\.html$ /en/article-hr-ai-ethics-2026.html [R=301,L]
+RewriteRule ^en/makale-ik-analitigi-12-kpi\.html$ /en/article-hr-analytics-12-kpis.html [R=301,L]
+RewriteRule ^en/makale-ik-analitigi-raporlama-sik-hatalar\.html$ /en/article-hr-analytics-reporting-mistakes.html [R=301,L]
+RewriteRule ^en/makale-ik-dijital-donusum-2026\.html$ /en/article-hr-digital-transformation-2026.html [R=301,L]
+RewriteRule ^en/makale-ik-donusen-rol-2026\.html$ /en/article-evolving-hr-role-2026.html [R=301,L]
+RewriteRule ^en/makale-ik-raporlama-dashboard-kurgusu\.html$ /en/article-hr-reporting-dashboard-design.html [R=301,L]
+RewriteRule ^en/makale-ik-roi-hesaplama-formulu\.html$ /en/article-hr-roi-calculation-formula.html [R=301,L]
+RewriteRule ^en/makale-ik-roi-hesaplama-ornek-senaryolar\.html$ /en/article-hr-roi-calculation-scenarios.html [R=301,L]
+RewriteRule ^en/makale-ik-yapay-zeka-kesisim-2026\.html$ /en/article-hr-and-ai-intersection-2026.html [R=301,L]
+RewriteRule ^en/makale-ik-yazilimi-2026-trendler\.html$ /en/article-hr-software-2026-trends.html [R=301,L]
+RewriteRule ^en/makale-ik-yazilimi-karsilastirma-2026\.html$ /en/article-hr-software-comparison-2026.html [R=301,L]
+RewriteRule ^en/makale-ik-yazilimi-secim-rehberi-2026\.html$ /en/article-hr-software-selection-guide-2026.html [R=301,L]
+RewriteRule ^en/makale-ik-yazilimi-uygulama-takvimi-90-gun\.html$ /en/article-hr-software-implementation-90-days.html [R=301,L]
+RewriteRule ^en/makale-insan-kaynaklari-yazilimi-fiyatlama-modeli\.html$ /en/article-hr-software-pricing-model.html [R=301,L]
+RewriteRule ^en/makale-insan-kaynaklari-yazilimi-kvkk-kontrol-listesi\.html$ /en/article-hr-software-kvkk-checklist.html [R=301,L]
+RewriteRule ^en/makale-ise-alimda-ai-etik\.html$ /en/article-ai-ethics-in-recruitment.html [R=301,L]
+RewriteRule ^en/makale-ise-alim-sureci-kpi-metrikleri\.html$ /en/article-recruitment-process-kpi-metrics.html [R=301,L]
+RewriteRule ^en/makale-ise-alim-yazilimi-aday-deneyimi\.html$ /en/article-recruitment-software-candidate-experience.html [R=301,L]
+RewriteRule ^en/makale-ise-alim-yazilimi-ats-kontrol-listesi\.html$ /en/article-ats-recruitment-software-checklist.html [R=301,L]
+RewriteRule ^en/makale-izin-yonetimi-hatalari\.html$ /en/article-leave-management-mistakes.html [R=301,L]
+RewriteRule ^en/makale-kobi-icin-ik-programi\.html$ /en/article-hr-software-for-smes.html [R=301,L]
+RewriteRule ^en/makale-onboarding-dijitallestirme\.html$ /en/article-onboarding-digitalization.html [R=301,L]
+RewriteRule ^en/makale-pdks-ile-bordro-entegrasyonu\.html$ /en/article-pdks-payroll-integration.html [R=301,L]
+RewriteRule ^en/makale-pdks-secim-kriterleri\.html$ /en/article-pdks-selection-criteria.html [R=301,L]
+RewriteRule ^en/makale-pdks-ve-uzaktan-calisma-yonetimi\.html$ /en/article-pdks-and-remote-work-management.html [R=301,L]
+RewriteRule ^en/makale-performans-ve-prim-modeli\.html$ /en/article-performance-and-bonus-model.html [R=301,L]
+RewriteRule ^en/makale-performans-yonetimi-okr-modeli\.html$ /en/article-performance-management-okr-model.html [R=301,L]
+RewriteRule ^en/makale-personel-takip-programi-kurulum-rehberi\.html$ /en/article-employee-tracking-setup-guide.html [R=301,L]
+RewriteRule ^en/makale-personel-takip-programi-nedir\.html$ /en/article-what-is-employee-tracking-software.html [R=301,L]
+RewriteRule ^en/makale-prediktif-ik\.html$ /en/article-predictive-hr.html [R=301,L]
+RewriteRule ^en/makale-puantaj-ve-vardiya-optimizasyonu\.html$ /en/article-attendance-and-shift-optimization.html [R=301,L]
+RewriteRule ^en/makale-sessiz-istifa-maliyeti\.html$ /en/article-quiet-quitting-cost.html [R=301,L]
+RewriteRule ^en/makale-turnover-dusurme-yollari\.html$ /en/article-ways-to-reduce-turnover.html [R=301,L]
+RewriteRule ^en/makale-ucret-adaleti-ve-analitik\.html$ /en/article-pay-equity-and-analytics.html [R=301,L]
+RewriteRule ^en/makale-ucret-degerlendirme-sureci\.html$ /en/article-salary-benchmarking-process.html [R=301,L]
+RewriteRule ^en/makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi\.html$ /en/article-salary-benchmarking-and-market-comparison.html [R=301,L]
+RewriteRule ^en/makale-yapay-zeka-genai\.html$ /en/article-ai-and-generative-ai.html [R=301,L]
+RewriteRule ^en/makale-yillik-performans-degerlendirme\.html$ /en/article-annual-performance-review.html [R=301,L]
+RewriteRule ^en/masraf-ve-satin-alma\.html$ /en/expense-procurement.html [R=301,L]
+RewriteRule ^en/mobil-uygulama\.html$ /en/mobile-app.html [R=301,L]
+RewriteRule ^en/net-brut-maas-hesaplama\.html$ /en/net-gross-salary-calculator.html [R=301,L]
+RewriteRule ^en/onboarding-kontrol-listesi-sablonu\.html$ /en/onboarding-checklist-template.html [R=301,L]
+RewriteRule ^en/performans-degerlendirme-formu-sablonu\.html$ /en/performance-review-template.html [R=301,L]
+RewriteRule ^en/performans-degerlendirme-okr\.html$ /en/performance-management-okr.html [R=301,L]
+RewriteRule ^en/puantaj-ve-vardiya-yazilimi\.html$ /en/attendance-shift-software.html [R=301,L]
+RewriteRule ^en/sgk-prim-hesaplama\.html$ /en/social-security-calculator.html [R=301,L]
+RewriteRule ^en/tesekkur-sablon-indirme\.html$ /en/template-download-thank-you.html [R=301,L]
+RewriteRule ^en/ucret-degerlendirme\.html$ /en/salary-benchmarking.html [R=301,L]
+RewriteRule ^en/ucretsiz-sablonlar\.html$ /en/free-templates.html [R=301,L]
+RewriteRule ^en/vaka-calismalari\.html$ /en/case-studies.html [R=301,L]
+RewriteRule ^en/vaka-calismasi-danismanlik\.html$ /en/case-study-consulting.html [R=301,L]
+RewriteRule ^en/vaka-calismasi-egitim\.html$ /en/case-study-education.html [R=301,L]
+RewriteRule ^en/vaka-calismasi-lojistik\.html$ /en/case-study-logistics.html [R=301,L]
+RewriteRule ^en/vaka-calismasi-perakende\.html$ /en/case-study-retail.html [R=301,L]
+RewriteRule ^en/vaka-calismasi-saglik\.html$ /en/case-study-healthcare.html [R=301,L]
+RewriteRule ^en/vaka-calismasi-tech-startup\.html$ /en/case-study-tech-startup.html [R=301,L]
+RewriteRule ^en/vaka-calismasi-uretim-devi\.html$ /en/case-study-manufacturing.html [R=301,L]
 
-# Specific redirect: /ik-yazilimi/ik-yazilimi.html -> /ik-yazilimi.html
-RewriteRule ^ik-yazilimi/ik-yazilimi\.html$ /ik-yazilimi.html [R=301,L]
+# === GERMAN (DE) Redirects ===
+RewriteRule ^de/araclar\.html$ /de/tools.html [R=301,L]
+RewriteRule ^de/asgari-ucret-hesaplama\.html$ /de/mindestlohn-rechner.html [R=301,L]
+RewriteRule ^de/ats-ise-alim-yazilimi\.html$ /de/ats-recruiting-software.html [R=301,L]
+RewriteRule ^de/bordro-maliyet-hesaplama\.html$ /de/lohnkosten-rechner.html [R=301,L]
+RewriteRule ^de/bordro-yazilimi\.html$ /de/lohnsoftware.html [R=301,L]
+RewriteRule ^de/dijital-ozluk-ve-izin\.html$ /de/digitale-personalakte.html [R=301,L]
+RewriteRule ^de/ik-analitigi\.html$ /de/hr-analyse.html [R=301,L]
+RewriteRule ^de/ik-arastirma-raporu-2026\.html$ /de/hr-forschungsbericht-2026.html [R=301,L]
+RewriteRule ^de/ik-roi-hesaplama\.html$ /de/hr-roi-rechner.html [R=301,L]
+RewriteRule ^de/ik-sozlugu\.html$ /de/hr-glossar.html [R=301,L]
+RewriteRule ^de/ik-yazilimi\.html$ /de/hr-software.html [R=301,L]
+RewriteRule ^de/kidem-tazminati-hesaplama\.html$ /de/abfindungsrechner.html [R=301,L]
+RewriteRule ^de/kurumsal-bilgi-bankasi-ve-onboarding\.html$ /de/wissensdatenbank-onboarding.html [R=301,L]
+RewriteRule ^de/makale-2026-asgari-ucret-net-hesabi\.html$ /de/artikel-2026-mindestlohn-netto.html [R=301,L]
+RewriteRule ^de/makale-2026-sgk-tavan-taban\.html$ /de/artikel-2026-sozialversicherung-grenze.html [R=301,L]
+RewriteRule ^de/makale-ai-ve-kvkk-uyumu\.html$ /de/artikel-ki-und-kvkk.html [R=301,L]
+RewriteRule ^de/makale-bordro-yazilimi-entegrasyon-listesi\.html$ /de/artikel-lohnsoftware-integration.html [R=301,L]
+RewriteRule ^de/makale-bordro-yazilimi-nasil-secilir\.html$ /de/artikel-lohnsoftware-auswahl.html [R=301,L]
+RewriteRule ^de/makale-dijital-ozluk-donusu-suresi\.html$ /de/artikel-digitale-personalakte-rueckgabe.html [R=301,L]
+RewriteRule ^de/makale-dijital-ozluk-ve-kvkk\.html$ /de/artikel-digitale-personalakte-kvkk.html [R=301,L]
+RewriteRule ^de/makale-esnek-calisma-saatleri-2026\.html$ /de/artikel-flexible-arbeitszeiten-2026.html [R=301,L]
+RewriteRule ^de/makale-excel-bordro-sizintilari\.html$ /de/artikel-excel-lohndatenlecks.html [R=301,L]
+RewriteRule ^de/makale-hr-yazilimi-global-lokal-fark\.html$ /de/artikel-hr-software-global-lokal.html [R=301,L]
+RewriteRule ^de/makale-hr-yazilimi-maliyet-hesabi\.html$ /de/artikel-hr-software-kosten.html [R=301,L]
+RewriteRule ^de/makale-ik-ai-etik-2026\.html$ /de/artikel-hr-ki-ethik-2026.html [R=301,L]
+RewriteRule ^de/makale-ik-analitigi-12-kpi\.html$ /de/artikel-hr-analyse-12-kpis.html [R=301,L]
+RewriteRule ^de/makale-ik-analitigi-raporlama-sik-hatalar\.html$ /de/artikel-hr-analyse-fehler.html [R=301,L]
+RewriteRule ^de/makale-ik-dijital-donusum-2026\.html$ /de/artikel-hr-digitale-transformation-2026.html [R=301,L]
+RewriteRule ^de/makale-ik-donusen-rol-2026\.html$ /de/artikel-hr-rolle-im-wandel-2026.html [R=301,L]
+RewriteRule ^de/makale-ik-raporlama-dashboard-kurgusu\.html$ /de/artikel-hr-reporting-dashboard.html [R=301,L]
+RewriteRule ^de/makale-ik-roi-hesaplama-formulu\.html$ /de/artikel-hr-roi-berechnung.html [R=301,L]
+RewriteRule ^de/makale-ik-roi-hesaplama-ornek-senaryolar\.html$ /de/artikel-hr-roi-szenarien.html [R=301,L]
+RewriteRule ^de/makale-ik-yapay-zeka-kesisim-2026\.html$ /de/artikel-hr-ki-schnittstelle-2026.html [R=301,L]
+RewriteRule ^de/makale-ik-yazilimi-2026-trendler\.html$ /de/artikel-hr-software-2026-trends.html [R=301,L]
+RewriteRule ^de/makale-ik-yazilimi-karsilastirma-2026\.html$ /de/artikel-hr-software-vergleich-2026.html [R=301,L]
+RewriteRule ^de/makale-ik-yazilimi-secim-rehberi-2026\.html$ /de/artikel-hr-software-auswahl-2026.html [R=301,L]
+RewriteRule ^de/makale-ik-yazilimi-uygulama-takvimi-90-gun\.html$ /de/artikel-hr-software-einfuehrung-90-tage.html [R=301,L]
+RewriteRule ^de/makale-insan-kaynaklari-yazilimi-fiyatlama-modeli\.html$ /de/artikel-hr-software-preismodell.html [R=301,L]
+RewriteRule ^de/makale-insan-kaynaklari-yazilimi-kvkk-kontrol-listesi\.html$ /de/artikel-hr-software-kvkk-checkliste.html [R=301,L]
+RewriteRule ^de/makale-ise-alimda-ai-etik\.html$ /de/artikel-ki-ethik-im-recruiting.html [R=301,L]
+RewriteRule ^de/makale-ise-alim-sureci-kpi-metrikleri\.html$ /de/artikel-recruiting-kpi-metriken.html [R=301,L]
+RewriteRule ^de/makale-ise-alim-yazilimi-aday-deneyimi\.html$ /de/artikel-recruiting-software-bewerber.html [R=301,L]
+RewriteRule ^de/makale-ise-alim-yazilimi-ats-kontrol-listesi\.html$ /de/artikel-ats-recruiting-checkliste.html [R=301,L]
+RewriteRule ^de/makale-izin-yonetimi-hatalari\.html$ /de/artikel-urlaubsmanagement-fehler.html [R=301,L]
+RewriteRule ^de/makale-kobi-icin-ik-programi\.html$ /de/artikel-hr-software-fuer-kmu.html [R=301,L]
+RewriteRule ^de/makale-onboarding-dijitallestirme\.html$ /de/artikel-onboarding-digitalisierung.html [R=301,L]
+RewriteRule ^de/makale-pdks-ile-bordro-entegrasyonu\.html$ /de/artikel-pdks-lohnintegration.html [R=301,L]
+RewriteRule ^de/makale-pdks-secim-kriterleri\.html$ /de/artikel-pdks-auswahlkriterien.html [R=301,L]
+RewriteRule ^de/makale-pdks-ve-uzaktan-calisma-yonetimi\.html$ /de/artikel-pdks-und-remote-arbeit.html [R=301,L]
+RewriteRule ^de/makale-performans-ve-prim-modeli\.html$ /de/artikel-leistung-und-bonusmodell.html [R=301,L]
+RewriteRule ^de/makale-performans-yonetimi-okr-modeli\.html$ /de/artikel-leistungsmanagement-okr.html [R=301,L]
+RewriteRule ^de/makale-personel-takip-programi-kurulum-rehberi\.html$ /de/artikel-mitarbeiter-tracking-einrichtung.html [R=301,L]
+RewriteRule ^de/makale-personel-takip-programi-nedir\.html$ /de/artikel-was-ist-mitarbeiter-tracking.html [R=301,L]
+RewriteRule ^de/makale-prediktif-ik\.html$ /de/artikel-praediktive-hr.html [R=301,L]
+RewriteRule ^de/makale-puantaj-ve-vardiya-optimizasyonu\.html$ /de/artikel-zeiterfassung-schicht-optimierung.html [R=301,L]
+RewriteRule ^de/makale-sessiz-istifa-maliyeti\.html$ /de/artikel-kosten-der-inneren-kuendigung.html [R=301,L]
+RewriteRule ^de/makale-turnover-dusurme-yollari\.html$ /de/artikel-mitarbeiterfluktuation-senken.html [R=301,L]
+RewriteRule ^de/makale-ucret-adaleti-ve-analitik\.html$ /de/artikel-lohngerechtigkeit-analyse.html [R=301,L]
+RewriteRule ^de/makale-ucret-degerlendirme-sureci\.html$ /de/artikel-gehaltsbenchmarking-prozess.html [R=301,L]
+RewriteRule ^de/makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi\.html$ /de/artikel-gehaltsbenchmarking-marktvergleich.html [R=301,L]
+RewriteRule ^de/makale-yapay-zeka-genai\.html$ /de/artikel-ki-und-generative-ki.html [R=301,L]
+RewriteRule ^de/makale-yillik-performans-degerlendirme\.html$ /de/artikel-jaehrliche-leistungsbeurteilung.html [R=301,L]
+RewriteRule ^de/masraf-ve-satin-alma\.html$ /de/ausgaben-beschaffung.html [R=301,L]
+RewriteRule ^de/mobil-uygulama\.html$ /de/mobile-app.html [R=301,L]
+RewriteRule ^de/net-brut-maas-hesaplama\.html$ /de/brutto-netto-rechner.html [R=301,L]
+RewriteRule ^de/onboarding-kontrol-listesi-sablonu\.html$ /de/onboarding-checkliste.html [R=301,L]
+RewriteRule ^de/performans-degerlendirme-formu-sablonu\.html$ /de/leistungsbeurteilung.html [R=301,L]
+RewriteRule ^de/performans-degerlendirme-okr\.html$ /de/leistungsmanagement-okr.html [R=301,L]
+RewriteRule ^de/puantaj-ve-vardiya-yazilimi\.html$ /de/zeiterfassung-schicht.html [R=301,L]
+RewriteRule ^de/sgk-prim-hesaplama\.html$ /de/sozialversicherung-rechner.html [R=301,L]
+RewriteRule ^de/tesekkur-sablon-indirme\.html$ /de/vorlagen-download-danke.html [R=301,L]
+RewriteRule ^de/ucret-degerlendirme\.html$ /de/gehaltsbenchmarking.html [R=301,L]
+RewriteRule ^de/ucretsiz-sablonlar\.html$ /de/kostenlose-vorlagen.html [R=301,L]
+RewriteRule ^de/vaka-calismalari\.html$ /de/fallstudien.html [R=301,L]
+RewriteRule ^de/vaka-calismasi-danismanlik\.html$ /de/fallstudie-beratung.html [R=301,L]
+RewriteRule ^de/vaka-calismasi-egitim\.html$ /de/fallstudie-bildung.html [R=301,L]
+RewriteRule ^de/vaka-calismasi-lojistik\.html$ /de/fallstudie-logistik.html [R=301,L]
+RewriteRule ^de/vaka-calismasi-perakende\.html$ /de/fallstudie-einzelhandel.html [R=301,L]
+RewriteRule ^de/vaka-calismasi-saglik\.html$ /de/fallstudie-gesundheitswesen.html [R=301,L]
+RewriteRule ^de/vaka-calismasi-tech-startup\.html$ /de/fallstudie-tech-startup.html [R=301,L]
+RewriteRule ^de/vaka-calismasi-uretim-devi\.html$ /de/fallstudie-produktion.html [R=301,L]
 
-# Specific redirect: /pricing -> /pricing.html
-RewriteRule ^pricing$ /pricing.html [R=301,L]
-
-# .html extension cleanup: redirect /page to /page.html if the .html file exists
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-RewriteRule ^([^.]+)$ /$1.html [R=301,L]
-
-# Trailing slash cleanup: redirect /folder to /folder/ if it's a real directory
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{DOCUMENT_ROOT}/$1/ -d
-RewriteRule ^(.+[^/])$ /$1/ [R=301,L]
-
-# ----------------------------------------------------------------------
-# SECURITY HEADERS
-# ----------------------------------------------------------------------
-
-<IfModule mod_headers.c>
-  # HSTS (Strict-Transport-Security)
-  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-
-  # Prevent MIME-type sniffing
-  Header always set X-Content-Type-Options "nosniff"
-
-  # Clickjacking protection
-  Header always set X-Frame-Options "SAMEORIGIN"
-
-  # XSS Protection
-  Header always set X-XSS-Protection "1; mode=block"
-
-  # Referrer Policy
-  Header always set Referrer-Policy "strict-origin-when-cross-origin"
-
-  # Permissions Policy
-  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
-</IfModule>
-
-# ----------------------------------------------------------------------
-# CACHE CONTROL
-# ----------------------------------------------------------------------
-
-<IfModule mod_expires.c>
-  ExpiresActive On
-
-  # Default: 1 hour
-  ExpiresDefault "access plus 1 hour"
-
-  # HTML: 10 minutes (revalidated)
-  ExpiresByType text/html "access plus 10 minutes"
-
-  # CSS & JS: 1 year (fingerprinted via .min files)
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
-  ExpiresByType text/javascript "access plus 1 year"
-
-  # Images: 1 year
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType image/x-icon "access plus 1 year"
-
-  # Fonts: 1 year
-  ExpiresByType font/woff2 "access plus 1 year"
-  ExpiresByType font/woff "access plus 1 year"
-
-  # Video: 1 month
-  ExpiresByType video/mp4 "access plus 1 month"
-</IfModule>
-
-<IfModule mod_headers.c>
-  # Cache-Control overrides for static assets
-  <FilesMatch "\.(min\.css|min\.js|webp|svg|ico)$">
-    Header set Cache-Control "public, immutable, max-age=31536000"
-  </FilesMatch>
-
-  <FilesMatch "\.(html)$">
-    Header set Cache-Control "public, must-revalidate, max-age=600"
-  </FilesMatch>
-</IfModule>
-
-# ----------------------------------------------------------------------
-# COMPRESSION
-# ----------------------------------------------------------------------
-
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
-</IfModule>
-
-# ----------------------------------------------------------------------
-# ERROR PAGES
-# ----------------------------------------------------------------------
-
-ErrorDocument 404 /404.html
-ErrorDocument 403 /404.html
-ErrorDocument 500 /404.html
-
-# ----------------------------------------------------------------------
-# ROBOTS & SECURITY FILES
-# ----------------------------------------------------------------------
-
-<FilesMatch "^(site-config\.js\.live\.backup|page-content\.js\.bak|index\.nginx-debian\.html)$">
-  Require all denied
-</FilesMatch>
-
-# Block access to backup files
-<FilesMatch "\.(bak|backup|old|swp|save)$">
-  Require all denied
-</FilesMatch>
-
-# ----------------------------------------------------------------------
-# CORS HEADERS FOR FONTS & CDN
-# ----------------------------------------------------------------------
-
-<IfModule mod_headers.c>
-  <FilesMatch "\.(woff2|woff)$">
-    Header set Access-Control-Allow-Origin "*"
-  </FilesMatch>
-</IfModule>
-
-# ----------------------------------------------------------------------
-# CHARACTER SET
-# ----------------------------------------------------------------------
-
-AddDefaultCharset UTF-8
-
-# ----------------------------------------------------------------------
-# REWRITE RULES FOR MULTILANGUAGE
-# ----------------------------------------------------------------------
-
-# Serve language-specific 404 pages
-RewriteCond %{REQUEST_URI} ^/(en|de|ar)/(.*)$
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(en|de|ar)/(.*)$ /$1/404.html [L]
-
-# ----------------------------------------------------------------------
-# DISABLE DIRECTORY LISTING
-# ----------------------------------------------------------------------
-
-Options -Indexes
+# === ARABIC (AR) Redirects ===
+RewriteRule ^ar/araclar\.html$ /ar/adwat.html [R=301,L]
+RewriteRule ^ar/asgari-ucret-hesaplama\.html$ /ar/hasb-ajr.html [R=301,L]
+RewriteRule ^ar/ats-ise-alim-yazilimi\.html$ /ar/brnamj-twzyf.html [R=301,L]
+RewriteRule ^ar/bordro-maliyet-hesaplama\.html$ /ar/hasb-tklf-rwatb.html [R=301,L]
+RewriteRule ^ar/bordro-yazilimi\.html$ /ar/brnamj-rwatb.html [R=301,L]
+RewriteRule ^ar/dijital-ozluk-ve-izin\.html$ /ar/mlf-rqmy-ajat.html [R=301,L]
+RewriteRule ^ar/ik-analitigi\.html$ /ar/thlylat-hr.html [R=301,L]
+RewriteRule ^ar/ik-arastirma-raporu-2026\.html$ /ar/tqryr-bhth-hr-2026.html [R=301,L]
+RewriteRule ^ar/ik-roi-hesaplama\.html$ /ar/hasb-ayd-hr.html [R=301,L]
+RewriteRule ^ar/ik-sozlugu\.html$ /ar/qamus-hr.html [R=301,L]
+RewriteRule ^ar/ik-yazilimi\.html$ /ar/brnamj-hr.html [R=301,L]
+RewriteRule ^ar/kidem-tazminati-hesaplama\.html$ /ar/hasb-mkafat.html [R=301,L]
+RewriteRule ^ar/kurumsal-bilgi-bankasi-ve-onboarding\.html$ /ar/bnk-mlwmat-tahym.html [R=301,L]
+RewriteRule ^ar/makale-2026-asgari-ucret-net-hesabi\.html$ /ar/mqal-2026-hsab-ajr-safy.html [R=301,L]
+RewriteRule ^ar/makale-2026-sgk-tavan-taban\.html$ /ar/mqal-2026-tamynat-hdwd.html [R=301,L]
+RewriteRule ^ar/makale-ai-ve-kvkk-uyumu\.html$ /ar/mqal-ai-kvkk-amtthel.html [R=301,L]
+RewriteRule ^ar/makale-bordro-yazilimi-entegrasyon-listesi\.html$ /ar/mqal-qaymt-tkaml-rwatb.html [R=301,L]
+RewriteRule ^ar/makale-bordro-yazilimi-nasil-secilir\.html$ /ar/mqal-akhtyar-brnamj-rwatb.html [R=301,L]
+RewriteRule ^ar/makale-dijital-ozluk-donusu-suresi\.html$ /ar/mqal-mlat-rqmy-ajat.html [R=301,L]
+RewriteRule ^ar/makale-dijital-ozluk-ve-kvkk\.html$ /ar/mqal-mlf-rqmy-kvkk.html [R=301,L]
+RewriteRule ^ar/makale-esnek-calisma-saatleri-2026\.html$ /ar/mqal-saat-dwam-mrn-2026.html [R=301,L]
+RewriteRule ^ar/makale-excel-bordro-sizintilari\.html$ /ar/mqal-tsrbyat-bynat-excel.html [R=301,L]
+RewriteRule ^ar/makale-hr-yazilimi-global-lokal-fark\.html$ /ar/mqal-brnamj-hr-almy-mhly.html [R=301,L]
+RewriteRule ^ar/makale-hr-yazilimi-maliyet-hesabi\.html$ /ar/mqal-hsab-tklf-brnamj-hr.html [R=301,L]
+RewriteRule ^ar/makale-ik-ai-etik-2026\.html$ /ar/mqal-akhlqyat-ai-hr-2026.html [R=301,L]
+RewriteRule ^ar/makale-ik-analitigi-12-kpi\.html$ /ar/mqal-12-kpi-thlyl-hr.html [R=301,L]
+RewriteRule ^ar/makale-ik-analitigi-raporlama-sik-hatalar\.html$ /ar/mqal-akhta-shayt-thlylat-hr.html [R=301,L]
+RewriteRule ^ar/makale-ik-dijital-donusum-2026\.html$ /ar/mqal-thwl-rqmy-hr-2026.html [R=301,L]
+RewriteRule ^ar/makale-ik-donusen-rol-2026\.html$ /ar/mqal-dwr-hr-mttwr-2026.html [R=301,L]
+RewriteRule ^ar/makale-ik-raporlama-dashboard-kurgusu\.html$ /ar/mqal-tsmym-lwht-hr.html [R=301,L]
+RewriteRule ^ar/makale-ik-roi-hesaplama-formulu\.html$ /ar/mqal-madt-hsab-ayd-hr.html [R=301,L]
+RewriteRule ^ar/makale-ik-roi-hesaplama-ornek-senaryolar\.html$ /ar/mqal-synarywhat-ayd-hr.html [R=301,L]
+RewriteRule ^ar/makale-ik-yapay-zeka-kesisim-2026\.html$ /ar/mqal-tqat-hr-wai-2026.html [R=301,L]
+RewriteRule ^ar/makale-ik-yazilimi-2026-trendler\.html$ /ar/mqal-atjahat-brnamj-hr-2026.html [R=301,L]
+RewriteRule ^ar/makale-ik-yazilimi-karsilastirma-2026\.html$ /ar/mqal-mqarn-brnamj-hr-2026.html [R=301,L]
+RewriteRule ^ar/makale-ik-yazilimi-secim-rehberi-2026\.html$ /ar/mqal-dlyl-akhtyar-hr-2026.html [R=301,L]
+RewriteRule ^ar/makale-ik-yazilimi-uygulama-takvimi-90-gun\.html$ /ar/mqal-jdwl-tnfydh-hr-90-ywm.html [R=301,L]
+RewriteRule ^ar/makale-insan-kaynaklari-yazilimi-fiyatlama-modeli\.html$ /ar/mqal-nmwthhj-tsyr-hr.html [R=301,L]
+RewriteRule ^ar/makale-insan-kaynaklari-yazilimi-kvkk-kontrol-listesi\.html$ /ar/mqal-qaymt-kvkk-brnamj-hr.html [R=301,L]
+RewriteRule ^ar/makale-ise-alimda-ai-etik\.html$ /ar/mqal-akhlqyat-ai-twzyf.html [R=301,L]
+RewriteRule ^ar/makale-ise-alim-sureci-kpi-metrikleri\.html$ /ar/mqal-kpi-amlyt-twzyf.html [R=301,L]
+RewriteRule ^ar/makale-ise-alim-yazilimi-aday-deneyimi\.html$ /ar/mqal-tjrb-mrshh-twzyf.html [R=301,L]
+RewriteRule ^ar/makale-ise-alim-yazilimi-ats-kontrol-listesi\.html$ /ar/mqal-qaymt-ats-twzyf.html [R=301,L]
+RewriteRule ^ar/makale-izin-yonetimi-hatalari\.html$ /ar/mqal-akhta-adart-ajazat.html [R=301,L]
+RewriteRule ^ar/makale-kobi-icin-ik-programi\.html$ /ar/mqal-brnamj-hr-shrkat-sghyrt.html [R=301,L]
+RewriteRule ^ar/makale-onboarding-dijitallestirme\.html$ /ar/mqal-rqmn-tahym-mwzfy.html [R=301,L]
+RewriteRule ^ar/makale-pdks-ile-bordro-entegrasyonu\.html$ /ar/mqal-tkaml-pdks-rwatb.html [R=301,L]
+RewriteRule ^ar/makale-pdks-secim-kriterleri\.html$ /ar/mqal-mayyr-akhtyar-pdks.html [R=301,L]
+RewriteRule ^ar/makale-pdks-ve-uzaktan-calisma-yonetimi\.html$ /ar/mqal-pdks-adart-ml-bd.html [R=301,L]
+RewriteRule ^ar/makale-performans-ve-prim-modeli\.html$ /ar/mqal-nmwthhj-ada-wmkafat.html [R=301,L]
+RewriteRule ^ar/makale-performans-yonetimi-okr-modeli\.html$ /ar/mqal-nmwthhj-okr-ada.html [R=301,L]
+RewriteRule ^ar/makale-personel-takip-programi-kurulum-rehberi\.html$ /ar/mqal-dlyl-tthbyt-mtabt-mwzfy.html [R=301,L]
+RewriteRule ^ar/makale-personel-takip-programi-nedir\.html$ /ar/mqal-ma-hw-brnamj-mtabt-mwzfy.html [R=301,L]
+RewriteRule ^ar/makale-prediktif-ik\.html$ /ar/mqal-hr-tnbywy.html [R=301,L]
+RewriteRule ^ar/makale-puantaj-ve-vardiya-optimizasyonu\.html$ /ar/mqal-thsyn-dwam-wardyat.html [R=301,L]
+RewriteRule ^ar/makale-sessiz-istifa-maliyeti\.html$ /ar/mqal-tklf-astqal-ssmt.html [R=301,L]
+RewriteRule ^ar/makale-turnover-dusurme-yollari\.html$ /ar/mqal-trq-tqlyl-dwran-mwzfy.html [R=301,L]
+RewriteRule ^ar/makale-ucret-adaleti-ve-analitik\.html$ /ar/mqal-adalt-ajwr-wthlylat.html [R=301,L]
+RewriteRule ^ar/makale-ucret-degerlendirme-sureci\.html$ /ar/mqal-amlyt-tqyym-ajwr.html [R=301,L]
+RewriteRule ^ar/makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi\.html$ /ar/mqal-tqyym-ajwr-wmqarn-swk.html [R=301,L]
+RewriteRule ^ar/makale-yapay-zeka-genai\.html$ /ar/mqal-ai-wai-twlydy.html [R=301,L]
+RewriteRule ^ar/makale-yillik-performans-degerlendirme\.html$ /ar/mqal-tqyym-ada-snwy.html [R=301,L]
+RewriteRule ^ar/masraf-ve-satin-alma\.html$ /ar/msrwfat-wshraat.html [R=301,L]
+RewriteRule ^ar/mobil-uygulama\.html$ /ar/ttbyq-mhmwl.html [R=301,L]
+RewriteRule ^ar/net-brut-maas-hesaplama\.html$ /ar/hasb-ratb-safy.html [R=301,L]
+RewriteRule ^ar/onboarding-kontrol-listesi-sablonu\.html$ /ar/qaymt-tahym.html [R=301,L]
+RewriteRule ^ar/performans-degerlendirme-formu-sablonu\.html$ /ar/nmwdhj-tqyym.html [R=301,L]
+RewriteRule ^ar/performans-degerlendirme-okr\.html$ /ar/tqyym-ada-okr.html [R=301,L]
+RewriteRule ^ar/puantaj-ve-vardiya-yazilimi\.html$ /ar/brnamj-dwam.html [R=301,L]
+RewriteRule ^ar/sgk-prim-hesaplama\.html$ /ar/hasb-tamynat.html [R=301,L]
+RewriteRule ^ar/tesekkur-sablon-indirme\.html$ /ar/shukran-qawalib.html [R=301,L]
+RewriteRule ^ar/ucret-degerlendirme\.html$ /ar/tqyym-ajwr.html [R=301,L]
+RewriteRule ^ar/ucretsiz-sablonlar\.html$ /ar/qwalb-mjany.html [R=301,L]
+RewriteRule ^ar/vaka-calismalari\.html$ /ar/drasat-halat.html [R=301,L]
+RewriteRule ^ar/vaka-calismasi-danismanlik\.html$ /ar/drasat-halat-astsharat.html [R=301,L]
+RewriteRule ^ar/vaka-calismasi-egitim\.html$ /ar/drasat-halat-tlym.html [R=301,L]
+RewriteRule ^ar/vaka-calismasi-lojistik\.html$ /ar/drasat-halat-lwjsty.html [R=301,L]
+RewriteRule ^ar/vaka-calismasi-perakende\.html$ /ar/drasat-halat-tjzat.html [R=301,L]
+RewriteRule ^ar/vaka-calismasi-saglik\.html$ /ar/drasat-halat-sh.html [R=301,L]
+RewriteRule ^ar/vaka-calismasi-tech-startup\.html$ /ar/drasat-halat-tech.html [R=301,L]
+RewriteRule ^ar/vaka-calismasi-uretim-devi\.html$ /ar/drasat-halat-antz.html [R=301,L]
