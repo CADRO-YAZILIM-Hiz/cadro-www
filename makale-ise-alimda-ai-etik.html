@@ -71,6 +71,13 @@
           
           <h2>The Black Box Problem</h2>
           <p>AI models learn from historical data. If a company has mostly hired leaders from a particular school or demographic over the last decade, the model concludes “this is the successful profile.” As a result, it filters out other qualified candidates through an invisible bias.</p>
+<div class="mid-cta" style="background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.18);border-radius:12px;padding:22px 24px;margin:32px 0;text-align:center;">
+  <p style="font-weight:700;font-size:1.05rem;margin:0 0 8px;">İşe alım sürecinizi dijitalleştirin</p>
+  <p style="font-size:0.88rem;opacity:0.78;margin:0 0 14px;">CADRO ATS ile ilan yönetimi, aday havuzu ve mülakat değerlendirmesini tek platformda yürütün.</p>
+  <a href="ats-ise-alim-yazilimi.html" class="primary-button" style="margin-right:10px;">ATS Modülünü İncele</a>
+  <a href="pricing.html" class="ghost-button">14 Gün Ücretsiz Dene</a>
+</div>
+
 
           <blockquote>"Speed is not an advantage if you’re moving in the wrong direction. HR automation doesn’t replace human judgment—it makes it auditable."</blockquote>
 
@@ -107,4 +114,32 @@
 
 
   <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js');</script>
+
+<script>
+/* Phase 5 CRO: Scroll-depth & CTA click tracking for Microsoft Clarity */
+(function(){
+  var fired={25:false,50:false,75:false,100:false};
+  function trackScroll(){
+    var docH=document.documentElement.scrollHeight-window.innerHeight;
+    if(docH<=0) return;
+    var pct=Math.round((window.scrollY/docH)*100);
+    [25,50,75,100].forEach(function(t){
+      if(pct>=t && !fired[t]){
+        fired[t]=true;
+        if(typeof clarity==='function') clarity('set','scroll_'+t+'%','true');
+        if(typeof gtag==='function') gtag('event','scroll_depth',{percent:t,page:location.pathname});
+      }
+    });
+  }
+  window.addEventListener('scroll',trackScroll,{passive:true});
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('.article-cta a, .mid-cta a');
+    if(el){
+      var label=el.textContent.trim()||el.href;
+      if(typeof clarity==='function') clarity('set','cta_click',label);
+      if(typeof gtag==='function') gtag('event','cta_click',{label:label,page:location.pathname});
+    }
+  });
+})();
+</script>
 </body></html>

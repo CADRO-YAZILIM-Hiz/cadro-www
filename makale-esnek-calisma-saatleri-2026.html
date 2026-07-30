@@ -108,6 +108,13 @@
 
     <h3>1.1 Denkleştirme Süresiyle Çalışma (Flex-Time)</h3>
     <p>İş Kanunu madde 63/2 uyarınca tarafların anlaşması hâlinde günde 11 saati aşmamak koşuluyla çalışma süreleri farklı biçimlerde dağıtılabilir. Bu düzenlemede <strong>haftalık ortalama çalışma süresi 45 saat</strong> eşiğini aşamaz; fark, denkleştirme süresi içinde telafi edilir.</p>
+<div class="mid-cta" style="background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.18);border-radius:12px;padding:22px 24px;margin:32px 0;text-align:center;">
+  <p style="font-weight:700;font-size:1.05rem;margin:0 0 8px;">İK süreçlerinizi tek platformda yönetin</p>
+  <p style="font-size:0.88rem;opacity:0.78;margin:0 0 14px;">CADRO; özlük, izin, puantaj, performans ve işe alımı bulut tabanlı tek platformda sunar.</p>
+  <a href="ik-yazilimi.html" class="primary-button" style="margin-right:10px;">İK Yazılımını Keşfet</a>
+  <a href="pricing.html" class="ghost-button">14 Gün Ücretsiz Dene</a>
+</div>
+
 
     <h3>1.2 Uzaktan (Remote/Telework) Çalışma</h3>
     <p>7244 sayılı Kanun ile 4857 sayılı İş Kanunu'na eklenen madde 14/A çerçevesinde uzaktan çalışma, yazılı sözleşme zorunluluğuyla düzenlenmiştir. Uzaktan çalışma sözleşmesinde belirtilmesi gereken unsurlar:</p>
@@ -217,4 +224,32 @@
     <script src="./lang-all.min.js"></script><script src="./app.min.js"></script>
   <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js');</script>
 
+
+<script>
+/* Phase 5 CRO: Scroll-depth & CTA click tracking for Microsoft Clarity */
+(function(){
+  var fired={25:false,50:false,75:false,100:false};
+  function trackScroll(){
+    var docH=document.documentElement.scrollHeight-window.innerHeight;
+    if(docH<=0) return;
+    var pct=Math.round((window.scrollY/docH)*100);
+    [25,50,75,100].forEach(function(t){
+      if(pct>=t && !fired[t]){
+        fired[t]=true;
+        if(typeof clarity==='function') clarity('set','scroll_'+t+'%','true');
+        if(typeof gtag==='function') gtag('event','scroll_depth',{percent:t,page:location.pathname});
+      }
+    });
+  }
+  window.addEventListener('scroll',trackScroll,{passive:true});
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('.article-cta a, .mid-cta a');
+    if(el){
+      var label=el.textContent.trim()||el.href;
+      if(typeof clarity==='function') clarity('set','cta_click',label);
+      if(typeof gtag==='function') gtag('event','cta_click',{label:label,page:location.pathname});
+    }
+  });
+})();
+</script>
 </body></html>

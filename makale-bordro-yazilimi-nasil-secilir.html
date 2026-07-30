@@ -107,6 +107,13 @@
     <div class="criteria-card">
       <h3><span class="criteria-num">1</span>Türkiye'ye Özgü Yasal Uyumluluk</h3>
       <p>SGK bildirge formatları, e-Beyanname entegrasyonu, asgari ücret takvimi ve vergi dilimi güncellemeleri otomatik olarak yansıtılmalıdır. Bu kapsam dışında kalan genel amaçlı uluslararası yazılımlar ciddi uyumluluk riski taşır.</p>
+<div class="mid-cta" style="background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.18);border-radius:12px;padding:22px 24px;margin:32px 0;text-align:center;">
+  <p style="font-weight:700;font-size:1.05rem;margin:0 0 8px;">Bordro süreçlerinizi otomatikleştirmeye hazır mısınız?</p>
+  <p style="font-size:0.88rem;opacity:0.78;margin:0 0 14px;">CADRO Bordro ile puantajdan bordroya, SGK bildiriminden muhasebe entegrasyonuna her şey tek ekranda.</p>
+  <a href="bordro-yazilimi.html" class="primary-button" style="margin-right:10px;">Bordro Modülünü İncele</a>
+  <a href="pricing.html" class="ghost-button">14 Gün Ücretsiz Dene</a>
+</div>
+
     </div>
 
     <div class="criteria-card">
@@ -197,4 +204,32 @@
     <script src="./lang-all.min.js"></script><script src="./app.min.js"></script>
   <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js');</script>
 
+
+<script>
+/* Phase 5 CRO: Scroll-depth & CTA click tracking for Microsoft Clarity */
+(function(){
+  var fired={25:false,50:false,75:false,100:false};
+  function trackScroll(){
+    var docH=document.documentElement.scrollHeight-window.innerHeight;
+    if(docH<=0) return;
+    var pct=Math.round((window.scrollY/docH)*100);
+    [25,50,75,100].forEach(function(t){
+      if(pct>=t && !fired[t]){
+        fired[t]=true;
+        if(typeof clarity==='function') clarity('set','scroll_'+t+'%','true');
+        if(typeof gtag==='function') gtag('event','scroll_depth',{percent:t,page:location.pathname});
+      }
+    });
+  }
+  window.addEventListener('scroll',trackScroll,{passive:true});
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('.article-cta a, .mid-cta a');
+    if(el){
+      var label=el.textContent.trim()||el.href;
+      if(typeof clarity==='function') clarity('set','cta_click',label);
+      if(typeof gtag==='function') gtag('event','cta_click',{label:label,page:location.pathname});
+    }
+  });
+})();
+</script>
 </body></html>

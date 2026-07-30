@@ -98,7 +98,14 @@
   </div>
   <div class="article-content">
     <p>Perakende, lojistik, sağlık, üretim ve teknoloji şirketleri için örnek İK ROI hesaplama senaryoları.</p>
-    <h2>Kapsam ve hedef</h2><p>Perakende, lojistik, sağlık, üretim ve teknoloji şirketleri için örnek İK ROI hesaplama senaryoları. Bu yazıda İK ROI Hesaplama: 5 Örnek Senaryo konusu pratik bir uygulama planı ile ele alınır.</p><p>Amaç; ik roi hesaplama ve ik yazılımı tarafında hızlı kazanım noktalarını belirleyip 90 günde ölçülebilir sonuç üretmektir.</p>
+    <h2>Kapsam ve hedef</h2><p>Perakende, lojistik, sağlık, üretim ve teknoloji şirketleri için örnek İK ROI hesaplama senaryoları. Bu yazıda İK ROI Hesaplama: 5 Örnek Senaryo konusu pratik bir uygulama planı ile ele alınır.</p>
+<div class="mid-cta" style="background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.18);border-radius:12px;padding:22px 24px;margin:32px 0;text-align:center;">
+  <p style="font-weight:700;font-size:1.05rem;margin:0 0 8px;">İK yazılımının yatırım getirisini hesaplayın</p>
+  <p style="font-size:0.88rem;opacity:0.78;margin:0 0 14px;">CADRO ile zaman ve maliyet tasarrufunu anında görün. Ücretsiz ROI hesaplama aracımızı deneyin.</p>
+  <a href="ik-roi-hesaplama.html" class="primary-button" style="margin-right:10px;">ROI Hesapla</a>
+  <a href="pricing.html" class="ghost-button">14 Gün Ücretsiz Dene</a>
+</div>
+<p>Amaç; ik roi hesaplama ve ik yazılımı tarafında hızlı kazanım noktalarını belirleyip 90 günde ölçülebilir sonuç üretmektir.</p>
 <h2>90 günlük uygulama planı</h2><p>1-30. gün: veri temizliği, mevcut süreç haritası ve sorumluluk matrisi netleştirilir.</p><p>31-60. gün: pilot ekip ile test yapılır, rapor setleri doğrulanır, eğitim ve geçiş planı tamamlanır.</p><p>61-90. gün: yaygınlaştırma başlatılır, haftalık performans göstergeleri ile süreç stabil hale getirilir.</p>
 <h2>Ölçüm modeli ve ROI mantığı</h2><p>Aylık net kazanç; zaman tasarrufu + hata azalımı + devir düşüş etkisi bileşenleriyle hesaplanır.</p><p>Geri ödeme süresi için toplam yazılım maliyeti aylık net kazanca bölünür; yönetim raporunda hem iyimser hem temkinli senaryo birlikte sunulur.</p>
 <h2>Sık yapılan hatalar</h2><p>Tek seferde tüm modülleri açmak, rol bazlı yetkiyi geciktirmek ve veri sahipliğini belirsiz bırakmak en yaygın üç risktir.</p><p>Bu riskler için kontrol listesi, haftalık durum toplantısı ve canlıya geçiş öncesi UAT onayı standart hale getirilmelidir.</p>
@@ -142,4 +149,32 @@
 
     <script src="./lang-all.min.js"></script><script src="./app.min.js"></script>
   <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js');</script>
+
+<script>
+/* Phase 5 CRO: Scroll-depth & CTA click tracking for Microsoft Clarity */
+(function(){
+  var fired={25:false,50:false,75:false,100:false};
+  function trackScroll(){
+    var docH=document.documentElement.scrollHeight-window.innerHeight;
+    if(docH<=0) return;
+    var pct=Math.round((window.scrollY/docH)*100);
+    [25,50,75,100].forEach(function(t){
+      if(pct>=t && !fired[t]){
+        fired[t]=true;
+        if(typeof clarity==='function') clarity('set','scroll_'+t+'%','true');
+        if(typeof gtag==='function') gtag('event','scroll_depth',{percent:t,page:location.pathname});
+      }
+    });
+  }
+  window.addEventListener('scroll',trackScroll,{passive:true});
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('.article-cta a, .mid-cta a');
+    if(el){
+      var label=el.textContent.trim()||el.href;
+      if(typeof clarity==='function') clarity('set','cta_click',label);
+      if(typeof gtag==='function') gtag('event','cta_click',{label:label,page:location.pathname});
+    }
+  });
+})();
+</script>
 </body></html>

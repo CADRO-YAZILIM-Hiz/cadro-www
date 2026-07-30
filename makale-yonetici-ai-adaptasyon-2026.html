@@ -30,6 +30,13 @@
 
 <h3>1. Teknoloji Okuryazarlığı Eksikliği</h3>
 <p>MIT Sloan Management Review'un 2025 araştırması, yöneticilerin %57'sinin temel AI kavramlarını (makine öğrenmesi, doğal dil işleme, üretken AI) açıklamakta zorlandığını ortaya koyuyor. Bu bilgi eksikliği, bilinmeyene karşı doğal bir savunma mekanizması oluşturuyor. Harvard Business Review'un "The AI-Savvy Leader" özel sayısında belirtildiği gibi, "AI okuryazarı olmayan bir yönetici, 2026'da veri okuryazarı olmayan bir CFO kadar risk altındadır."</p>
+<div class="mid-cta" style="background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.18);border-radius:12px;padding:22px 24px;margin:32px 0;text-align:center;">
+  <p style="font-weight:700;font-size:1.05rem;margin:0 0 8px;">Yapay zeka destekli İK'ya geçin</p>
+  <p style="font-size:0.88rem;opacity:0.78;margin:0 0 14px;">CADRO'nun AI modülleri ile işe alım, performans ve raporlamada yapay zeka avantajını yaşayın.</p>
+  <a href="ik-yazilimi.html" class="primary-button" style="margin-right:10px;">AI Özelliklerini Keşfet</a>
+  <a href="pricing.html" class="ghost-button">14 Gün Ücretsiz Dene</a>
+</div>
+
 
 <h3>2. Kontrol Kaybı Korkusu</h3>
 <p>Deloitte'un Human Capital Trends 2026 raporuna göre, üst düzey yöneticilerin %41'i AI'nın karar alma süreçlerindeki rollerini azaltacağından endişe ediyor. Bu endişe, özellikle işe alım, performans değerlendirme ve terfi kararları gibi geleneksel olarak "insan sezgisine" dayanan alanlarda yoğunlaşıyor.</p>
@@ -78,4 +85,32 @@
 </main>
 <footer class="footer" style="background:#0f172a;color:#cbd5e1;padding:40px 20px;text-align:center">&copy; 2026 CADRO. Tüm hakları saklıdır.</footer>
 </div>
-<script src="./app.min.js"></script></body></html>
+<script src="./app.min.js"></script>
+<script>
+/* Phase 5 CRO: Scroll-depth & CTA click tracking for Microsoft Clarity */
+(function(){
+  var fired={25:false,50:false,75:false,100:false};
+  function trackScroll(){
+    var docH=document.documentElement.scrollHeight-window.innerHeight;
+    if(docH<=0) return;
+    var pct=Math.round((window.scrollY/docH)*100);
+    [25,50,75,100].forEach(function(t){
+      if(pct>=t && !fired[t]){
+        fired[t]=true;
+        if(typeof clarity==='function') clarity('set','scroll_'+t+'%','true');
+        if(typeof gtag==='function') gtag('event','scroll_depth',{percent:t,page:location.pathname});
+      }
+    });
+  }
+  window.addEventListener('scroll',trackScroll,{passive:true});
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('.article-cta a, .mid-cta a');
+    if(el){
+      var label=el.textContent.trim()||el.href;
+      if(typeof clarity==='function') clarity('set','cta_click',label);
+      if(typeof gtag==='function') gtag('event','cta_click',{label:label,page:location.pathname});
+    }
+  });
+})();
+</script>
+</body></html>

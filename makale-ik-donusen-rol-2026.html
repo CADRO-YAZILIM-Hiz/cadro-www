@@ -31,6 +31,13 @@
 
 <h3>1. Yetenek Mimarı (Talent Architect)</h3>
 <p>SHRM'nin (Society for Human Resource Management) 2026 araştırmasına göre, İK profesyonellerinin %58'i "yetenek mimarı" rolünü birincil sorumlulukları arasında görüyor. Bu rol, organizasyonun gelecekteki yetenek ihtiyacını bugünden öngörmeyi, AI ile hangi rollerin dönüşeceğini analiz etmeyi ve buna göre işe alım + yeniden becerilendirme (reskilling) stratejisi geliştirmeyi kapsıyor.</p>
+<div class="mid-cta" style="background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.18);border-radius:12px;padding:22px 24px;margin:32px 0;text-align:center;">
+  <p style="font-weight:700;font-size:1.05rem;margin:0 0 8px;">İK süreçlerinizi tek platformda yönetin</p>
+  <p style="font-size:0.88rem;opacity:0.78;margin:0 0 14px;">CADRO; özlük, izin, puantaj, performans ve işe alımı bulut tabanlı tek platformda sunar.</p>
+  <a href="ik-yazilimi.html" class="primary-button" style="margin-right:10px;">İK Yazılımını Keşfet</a>
+  <a href="pricing.html" class="ghost-button">14 Gün Ücretsiz Dene</a>
+</div>
+
 
 <h3>2. Veri Hikaye Anlatıcısı (Data Storyteller)</h3>
 <p>Cornell Üniversitesi Industrial and Labor Relations School'un 2026 raporuna göre, en başarılı İK liderleri, "insan verisini iş sonuçlarına bağlayabilen" hikaye anlatıcılarıdır. Örneğin: "Geçen çeyrek onboarding programını revize ettik; yeni işe alınanların ilk 3 aylık performans skoru %23 arttı; bu, şirket genelinde tahmini 1.2M TL'lik verimlilik artışı sağladı." Bu tür veri odaklı anlatılar, İK'nın yönetim kurulundaki ağırlığını artırıyor.</p>
@@ -78,4 +85,32 @@
 </main>
 <footer class="footer" style="background:#0f172a;color:#cbd5e1;padding:40px 20px;text-align:center">&copy; 2026 CADRO. Tüm hakları saklıdır.</footer>
 </div>
-<script src="./app.min.js"></script></body></html>
+<script src="./app.min.js"></script>
+<script>
+/* Phase 5 CRO: Scroll-depth & CTA click tracking for Microsoft Clarity */
+(function(){
+  var fired={25:false,50:false,75:false,100:false};
+  function trackScroll(){
+    var docH=document.documentElement.scrollHeight-window.innerHeight;
+    if(docH<=0) return;
+    var pct=Math.round((window.scrollY/docH)*100);
+    [25,50,75,100].forEach(function(t){
+      if(pct>=t && !fired[t]){
+        fired[t]=true;
+        if(typeof clarity==='function') clarity('set','scroll_'+t+'%','true');
+        if(typeof gtag==='function') gtag('event','scroll_depth',{percent:t,page:location.pathname});
+      }
+    });
+  }
+  window.addEventListener('scroll',trackScroll,{passive:true});
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('.article-cta a, .mid-cta a');
+    if(el){
+      var label=el.textContent.trim()||el.href;
+      if(typeof clarity==='function') clarity('set','cta_click',label);
+      if(typeof gtag==='function') gtag('event','cta_click',{label:label,page:location.pathname});
+    }
+  });
+})();
+</script>
+</body></html>

@@ -73,6 +73,13 @@
           
           <h2>The Recency Bias Trap</h2>
           <p>Humans remember the most recent events. In annual reviews, managers rate the last two months rather than the whole year. This creates unfair bonuses and deep perceptions of injustice.</p>
+<div class="mid-cta" style="background:rgba(6,182,212,0.08);border:1px solid rgba(6,182,212,0.18);border-radius:12px;padding:22px 24px;margin:32px 0;text-align:center;">
+  <p style="font-weight:700;font-size:1.05rem;margin:0 0 8px;">Performans yönetimini ölçülebilir hale getirin</p>
+  <p style="font-size:0.88rem;opacity:0.78;margin:0 0 14px;">CADRO Performans ile OKR bazlı hedef takibi, 360° değerlendirme ve geri bildirim döngüleri.</p>
+  <a href="performans-degerlendirme-okr.html" class="primary-button" style="margin-right:10px;">Performans Modülünü İncele</a>
+  <a href="pricing.html" class="ghost-button">14 Gün Ücretsiz Dene</a>
+</div>
+
 
           <h2>The Solution: Continuous Feedback &amp; 360 Agility</h2>
           <p>Management in 2026 means <strong>continuous performance management</strong>—OKRs set quarterly and feedback given in real time. Success shouldn’t depend on a single manager’s opinion; 360 reviews with anonymous peer and report input create a far more transparent competency map.</p>
@@ -101,4 +108,32 @@
 
 
   <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js');</script>
+
+<script>
+/* Phase 5 CRO: Scroll-depth & CTA click tracking for Microsoft Clarity */
+(function(){
+  var fired={25:false,50:false,75:false,100:false};
+  function trackScroll(){
+    var docH=document.documentElement.scrollHeight-window.innerHeight;
+    if(docH<=0) return;
+    var pct=Math.round((window.scrollY/docH)*100);
+    [25,50,75,100].forEach(function(t){
+      if(pct>=t && !fired[t]){
+        fired[t]=true;
+        if(typeof clarity==='function') clarity('set','scroll_'+t+'%','true');
+        if(typeof gtag==='function') gtag('event','scroll_depth',{percent:t,page:location.pathname});
+      }
+    });
+  }
+  window.addEventListener('scroll',trackScroll,{passive:true});
+  document.addEventListener('click',function(e){
+    var el=e.target.closest('.article-cta a, .mid-cta a');
+    if(el){
+      var label=el.textContent.trim()||el.href;
+      if(typeof clarity==='function') clarity('set','cta_click',label);
+      if(typeof gtag==='function') gtag('event','cta_click',{label:label,page:location.pathname});
+    }
+  });
+})();
+</script>
 </body></html>
