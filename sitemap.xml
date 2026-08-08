@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
@@ -3955,5 +3955,148 @@
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+  </url>
+  <!-- === Tools & Landing Pages === -->
+  <url>
+    <loc>https://www.cadro.io/araclar.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/araclar.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/tools.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/tools.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/adwat.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/araclar.html" />
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/app-landing.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <!-- === Global Calculators === -->
+  <url>
+    <loc>https://www.cadro.io/ar/gosi-calculator-sa.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/de/lohnsteuer-rechner.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <!-- === Industry Vertical HR Software Pages === -->
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/bilisim.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/cagri-merkezi.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/egitim.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/gida.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/insaat.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/lojistik.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/otel.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/perakende.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/restoran.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/saglik.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/tekstil.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ik-yazilimi/uretim.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <!-- === Missing Turkish Articles === -->
+  <url>
+    <loc>https://www.cadro.io/makale-2026-dogum-babalik-izni.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/makale-2026-yemek-istisnasi.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/makale-ik-ai-etik-2026.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/makale-ik-donusen-rol-2026.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/makale-ik-yapay-zeka-kesisim-2026.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/makale-prediktif-ik-sadakat-2026.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/makale-sektorel-ik-yazilimi-uretim.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/makale-sektorel-ik-yazilimi-yazilim-sirketleri.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/makale-yonetici-ai-adaptasyon-2026.html</loc>
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 </urlset>
