@@ -217,6 +217,10 @@ RewriteRule ^Artikel-personel-takip-programi-kurulum-Leitfaden\.html$ /makale-pe
 RewriteRule ^Artikel-predHRtif-HR\.html$ /makale-prediktif-ik.html [R=301,L]
 RewriteRule ^Artikel-sessiz-istifa-Kosten\.html$ /makale-sessiz-istifa-maliyeti.html [R=301,L]
 RewriteRule ^Artikel-turnover-dusurme-yollari\.html$ /makale-turnover-dusurme-yollari.html [R=301,L]
+RewriteRule ^Artikel-Leistung-yonetimi-okr-modeli\.html$ /makale-performans-yonetimi-okr-modeli.html [R=301,L]
+RewriteRule ^Artikel-izin-yonetimi-hatalari\.html$ /makale-izin-yonetimi-hatalari.html [R=301,L]
+RewriteRule ^Artikel-pdks-secim-kriterleri\.html$ /makale-pdks-secim-kriterleri.html [R=301,L]
+RewriteRule ^Artikel-HR-Berichterstattung-dashboard-kurgusu\.html$ /makale-ik-raporlama-dashboard-kurgusu.html [R=301,L]
 
 # Hesap makineleri - yanlis isimlendirmeler -> dogru sayfalar
 RewriteRule ^sgk-prim-Berechnenma\.html$ /sgk-prim-hesaplama.html [R=301,L]
@@ -227,6 +231,9 @@ RewriteRule ^kidem-tazminati-Calculatema\.html$ /kidem-tazminati-hesaplama.html 
 RewriteRule ^bordro-maliyet-Calculatema\.html$ /bordro-maliyet-hesaplama.html [R=301,L]
 RewriteRule ^ik-roi-Calculatema\.html$ /ik-roi-hesaplama.html [R=301,L]
 RewriteRule ^ik-roi-Berechnenma\.html$ /ik-roi-hesaplama.html [R=301,L]
+RewriteRule ^bordro-maliyet-Berechnenma\.html$ /bordro-maliyet-hesaplama.html [R=301,L]
+RewriteRule ^de/kidem-tazminati-Berechnenma\.html$ /de/abfindungsrechner.html [R=301,L]
+RewriteRule ^ar/bordro-maliyet-Berechnenma\.html$ /ar/hasb-tklf-rwatb.html [R=301,L]
 
 # Yanlis dil klasorundeki EN/DE/AR hesap makinelerini TR'ye yonlendir
 RewriteRule ^de/sgk-prim-Berechnenma\.html$ /sgk-prim-hesaplama.html [R=301,L]
@@ -266,6 +273,14 @@ RewriteRule ^en/asgari-ucret-hesaplama\.html$ /asgari-ucret-hesaplama.html [R=30
 RewriteRule ^en/article-predictiand-hr\.html$ /en/article-predictive-hr.html [R=301,L]
 RewriteRule ^de/artikel-praediktiand-hr\.html$ /de/artikel-praediktive-hr.html [R=301,L]
 RewriteRule ^de/artikel-praedHRtive-hr\.html$ /de/artikel-praediktive-hr.html [R=301,L]
+RewriteRule ^en/article-ai-and-generatiand-ai\.html$ /en/article-ai-and-generative-ai.html [R=301,L]
+RewriteRule ^de/artikel-ki-und-generatiand-ki\.html$ /de/artikel-ki-und-generative-ki.html [R=301,L]
+RewriteRule ^de/artikel-recruiting-kpi-metrHRen\.html$ /de/artikel-recruiting-kpi-metriken.html [R=301,L]
+RewriteRule ^de/artikel-2026-sozialandrsicherung-grenze\.html$ /de/artikel-2026-sozialversicherung-grenze.html [R=301,L]
+RewriteRule ^de/artikel-2026-mstlohn-netto\.html$ /de/artikel-2026-mindestlohn-netto.html [R=301,L]
+RewriteRule ^makale-personel-takip-programi-kurulum-Leitfaden\.html$ /makale-personel-takip-programi-kurulum-rehberi.html [R=301,L]
+RewriteRule ^ar/article-hr-roi-calculation-formula\.html$ /ar/mqal-madt-hsab-ayd-hr.html [R=301,L]
+RewriteRule ^ar/makale-pdks-ve-uzaktan-calisma-yonetimi\.html$ /ar/mqal-pdks-adart-ml-bd.html [R=301,L]
 
 # Var olmayan sayfalar -> ana sayfa
 RewriteRule ^de/about\.html$ /de/ [R=301,L]

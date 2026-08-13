@@ -6,6 +6,8 @@ Disallow: /page-content.js.bak
 Disallow: /node_modules/
 Disallow: /*.bak$
 Disallow: /site-config.js.live.backup
+Disallow: /assets/templates/*.csv
+Disallow: /assets/templates/*.xlsx
 
 Sitemap: https://www.cadro.io/sitemap.xml
 Sitemap: https://www.cadro.io/video-sitemap.xml
