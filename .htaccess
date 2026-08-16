@@ -282,6 +282,18 @@ RewriteRule ^makale-personel-takip-programi-kurulum-Leitfaden\.html$ /makale-per
 RewriteRule ^ar/article-hr-roi-calculation-formula\.html$ /ar/mqal-madt-hsab-ayd-hr.html [R=301,L]
 RewriteRule ^ar/makale-pdks-ve-uzaktan-calisma-yonetimi\.html$ /ar/mqal-pdks-adart-ml-bd.html [R=301,L]
 
+# GSC 404 örnekleri — 2026-08-16
+RewriteRule ^ar/makale-prediktif-ik-sadakat-2026\.html$ /ar/mqal-hr-tnby-wla-2026.html [R=301,L]
+RewriteRule ^Artikel-personel-takip-programi-Was\ ist\.html$ /de/artikel-was-ist-mitarbeiter-tracking.html [R=301,L]
+RewriteRule ^en/makale-prediktif-ik-sadakat-2026\.html$ /en/article-predictive-hr-loyalty-2026.html [R=301,L]
+RewriteRule ^de/makale-prediktif-ik-sadakat-2026\.html$ /de/artikel-praediktive-hr-mitarbeiterbindung-2026.html [R=301,L]
+RewriteRule ^Artikel-ise-alim-yazilimi-aday-Erfahrung\.html$ /makale-ise-alim-yazilimi-aday-deneyimi.html [R=301,L]
+RewriteRule ^makale-dijital-ozluk-and-kvkk\.html$ /makale-dijital-ozluk-ve-kvkk.html [R=301,L]
+RewriteRule ^ar/kidem-tazminati-Berechnenma\.html$ /ar/hasb-mkafat.html [R=301,L]
+RewriteRule ^de/article-hr-roi-calculation-scenarios\.html$ /de/artikel-hr-roi-szenarien.html [R=301,L]
+RewriteRule ^Artikel-ai-ve-kvkk-uyumu\.html$ /makale-ai-ve-kvkk-uyumu.html [R=301,L]
+RewriteRule ^Artikel-ucret-degerlendirme-ve-piyasa-karsilasmasi\.html$ /makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi.html [R=301,L]
+
 # Var olmayan sayfalar -> ana sayfa
 RewriteRule ^de/about\.html$ /de/ [R=301,L]
 RewriteRule ^en/about\.html$ /en/ [R=301,L]
