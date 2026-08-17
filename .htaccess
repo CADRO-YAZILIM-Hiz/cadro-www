@@ -283,6 +283,13 @@ RewriteRule ^ar/article-hr-roi-calculation-formula\.html$ /ar/mqal-madt-hsab-ayd
 RewriteRule ^ar/makale-pdks-ve-uzaktan-calisma-yonetimi\.html$ /ar/mqal-pdks-adart-ml-bd.html [R=301,L]
 
 # GSC 404 örnekleri — 2026-08-16
+RewriteRule ^de/tools\.html$ /de/hr-software.html [R=301,L]
+RewriteRule ^de/makale-yonetici-ai-adaptasyon-2026\.html$ /de/artikel-fuehrungskraft-ki-anpassung-2026.html [R=301,L]
+RewriteRule ^makale-pdks-with-bordro-entegrasyonu\.html$ /makale-pdks-ile-bordro-entegrasyonu.html [R=301,L]
+RewriteRule ^ar/asgari-ucret-Calculatema\.html$ /ar/hasb-ajr.html [R=301,L]
+RewriteRule ^en/tools\.html$ /en/hr-software.html [R=301,L]
+RewriteRule ^de/artikel-praedHRtive-hr\.html$ /de/artikel-praediktive-hr.html [R=301,L]
+RewriteRule ^makale-performans-and-prim-modeli\.html$ /makale-performans-ve-prim-modeli.html [R=301,L]
 RewriteRule ^ar/makale-prediktif-ik-sadakat-2026\.html$ /ar/mqal-hr-tnby-wla-2026.html [R=301,L]
 RewriteRule ^Artikel-personel-takip-programi-Was\ ist\.html$ /de/artikel-was-ist-mitarbeiter-tracking.html [R=301,L]
 RewriteRule ^en/makale-prediktif-ik-sadakat-2026\.html$ /en/article-predictive-hr-loyalty-2026.html [R=301,L]
