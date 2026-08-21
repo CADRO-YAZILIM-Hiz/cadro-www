@@ -3,6 +3,17 @@
 RewriteEngine On
 RewriteBase /
 
+# Fallback 301 redirects for hosts where mod_rewrite rules are not applied
+Redirect 301 /ik-roi-Berechnenma.html /ik-roi-hesaplama.html
+Redirect 301 /de/ik-roi-Berechnenma.html /de/hr-roi-rechner.html
+Redirect 301 /en/ik-roi-Berechnenma.html /en/hr-roi-calculator.html
+Redirect 301 /en/makale-yonetici-ai-adaptasyon-2026.html /en/article-manager-ai-adaptation-2026.html
+Redirect 301 /de/makale-yonetici-ai-adaptasyon-2026.html /de/artikel-fuehrungskraft-ki-anpassung-2026.html
+Redirect 301 /ar/makale-yonetici-ai-adaptasyon-2026.html /ar/mqal-tkyf-mdra-ma-ai-2026.html
+Redirect 301 /makale-dijital-ozluk-and-kvkk.html /makale-dijital-ozluk-ve-kvkk.html
+Redirect 301 /Artikel-yillHR-Leistung-degerlendirme.html /makale-yillik-performans-degerlendirme.html
+Redirect 301 /Artikel-KMU-icin-HR-programi.html /makale-kobi-icin-ik-programi.html
+
 # === ENGLISH (EN) Redirects ===
 RewriteRule ^en/araclar\.html$ /en/tools.html [R=301,L]
 RewriteRule ^en/asgari-ucret-hesaplama\.html$ /en/minimum-wage-calculator.html [R=301,L]
