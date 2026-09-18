@@ -14,6 +14,21 @@ Redirect 301 /makale-dijital-ozluk-and-kvkk.html /makale-dijital-ozluk-ve-kvkk.h
 Redirect 301 /Artikel-yillHR-Leistung-degerlendirme.html /makale-yillik-performans-degerlendirme.html
 Redirect 301 /Artikel-KMU-icin-HR-programi.html /makale-kobi-icin-ik-programi.html
 
+# === GSC 404 CLEANUP (2026-09-18) ===
+# Search Console still discovers legacy machine-translated slugs from old
+# hreflang references. Keep these URLs as permanent redirects to the current
+# localized pages instead of returning 404 responses.
+Redirect 301 /de/asgari-ucret-Berechnung.html /de/mindestlohn-rechner.html
+Redirect 301 /en/makale-ik-roi-Calculatema-formulu.html /en/article-hr-roi-calculation-formula.html
+Redirect 301 /makale-HR-analitigi-Berichterstattung-sHR-hatalar.html /makale-ik-analitigi-raporlama-sik-hatalar.html
+Redirect 301 /ik-roi-Calculatema.html /ik-roi-hesaplama.html
+Redirect 301 /ar/about.html /about.html
+Redirect 301 /Artikel-sessiz-istifa-Kosten.html /makale-sessiz-istifa-maliyeti.html
+Redirect 301 /en/kidem-tazminati-Berechnenma.html /en/severance-pay-calculator.html
+Redirect 301 /de/sgk-prim-Berechnenma.html /de/sozialversicherung-rechner.html
+Redirect 301 /en/makale-yonetici-ai-adaptasyon-2026.html /en/article-manager-ai-adaptation-2026.html
+Redirect 301 /en/sgk-prim-Calculatema.html /en/social-security-calculator.html
+
 # === ENGLISH (EN) Redirects ===
 RewriteRule ^en/araclar\.html$ /en/tools.html [R=301,L]
 RewriteRule ^en/asgari-ucret-hesaplama\.html$ /en/minimum-wage-calculator.html [R=301,L]
