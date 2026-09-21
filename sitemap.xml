@@ -2735,46 +2735,6 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.cadro.io/pay.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/pay.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/pay.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/pay.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/pay.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/pay.html" />
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>https://www.cadro.io/en/pay.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/pay.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/pay.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/pay.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/pay.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/pay.html" />
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>https://www.cadro.io/de/pay.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/pay.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/pay.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/pay.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/pay.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/pay.html" />
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>https://www.cadro.io/ar/pay.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/pay.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/pay.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/pay.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/pay.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/pay.html" />
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <priority>0.50</priority>
-  </url>
-  <url>
     <loc>https://www.cadro.io/pdks.html</loc>
     <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/pdks.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/pdks.html" />
@@ -3173,46 +3133,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/terms.html" />
     <lastmod>2026-07-25T00:00:00+00:00</lastmod>
     <priority>0.50</priority>
-  </url>
-  <url>
-    <loc>https://www.cadro.io/tesekkur-sablon-indirme.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/tesekkur-sablon-indirme.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/template-download-thank-you.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/vorlagen-download-danke.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/shukran-qawalib.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/tesekkur-sablon-indirme.html" />
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://www.cadro.io/en/template-download-thank-you.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/tesekkur-sablon-indirme.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/template-download-thank-you.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/vorlagen-download-danke.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/shukran-qawalib.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/tesekkur-sablon-indirme.html" />
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cadro.io/de/vorlagen-download-danke.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/tesekkur-sablon-indirme.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/template-download-thank-you.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/vorlagen-download-danke.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/shukran-qawalib.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/tesekkur-sablon-indirme.html" />
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cadro.io/ar/shukran-qawalib.html</loc>
-    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/tesekkur-sablon-indirme.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/template-download-thank-you.html" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/vorlagen-download-danke.html" />
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/shukran-qawalib.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/tesekkur-sablon-indirme.html" />
-    <lastmod>2026-07-25T00:00:00+00:00</lastmod>
-    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://www.cadro.io/ucret-degerlendirme.html</loc>
@@ -3979,11 +3899,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/araclar.html" />
     <lastmod>2026-08-08T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://www.cadro.io/app-landing.html</loc>
-    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
-    <priority>0.60</priority>
   </url>
   <!-- === Global Calculators === -->
   <url>
