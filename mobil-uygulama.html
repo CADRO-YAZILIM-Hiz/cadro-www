@@ -49,7 +49,11 @@
   .store-btn .store-sub { font-size:0.68rem; font-weight:500; opacity:0.7; text-transform:uppercase; letter-spacing:0.06em; }
   .store-btn .store-name { font-size:1rem; font-weight:800; }
   .mobile-mockup { display:flex; justify-content:center; }
-  .mockup-frame { width:240px; height:480px; background:rgba(255,255,255,0.06); border:2px solid rgba(148,163,184,0.2); border-radius:40px; display:flex; align-items:center; justify-content:center; font-size:4rem; box-shadow:0 30px 80px rgba(0,0,0,0.3); }
+  .mockup-frame { width:240px; height:auto; aspect-ratio:0.58; object-fit:cover; background:rgba(255,255,255,0.06); border:2px solid rgba(148,163,184,0.2); border-radius:40px; box-shadow:0 30px 80px rgba(0,0,0,0.3); }
+  .mobile-gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:18px; margin:28px 0 8px; }
+  .mobile-gallery figure { margin:0; padding:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(148,163,184,0.12); border-radius:14px; }
+  .mobile-gallery img { display:block; width:100%; aspect-ratio:0.58; object-fit:cover; border-radius:9px; background:#0f172a; }
+  .mobile-gallery figcaption { padding:10px 2px 2px; font-size:0.82rem; font-weight:700; }
   .feature-list { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:18px; margin:28px 0; }
   .feature-item { display:flex; align-items:flex-start; gap:14px; padding:18px; background:rgba(255,255,255,0.03); border:1px solid rgba(148,163,184,0.12); border-radius:12px; }
   .feature-item .icon { font-size:1.5rem; flex-shrink:0; }
@@ -126,8 +130,24 @@
       </div>
     </div>
     <div class="mobile-mockup">
-      <div class="mockup-frame">•</div>
+      <img class="mockup-frame" src="assets/screenshots/mobile/tr/dashboard.jpg" alt="CADRO mobil uygulaması ana ekranı">
     </div>
+  </div>
+</section>
+
+<section class="section" id="ekran-goruntuleri">
+  <div class="section-head">
+    <p class="eyebrow">GERÇEK ÜRÜN EKRANLARI</p>
+    <h2>Mobil Uygulama Ekranlarını İnceleyin</h2>
+    <p>CADRO HRMS mobil uygulamasındaki gerçek akışlardan örnekler: kokpit, izin, puantaj, e-özlük, masraf ve cihaz yönetimi.</p>
+  </div>
+  <div class="mobile-gallery">
+    <figure><img src="assets/screenshots/mobile/tr/dashboard.jpg" alt="CADRO mobil uygulaması kokpit ekranı" loading="lazy"><figcaption>Kokpit</figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/leave.jpg" alt="CADRO mobil uygulaması izin ekranı" loading="lazy"><figcaption>İzin yönetimi</figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/attendance.jpg" alt="CADRO mobil uygulaması puantaj ekranı" loading="lazy"><figcaption>Puantaj</figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/e-dossier.jpg" alt="CADRO mobil uygulaması e-özlük ekranı" loading="lazy"><figcaption>E-özlük</figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/expenses.jpg" alt="CADRO mobil uygulaması masraflar ekranı" loading="lazy"><figcaption>Masraflar</figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/device-management.jpg" alt="CADRO mobil uygulaması tek cihaz yönetimi ekranı" loading="lazy"><figcaption>Tek cihaz yönetimi</figcaption></figure>
   </div>
 </section>
 
