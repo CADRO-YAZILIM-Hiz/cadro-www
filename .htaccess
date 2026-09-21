@@ -436,3 +436,14 @@ RewriteRule ^ar/vaka-calismasi-perakende\.html$ /ar/drasat-halat-tjzat.html [R=3
 RewriteRule ^ar/vaka-calismasi-saglik\.html$ /ar/drasat-halat-sh.html [R=301,L]
 RewriteRule ^ar/vaka-calismasi-tech-startup\.html$ /ar/drasat-halat-tech.html [R=301,L]
 RewriteRule ^ar/vaka-calismasi-uretim-devi\.html$ /ar/drasat-halat-antz.html [R=301,L]
+
+# === AI SEARCH OPTIMIZATION: llms.txt Discovery Headers ===
+# Let AI crawlers (Bing Copilot, ChatGPT, Claude, Perplexity) auto-discover llms.txt
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|md|txt)$">
+    Header add Link '</llms.txt>; rel="describedby"; type="text/markdown"'
+  </FilesMatch>
+  <FilesMatch "llms-full\.txt$">
+    Header add Link '</llms.txt>; rel="describedby"; type="text/markdown"'
+  </FilesMatch>
+</IfModule>

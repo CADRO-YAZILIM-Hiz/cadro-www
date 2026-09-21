@@ -11,10 +11,13 @@ Disallow: /assets/templates/*.xlsx
 
 Sitemap: https://www.cadro.io/sitemap.xml
 Sitemap: https://www.cadro.io/video-sitemap.xml
+Sitemap: https://www.cadro.io/ai-sitemap.xml
 # AI search & training crawlers
 User-agent: GPTBot
 Allow: /
 Allow: /md/
+# Also allow .md page alternatives
+Allow: /*.html.md$
 
 User-agent: Google-Extended
 Allow: /

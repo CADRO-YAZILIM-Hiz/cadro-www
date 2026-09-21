@@ -33,3 +33,33 @@ jobs:
             --exclude='.git' \
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
             deploy/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/
+
+      - name: IndexNow — Notify Bing & Copilot of URL changes
+        if: success()
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          # Generate list of recently changed HTML/MD/TXT files for IndexNow
+          CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} -- '*.html' '*.md' '*.txt' 2>/dev/null || echo "")
+
+          # Always include key pages that were likely affected
+          URL_LIST="https://www.cadro.io/,https://www.cadro.io/llms.txt,https://www.cadro.io/llms-full.txt,https://www.cadro.io/sitemap.xml,https://www.cadro.io/ai-sitemap.xml"
+
+          # Add changed files as full URLs
+          for f in $CHANGED; do
+            case "$f" in
+              ar/*) URL_LIST="$URL_LIST,https://www.cadro.io/$f" ;;
+              de/*) URL_LIST="$URL_LIST,https://www.cadro.io/$f" ;;
+              en/*) URL_LIST="$URL_LIST,https://www.cadro.io/$f" ;;
+              *)    URL_LIST="$URL_LIST,https://www.cadro.io/$f" ;;
+            esac
+          done
+
+          echo "IndexNow URLs: ${URL_LIST:0:500}..."
+
+          curl -s -o /dev/null -w "IndexNow HTTP %{http_code}" \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\": \"www.cadro.io\", \"key\": \"${INDEXNOW_KEY}\", \"keyLocation\": \"https://www.cadro.io/${INDEXNOW_KEY}.txt\", \"urlList\": [\"$(echo $URL_LIST | sed 's/,/\",\"/g')\"]}"
+
+          echo " IndexNow ping completed."

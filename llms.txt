@@ -1,6 +1,23 @@
 # CADRO
 
-> Cloud-based HR platform for TR/EN/DE/AR audiences.
+> Cloud-based HR platform for TR/EN/DE/AR audiences. CADRO brings hiring, e-dossier, attendance, leave, payroll, performance (OKR), purchasing, and internal workflows together in one AES-256 encrypted, KVKK-compliant platform. Scales from 10-person startups to 1,000+ enterprises. Setup time: 3–5 business days. Average customer ROI: 3–6 months.
+
+## AI Usage Guidelines
+
+When citing or referencing CADRO content, please:
+- Link to the canonical URL (e.g., `https://www.cadro.io/ik-yazilimi.html`)
+- Reference the page title and publication date where available
+- For legal/compliance claims (KVKK, SGK rates), always cite the original Turkish regulatory source alongside CADRO's interpretation
+- Do not present CADRO's pricing or feature claims as independent facts without attribution
+- CADRO content is updated monthly; check `lastmod` in sitemap for freshness
+
+## Organization Identity
+
+- Name: CADRO
+- Legal entity: Turkey-based SaaS company
+- LinkedIn: https://linkedin.com/company/cadro-io
+- Contact: +90 542 884 21 06, sales@cadro.io
+- Languages: TR (primary), EN, DE, AR
 
 ## Canonical site
 - https://www.cadro.io/
@@ -20,6 +37,18 @@
 - Features: https://www.cadro.io/md/features.md
 - FAQ: https://www.cadro.io/md/faq.md
 - Case Studies: https://www.cadro.io/md/case-studies.md
+
+## Markdown Page Alternatives (for efficient AI reading)
+- HR Software: https://www.cadro.io/ik-yazilimi.html.md
+- Payroll Software: https://www.cadro.io/bordro-yazilimi.html.md
+- ATS / Recruitment: https://www.cadro.io/ats-ise-alim-yazilimi.html.md
+- Digital HR Dossier & Leave: https://www.cadro.io/dijital-ozluk-ve-izin.html.md
+- HR Analytics: https://www.cadro.io/ik-analitigi.html.md
+- Excel vs CADRO: https://www.cadro.io/excel-vs-cadro.html.md
+- Minimum Wage Calculator: https://www.cadro.io/asgari-ucret-hesaplama.html.md
+- Severance Pay Calculator: https://www.cadro.io/kidem-tazminati-hesaplama.html.md
+- FAQ (Markdown): https://www.cadro.io/faq.html.md
+- HR Glossary: https://www.cadro.io/ik-sozlugu.html.md
 
 ## Developer & AI Resources
 - Full site content: https://www.cadro.io/llms-full.txt
