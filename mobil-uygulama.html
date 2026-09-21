@@ -51,9 +51,12 @@
   .mobile-mockup { display:flex; justify-content:center; }
   .mockup-frame { width:240px; height:auto; aspect-ratio:0.58; object-fit:cover; background:rgba(255,255,255,0.06); border:2px solid rgba(148,163,184,0.2); border-radius:40px; box-shadow:0 30px 80px rgba(0,0,0,0.3); }
   .mobile-gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:18px; margin:28px 0 8px; }
-  .mobile-gallery figure { margin:0; padding:12px; background:rgba(255,255,255,0.03); border:1px solid rgba(148,163,184,0.12); border-radius:14px; }
+  .mobile-gallery figure { margin:0; padding:12px; background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.025)); border:1px solid rgba(148,163,184,0.16); border-radius:16px; box-shadow:0 14px 30px rgba(15,23,42,0.12); transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease; }
+  .mobile-gallery figure:hover { transform:translateY(-5px); border-color:rgba(34,211,238,0.45); box-shadow:0 20px 38px rgba(8,47,73,0.2); }
   .mobile-gallery img { display:block; width:100%; aspect-ratio:0.58; object-fit:cover; border-radius:9px; background:#0f172a; }
-  .mobile-gallery figcaption { padding:10px 2px 2px; font-size:0.82rem; font-weight:700; }
+  .mobile-gallery figcaption { padding:13px 4px 3px; }
+  .mobile-gallery figcaption strong { display:block; color:var(--cyan); font-size:0.92rem; margin-bottom:6px; }
+  .mobile-gallery figcaption span { display:block; font-size:0.78rem; line-height:1.55; opacity:0.78; }
   .feature-list { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:18px; margin:28px 0; }
   .feature-item { display:flex; align-items:flex-start; gap:14px; padding:18px; background:rgba(255,255,255,0.03); border:1px solid rgba(148,163,184,0.12); border-radius:12px; }
   .feature-item .icon { font-size:1.5rem; flex-shrink:0; }
@@ -142,12 +145,12 @@
     <p>CADRO HRMS mobil uygulamasındaki gerçek akışlardan örnekler: kokpit, izin, puantaj, e-özlük, masraf ve cihaz yönetimi.</p>
   </div>
   <div class="mobile-gallery">
-    <figure><img src="assets/screenshots/mobile/tr/dashboard.jpg" alt="CADRO mobil uygulaması kokpit ekranı" loading="lazy"><figcaption>Kokpit</figcaption></figure>
-    <figure><img src="assets/screenshots/mobile/tr/leave.jpg" alt="CADRO mobil uygulaması izin ekranı" loading="lazy"><figcaption>İzin yönetimi</figcaption></figure>
-    <figure><img src="assets/screenshots/mobile/tr/attendance.jpg" alt="CADRO mobil uygulaması puantaj ekranı" loading="lazy"><figcaption>Puantaj</figcaption></figure>
-    <figure><img src="assets/screenshots/mobile/tr/e-dossier.jpg" alt="CADRO mobil uygulaması e-özlük ekranı" loading="lazy"><figcaption>E-özlük</figcaption></figure>
-    <figure><img src="assets/screenshots/mobile/tr/expenses.jpg" alt="CADRO mobil uygulaması masraflar ekranı" loading="lazy"><figcaption>Masraflar</figcaption></figure>
-    <figure><img src="assets/screenshots/mobile/tr/device-management.jpg" alt="CADRO mobil uygulaması tek cihaz yönetimi ekranı" loading="lazy"><figcaption>Tek cihaz yönetimi</figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/dashboard.jpg" alt="CADRO mobil uygulaması kokpit ekranı" loading="lazy"><figcaption><strong>Kokpit</strong><span>İK gündemini, bekleyen işleri ve önemli özetleri tek bakışta görün.</span></figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/leave.jpg" alt="CADRO mobil uygulaması izin ekranı" loading="lazy"><figcaption><strong>İzin yönetimi</strong><span>İzin taleplerini gönderin, bakiyeleri izleyin ve onay akışlarını hızlandırın.</span></figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/attendance.jpg" alt="CADRO mobil uygulaması puantaj ekranı" loading="lazy"><figcaption><strong>Puantaj</strong><span>QR ve konum doğrulamasıyla giriş-çıkış kayıtlarını güvenli biçimde yönetin.</span></figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/e-dossier.jpg" alt="CADRO mobil uygulaması e-özlük ekranı" loading="lazy"><figcaption><strong>E-özlük</strong><span>Çalışan belgelerine erişin, yeni evrakları yükleyin ve arşivi güncel tutun.</span></figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/expenses.jpg" alt="CADRO mobil uygulaması masraflar ekranı" loading="lazy"><figcaption><strong>Masraflar</strong><span>Fişleri ekleyin, masraf bildirimlerini gönderin ve onay sürecini takip edin.</span></figcaption></figure>
+    <figure><img src="assets/screenshots/mobile/tr/device-management.jpg" alt="CADRO mobil uygulaması tek cihaz yönetimi ekranı" loading="lazy"><figcaption><strong>Tek cihaz yönetimi</strong><span>Hesabınıza bağlı mobil cihazları kontrol ederek erişim güvenliğini koruyun.</span></figcaption></figure>
   </div>
 </section>
 

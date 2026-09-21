@@ -39,6 +39,25 @@
       .hero-brand-lockup { display: inline-flex; align-items: center; gap: 14px; padding: 12px 16px; margin: 0 0 18px; border-radius: 999px; background: rgba(255, 255, 255, 0.82); border: 1px solid rgba(148, 163, 184, 0.18); box-shadow: 0 14px 32px rgba(15, 23, 42, 0.06); }
       .hero-brand-lockup img { height: 50px; width: auto; display: block; }
       .hero-brand-lockup span { font-size: 0.82rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #0891b2; }
+      .mobile-home-spotlight { display:grid; grid-template-columns:minmax(0,1.1fr) minmax(260px,0.9fr); gap:42px; align-items:center; padding:34px; border:1px solid rgba(6,182,212,0.24); border-radius:26px; background:linear-gradient(120deg,rgba(8,145,178,0.13),rgba(15,23,42,0.02) 65%); overflow:hidden; }
+      .mobile-home-spotlight h2 { margin:8px 0 14px; max-width:650px; }
+      .mobile-home-spotlight p { max-width:650px; }
+      .mobile-home-proof { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 26px; }
+      .mobile-home-proof span { padding:8px 12px; border-radius:999px; background:rgba(255,255,255,0.08); border:1px solid rgba(148,163,184,0.16); font-size:0.78rem; font-weight:700; }
+      .mobile-home-carousel { justify-self:center; width:min(100%,330px); position:relative; }
+      .mobile-home-phone { position:relative; padding:12px; border-radius:34px; background:linear-gradient(145deg,#0f172a,#164e63); box-shadow:0 28px 60px rgba(8,47,73,0.28); transform:rotate(3deg); }
+      .mobile-home-viewport { overflow:hidden; border-radius:24px; touch-action:pan-y; cursor:grab; }
+      .mobile-home-viewport.is-dragging { cursor:grabbing; }
+      .mobile-home-track { display:flex; transition:transform 280ms ease; }
+      .mobile-home-track img { display:block; flex:0 0 100%; width:100%; height:auto; aspect-ratio:auto; object-fit:contain; user-select:none; -webkit-user-drag:none; }
+      .mobile-home-carousel-button { position:absolute; top:50%; z-index:2; width:36px; height:36px; border:1px solid rgba(255,255,255,0.35); border-radius:50%; background:rgba(15,23,42,0.82); color:#fff; font-size:1.25rem; line-height:1; transform:translateY(-50%); cursor:pointer; box-shadow:0 8px 20px rgba(15,23,42,0.28); }
+      .mobile-home-carousel-button:hover { background:#0891b2; }
+      .mobile-home-carousel-button.prev { left:-18px; }
+      .mobile-home-carousel-button.next { right:-18px; }
+      .mobile-home-carousel-dots { display:flex; justify-content:center; gap:7px; margin-top:18px; transform:rotate(-3deg); }
+      .mobile-home-carousel-dots button { width:8px; height:8px; padding:0; border:0; border-radius:50%; background:rgba(100,116,139,0.5); cursor:pointer; }
+      .mobile-home-carousel-dots button.is-active { width:22px; border-radius:8px; background:#06b6d4; }
+      @media(max-width:760px) { .mobile-home-spotlight { grid-template-columns:1fr; padding:24px; } .mobile-home-carousel { width:min(72vw,280px); } }
     </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CADRO","url":"https://www.cadro.io/","inLanguage":"tr"}</script>
 
@@ -125,6 +144,38 @@
                 <img src="./assets/screenshots/phase2/tr/dashboard.webp" alt="CADRO cockpit and HR dashboard" class="product-shot" id="homepage-shot-dashboard" loading="eager" fetchpriority="high">
               </button>
             </figure>
+          </div>
+        </section>
+
+        <section class="section reveal-on-scroll" id="mobile-app-spotlight">
+          <div class="mobile-home-spotlight">
+            <div>
+              <p class="eyebrow">CADRO MOBİL UYGULAMA</p>
+              <h2>İK operasyonlarınız artık cebinizde.</h2>
+              <p>İzin taleplerini yönetin, puantajı takip edin, masraf ve e-özlük süreçlerini çalışanlarınızla birlikte mobil uygulamadan yürütün.</p>
+              <div class="mobile-home-proof" aria-label="Mobil uygulama özellikleri">
+                <span>İzin yönetimi</span><span>QR / konumlu puantaj</span><span>Masraf bildirimi</span><span>E-özlük</span><span>Tek cihaz güvenliği</span>
+              </div>
+              <a class="primary-button" href="mobil-uygulama.html">Mobil uygulamayı gerçek ekranlarla inceleyin →</a>
+            </div>
+            <div class="mobile-home-carousel" data-mobile-carousel aria-label="CADRO mobil uygulaması ekran galerisi">
+              <div class="mobile-home-phone">
+                <button class="mobile-home-carousel-button prev" type="button" data-carousel-prev aria-label="Önceki mobil ekran">‹</button>
+                <div class="mobile-home-viewport" data-carousel-viewport>
+                  <div class="mobile-home-track" data-carousel-track>
+                    <img src="./assets/screenshots/mobile/tr/dashboard.jpg" alt="CADRO mobil uygulaması kokpit ekranı" loading="lazy">
+                    <img src="./assets/screenshots/mobile/tr/leave.jpg" alt="CADRO mobil uygulaması izin ekranı" loading="lazy">
+                    <img src="./assets/screenshots/mobile/tr/attendance.jpg" alt="CADRO mobil uygulaması puantaj ekranı" loading="lazy">
+                    <img src="./assets/screenshots/mobile/tr/e-dossier.jpg" alt="CADRO mobil uygulaması e-özlük ekranı" loading="lazy">
+                    <img src="./assets/screenshots/mobile/tr/expenses.jpg" alt="CADRO mobil uygulaması masraflar ekranı" loading="lazy">
+                    <img src="./assets/screenshots/mobile/tr/device-management.jpg" alt="CADRO mobil uygulaması cihaz yönetimi ekranı" loading="lazy">
+                    <img src="./assets/screenshots/mobile/tr/more.jpg" alt="CADRO mobil uygulaması diğer özellikler ekranı" loading="lazy">
+                  </div>
+                </div>
+                <button class="mobile-home-carousel-button next" type="button" data-carousel-next aria-label="Sonraki mobil ekran">›</button>
+              </div>
+              <div class="mobile-home-carousel-dots" data-carousel-dots aria-label="Mobil ekran seçimi"></div>
+            </div>
           </div>
         </section>
 
@@ -535,6 +586,44 @@
 
 
 <script>
+/* Homepage mobile app phone carousel */
+(function(){
+  var carousel=document.querySelector('[data-mobile-carousel]');
+  if(!carousel) return;
+  var viewport=carousel.querySelector('[data-carousel-viewport]');
+  var track=carousel.querySelector('[data-carousel-track]');
+  var slides=Array.prototype.slice.call(track.querySelectorAll('img'));
+  var dots=carousel.querySelector('[data-carousel-dots]');
+  var index=0;
+  var startX=0;
+  var dragging=false;
+  slides.forEach(function(_,i){
+    var dot=document.createElement('button');
+    dot.type='button';
+    dot.setAttribute('aria-label','Mobil ekran '+(i+1));
+    dot.addEventListener('click',function(){goTo(i);});
+    dots.appendChild(dot);
+  });
+  function goTo(next){
+    index=(next+slides.length)%slides.length;
+    track.style.transform='translateX(-'+(index*100)+'%)';
+    Array.prototype.forEach.call(dots.children,function(dot,i){dot.classList.toggle('is-active',i===index);});
+  }
+  carousel.querySelector('[data-carousel-prev]').addEventListener('click',function(){goTo(index-1);});
+  carousel.querySelector('[data-carousel-next]').addEventListener('click',function(){goTo(index+1);});
+  viewport.addEventListener('pointerdown',function(e){
+    dragging=true; startX=e.clientX; viewport.classList.add('is-dragging'); viewport.setPointerCapture(e.pointerId);
+  });
+  viewport.addEventListener('pointerup',function(e){
+    if(!dragging) return;
+    dragging=false; viewport.classList.remove('is-dragging');
+    var delta=e.clientX-startX;
+    if(Math.abs(delta)>35) goTo(index+(delta<0?1:-1));
+  });
+  viewport.addEventListener('pointercancel',function(){dragging=false; viewport.classList.remove('is-dragging');});
+  goTo(0);
+})();
+
 /* Phase 5 CRO: Scroll-depth & CTA click tracking for Microsoft Clarity */
 (function(){
   var fired={25:false,50:false,75:false,100:false};
