@@ -31,6 +31,9 @@ jobs:
       - name: Run daily publisher
         run: node publish-scheduler.js
 
+      - name: Generate published blog sitemap
+        run: node generate-blog-sitemap.js
+
       - name: Commit and push changes if any
         run: |
           if [ -n "$(git status --porcelain)" ]; then

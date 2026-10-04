@@ -10,6 +10,7 @@ Disallow: /assets/templates/*.csv
 Disallow: /assets/templates/*.xlsx
 
 Sitemap: https://www.cadro.io/sitemap.xml
+Sitemap: https://www.cadro.io/blog-sitemap.xml
 Sitemap: https://www.cadro.io/video-sitemap.xml
 Sitemap: https://www.cadro.io/ai-sitemap.xml
 # AI search & training crawlers
