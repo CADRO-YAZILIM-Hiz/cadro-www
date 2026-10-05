@@ -5,7 +5,7 @@
   const grid = document.querySelector('.blog-grid');
   if (!grid) return;
 
-  const sourceUrl = '../blog.html';
+  const sourceUrl = `${window.location.origin}/blog.html`;
   const dateFormatter = new Intl.DateTimeFormat(language, {
     day: '2-digit',
     month: 'long',
@@ -27,7 +27,8 @@
       const sourceLink = sourceCard.querySelector('a.read-more');
       if (!sourceLink) return null;
 
-      const articleResponse = await fetch(new URL(sourceLink.getAttribute('href'), window.location.href));
+      const articleUrl = new URL(sourceLink.getAttribute('href'), `${window.location.origin}/`);
+      const articleResponse = await fetch(articleUrl);
       if (!articleResponse.ok) return null;
 
       const articleDocument = new DOMParser().parseFromString(await articleResponse.text(), 'text/html');
