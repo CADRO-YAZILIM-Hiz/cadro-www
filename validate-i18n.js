@@ -8,6 +8,9 @@ const universalSlugs = new Set([
   'compliance', 'excel-vs-cadro', 'faq', 'pay', 'pdks', 'pricing', 'privacy',
   'refund', 'security', 'terms', 'watch', 'webinar', 'app-landing',
 ]);
+const technicalSlugs = new Set([
+  'tesekkur-sablon-indirme', 'shukran-qawalib', 'template-download-thank-you', 'vorlagen-download-danke',
+]);
 const trFiles = fs.readdirSync(root).filter((file) => file.endsWith('.html'));
 const mapping = JSON.parse(fs.readFileSync(path.join(root, 'slug-mapping.json'), 'utf8'));
 const errors = [];
@@ -20,6 +23,7 @@ function existsFor(language, slug) {
 for (const file of trFiles) {
   const trSlug = path.basename(file, '.html');
   if (trSlug === '404' || trSlug === 'index' || trSlug === 'blog') continue;
+  if (technicalSlugs.has(trSlug)) continue;
   if (universalSlugs.has(trSlug)) continue;
   const entry = mapping[trSlug];
   if (!entry || !entry.en || !entry.de || !entry.ar) {
@@ -46,7 +50,7 @@ for (const file of htmlFiles) {
   const relative = path.relative(root, file).replaceAll(path.sep, '/');
   if (/\?{3,}/.test(html)) warnings.push(`${relative}: encoding placeholder detected`);
   if (!/<link[^>]+rel=["']canonical["']/i.test(html)) warnings.push(`${relative}: canonical missing`);
-  if (!/<link[^>]+hreflang=["']tr["']/i.test(html) && !relative.endsWith('/404.html')) warnings.push(`${relative}: hreflang cluster missing`);
+  if (!/<link[^>]+hreflang=["']tr["']/i.test(html) && !relative.endsWith('/404.html') && !technicalSlugs.has(path.basename(relative, '.html')) && !/<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)) warnings.push(`${relative}: hreflang cluster missing`);
   if (relative.startsWith('ar/') && !/<html[^>]+lang=["']ar["'][^>]+dir=["']rtl["']/i.test(html) && !/<html[^>]+dir=["']rtl["'][^>]+lang=["']ar["']/i.test(html)) {
     warnings.push(`${relative}: Arabic lang/dir declaration missing`);
   }
