@@ -35,6 +35,7 @@
   "tesekkur-sablon-indirme": { "en": "template-download-thank-you", "de": "vorlagen-download-danke", "ar": "shukran-qawalib" },
   "ik-arastirma-raporu-2026": { "en": "hr-research-report-2026", "de": "hr-forschungsbericht-2026", "ar": "tqryr-bhth-hr-2026" },
   "app-landing": { "en": "app-landing", "de": "app-landing", "ar": "app-landing" },
+  "about": { "en": "about", "de": "about", "ar": "about" },
 
   "_makale_prefix": {
     "_note": "Article/blog post slugs. The 'makale-' prefix is replaced with language-appropriate prefix.",
@@ -93,4 +94,43 @@
   "makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi": { "en": "article-salary-benchmarking-and-market-comparison", "de": "artikel-gehaltsbenchmarking-marktvergleich", "ar": "mqal-tqyym-ajwr-wmqarn-swk" },
   "makale-yapay-zeka-genai": { "en": "article-ai-and-generative-ai", "de": "artikel-ki-und-generative-ki", "ar": "mqal-ai-wai-twlydy" },
   "makale-yillik-performans-degerlendirme": { "en": "article-annual-performance-review", "de": "artikel-jaehrliche-leistungsbeurteilung", "ar": "mqal-tqyym-ada-snwy" }
+  ,"makale-2026-dogum-babalik-izni": { "en": "article-2026-maternity-paternity-leave", "de": "artikel-2026-mutterschutz-elternzeit", "ar": "mqal-2026-ajazt-umum-ubw" }
+  ,"makale-2026-yemek-istisnasi": { "en": "article-2026-meal-allowance-tax-exemption", "de": "artikel-2026-essensgeld-steuerfreibetrag", "ar": "mqal-2026-bdl-wjbat-dryby" }
+  ,"makale-aciklanabilir-yapay-zeka-ik": { "en": "article-explainable-ai-hr", "de": "artikel-erklaerbare-ki-hr", "ar": "mqal-aldka-alastnaay-alqabl-lltfsy" }
+  ,"makale-biyometrik-mesai-takibi-kvkk": { "en": "article-biometric-time-tracking-turkish-dpa", "de": "artikel-biometrische-zeiterfassung-turkische-datenschutzbehoerde", "ar": "mqal-alhdwr-albywmetry-wkvkk" }
+  ,"makale-calisan-izleme-olcululuk-kvkk": { "en": "article-employee-monitoring-proportionality", "de": "artikel-mitarbeiterueberwachung-verhaeltnismaessigkeit", "ar": "mqal-mraqbt-almwzfyn-waltanasb" }
+  ,"makale-elektronik-puantaj-delil-niteligi": { "en": "article-electronic-time-records-evidence", "de": "artikel-elektronische-zeiterfassung-beweiswert", "ar": "mqal-qymt-sjlat-alwaqt-alalktrwnyh" }
+  ,"makale-ik-ai-risk-management-framework-rehberi": { "en": "article-nist-ai-rmf-hr-guide", "de": "artikel-nist-ai-rmf-hr-leitfaden", "ar": "mqal-dlyl-nist-llmward-albshrya" }
+  ,"makale-ik-dashboard-tasarimi": { "en": "article-hr-dashboard-design", "de": "artikel-hr-dashboard-design", "ar": "mqal-tsmym-lwht-hr" }
+  ,"makale-ik-yapay-zeka-kullanim-modeli": { "en": "article-ai-in-hr-operating-model", "de": "artikel-ki-im-hr-betriebsmodell", "ar": "mqal-astkhdam-aldka-alastnaay-fy-almward-albshrya" }
+  ,"makale-insan-makine-isbirligi-ik": { "en": "article-human-machine-collaboration-hr", "de": "artikel-mensch-maschine-zusammenarbeit-hr", "ar": "mqal-taawn-alansan-walalat-fy-almward-albshrya" }
+  ,"makale-ise-alim-algoritmik-bias": { "en": "article-hiring-algorithmic-bias", "de": "artikel-algorithmischer-bias-im-recruiting", "ar": "mqal-thyzt-khwaryzmyat-al-twzyf" }
+  ,"makale-ise-alim-hunisi-kpi-modeli": { "en": "article-recruitment-funnel-kpi", "de": "artikel-recruiting-funnel-kpi", "ar": "mqal-mshrat-ada-msar-twzyf" }
+  ,"makale-people-analytics-korelasyon-nedensellik": { "en": "article-people-analytics-correlation-causation", "de": "artikel-people-analytics-korrelation-kausalitaet", "ar": "mqal-thlylat-almwzfyn-alartbat-walsbby" }
+  ,"makale-qr-pdks-nasil-calisir": { "en": "article-how-qr-time-tracking-works", "de": "artikel-qr-zeiterfassung-architektur", "ar": "mqal-kyf-yaml-nzam-alhdwr-qr" }
+  ,"makale-qr-pdks-sahte-giris-riski": { "en": "article-fake-checkin-qr-shift-tracking", "de": "artikel-gefaelschte-checkins-qr-schicht", "ar": "mqal-tasjyl-hdur-wahmy-qr" }
+  ,"makale-calisan-verisi-ai-veri-minimizasyonu": { "en": "article-employee-data-ai-minimization", "de": "artikel-datenminimierung-beschaeftigtendaten-ki", "ar": "mqal-taqlyl-byanat-almwzfyn-aldaaa-alastnaay" }
+  ,"makale-hibrit-calisma-qr-pdks": { "en": "article-qr-attendance-remote-hybrid-work", "de": "artikel-qr-anwesenheit-remote-hybrid", "ar": "mqal-hdur-qr-laml-alhyjn" }
+  ,"makale-ik-analitigi-veri-kalitesi-yonetimi": { "en": "article-hr-analytics-data-governance", "de": "artikel-daten-governance-hr-analytik", "ar": "mqal-hwkm-byanat-thlylat-almwzfyn" }
+  ,"makale-ik-is-zekasi-kpi-stratejik-karar": { "en": "article-hr-business-intelligence-kpi", "de": "artikel-hr-business-intelligence-kpi", "ar": "mqal-thka-alamal-fy-almward-albshrya-kpi" }
+  ,"makale-ik-teknolojileri-2027-ai-bi-pdks": { "en": "article-hr-technology-2027-ai-bi-time-tracking", "de": "artikel-hr-technologie-2027-ki-bi-zeiterfassung", "ar": "mqal-tqnyat-almward-albshrya-2027" }
+  ,"makale-ik-uretken-yapay-zeka-guvenli-kullanim": { "en": "article-safe-generative-ai-hr", "de": "artikel-sichere-generative-ki-im-hr", "ar": "mqal-astkhdam-amn-llthka-alastnaay-althn" }
+  ,"makale-kvkk-2026-921-biyometrik-mesai-takibi": { "en": "article-kvkk-2026-921-biometric-time-tracking", "de": "artikel-kvkk-2026-921-biometrische-zeiterfassung", "ar": "mqal-qarar-kvkk-2026-921-albywmetry" }
+  ,"makale-pdks-kisisel-veri-mi": { "en": "article-is-time-tracking-data-personal-data", "de": "artikel-sind-zeiterfassungsdaten-personenbezogen", "ar": "mqal-hal-byanat-alhdwr-shkhsyh" }
+  ,"makale-pdks-tedarikci-secim-kontrol-listesi": { "en": "article-time-tracking-vendor-checklist", "de": "artikel-zeiterfassungsanbieter-checkliste", "ar": "mqal-qaymt-tahqaq-mzwd-alhdwr" }
+  ,"makale-prediktif-ik-sadakat-2026": { "en": "article-predictive-hr-loyalty-2026", "de": "artikel-praediktive-hr-mitarbeiterbindung-2026", "ar": "mqal-hr-tnby-wla-2026" }
+  ,"makale-qr-gps-nfc-biyometri-pdks-karsilastirma": { "en": "article-qr-gps-nfc-biometric-time-tracking", "de": "artikel-qr-gps-nfc-biometrische-zeiterfassung", "ar": "mqal-mqarn-qr-gps-nfc-bymtrya" }
+  ,"makale-qr-pdks-bordro-entegrasyonu": { "en": "article-qr-time-tracking-payroll-integration", "de": "artikel-qr-zeiterfassung-lohnintegration", "ar": "mqal-tkaml-hdur-qr-ma-alrwatyb" }
+  ,"makale-qr-pdks-kvkk-veri-minimizasyonu": { "en": "article-kvkk-data-minimization-qr-time-tracking", "de": "artikel-kvkk-datenminimierung-qr-zeiterfassung", "ar": "mqal-tqlyl-byanat-qr-wfqa-lkvkk" }
+  ,"makale-sektorel-ik-yazilimi-lojistik": { "en": "article-hr-software-for-logistics", "de": "artikel-hr-software-fuer-logistik", "ar": "mqal-brnamj-hr-lwjsty" }
+  ,"makale-sektorel-ik-yazilimi-perakende": { "en": "article-hr-software-for-retail", "de": "artikel-hr-software-fuer-einzelhandel", "ar": "mqal-brnamj-hr-tjzat" }
+  ,"makale-sektorel-ik-yazilimi-saglik": { "en": "article-hr-software-for-healthcare", "de": "artikel-hr-software-fuer-gesundheitswesen", "ar": "mqal-brnamj-hr-sh" }
+  ,"makale-sektorel-ik-yazilimi-uretim": { "en": "article-hr-software-for-manufacturing", "de": "artikel-hr-software-fuer-produktion", "ar": "mqal-brnamj-hr-sharikat-antz" }
+  ,"makale-sektorel-ik-yazilimi-yazilim-sirketleri": { "en": "article-hr-software-for-software-companies", "de": "artikel-hr-software-fuer-software-firmen", "ar": "mqal-brnamj-hr-shrkat-brmjyat" }
+  ,"makale-sektorlere-gore-qr-pdks": { "en": "article-qr-time-tracking-by-industry", "de": "artikel-qr-zeiterfassung-branchen", "ar": "mqal-hdur-qr-hsb-alqta" }
+  ,"makale-turnover-tahmin-modeli-yanlis-pozitif": { "en": "article-turnover-prediction-false-positives", "de": "artikel-fehlalarme-fluktuationsprognose", "ar": "mqal-natayj-kadbt-tndb-dwran-almwzfyn" }
+  ,"makale-ucret-adaleti-analitigi": { "en": "article-pay-equity-analytics", "de": "artikel-lohngerechtigkeit-analyse", "ar": "mqal-thlylat-adalt-alajwr" }
+  ,"makale-yargitay-kvkk-kurul-karari-farki": { "en": "article-yargitay-vs-turkish-dpa-decisions", "de": "artikel-unterschied-yargitay-datenschutzbehoerde", "ar": "mqal-alfrq-byn-qrarat-yargitay-wkvkk" }
+  ,"makale-yargitay-pdks-fazla-calisma-ispat": { "en": "article-turkish-court-time-records-overtime-proof", "de": "artikel-yargitay-zeiterfassung-ueberstunden-beweis", "ar": "mqal-mahkmt-alnqd-altrky-wsjalat-alwaqt" }
+  ,"makale-yonetici-ai-adaptasyon-2026": { "en": "article-manager-ai-adaptation-2026", "de": "artikel-fuehrungskraft-ki-anpassung-2026", "ar": "mqal-tkyf-mdra-ma-ai-2026" }
 }

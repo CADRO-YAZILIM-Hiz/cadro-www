@@ -3669,7 +3669,42 @@
 
   <url>
     <loc>https://www.cadro.io/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/about.html" />
     <lastmod>2026-07-30T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/en/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/about.html" />
+    <lastmod>2026-10-06T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/de/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/about.html" />
+    <lastmod>2026-10-06T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ar/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/about.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/about.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/about.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/about.html" />
+    <lastmod>2026-10-06T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
@@ -3900,6 +3935,36 @@
     <lastmod>2026-08-08T00:00:00+00:00</lastmod>
     <priority>0.80</priority>
   </url>
+  <url>
+    <loc>https://www.cadro.io/en/tools.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/araclar.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/tools.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/tools.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/adwat.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/araclar.html" />
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/de/tools.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/araclar.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/tools.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/tools.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/adwat.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/araclar.html" />
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.cadro.io/ar/adwat.html</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://www.cadro.io/araclar.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.cadro.io/en/tools.html" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.cadro.io/de/tools.html" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/adwat.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.cadro.io/araclar.html" />
+    <lastmod>2026-08-08T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
   <!-- === Global Calculators === -->
   <url>
     <loc>https://www.cadro.io/ar/gosi-calculator-sa.html</loc>
@@ -4027,4 +4092,55 @@
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
+  <url><loc>https://www.cadro.io/makale-aciklanabilir-yapay-zeka-ik.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-explainable-ai-hr.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-erklaerbare-ki-hr.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-aldka-alastnaay-alqabl-lltfsy.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-biyometrik-mesai-takibi-kvkk.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-biometric-time-tracking-turkish-dpa.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-biometrische-zeiterfassung-turkische-datenschutzbehoerde.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-alhdwr-albywmetry-wkvkk.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-calisan-izleme-olcululuk-kvkk.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-employee-monitoring-proportionality.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-mitarbeiterueberwachung-verhaeltnismaessigkeit.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-mraqbt-almwzfyn-waltanasb.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-elektronik-puantaj-delil-niteligi.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-electronic-time-records-evidence.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-elektronische-zeiterfassung-beweiswert.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-qymt-sjlat-alwaqt-alalktrwnyh.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-ik-ai-risk-management-framework-rehberi.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-nist-ai-rmf-hr-guide.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-nist-ai-rmf-hr-leitfaden.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-dlyl-nist-llmward-albshrya.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-ik-dashboard-tasarimi.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-hr-dashboard-design.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-hr-dashboard-design.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-ik-yapay-zeka-kullanim-modeli.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-ai-in-hr-operating-model.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-ki-im-hr-betriebsmodell.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-astkhdam-aldka-alastnaay-fy-almward-albshrya.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-insan-makine-isbirligi-ik.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-human-machine-collaboration-hr.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-mensch-maschine-zusammenarbeit-hr.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-taawn-alansan-walalat-fy-almward-albshrya.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-ise-alim-algoritmik-bias.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-hiring-algorithmic-bias.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-algorithmischer-bias-im-recruiting.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-thyzt-khwaryzmyat-al-twzyf.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-ise-alim-hunisi-kpi-modeli.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-recruitment-funnel-kpi.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-recruiting-funnel-kpi.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-mshrat-ada-msar-twzyf.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-people-analytics-korelasyon-nedensellik.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-people-analytics-correlation-causation.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-people-analytics-korrelation-kausalitaet.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-thlylat-almwzfyn-alartbat-walsbby.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-qr-pdks-nasil-calisir.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-how-qr-time-tracking-works.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-qr-zeiterfassung-architektur.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-kyf-yaml-nzam-alhdwr-qr.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/makale-qr-pdks-sahte-giris-riski.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/en/article-fake-checkin-qr-shift-tracking.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/de/artikel-gefaelschte-checkins-qr-schicht.html</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://www.cadro.io/ar/mqal-tasjyl-hdur-wahmy-qr.html</loc><lastmod>2026-10-06</lastmod></url>
 </urlset>
