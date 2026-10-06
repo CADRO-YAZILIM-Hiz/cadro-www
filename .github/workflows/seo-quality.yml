@@ -1,0 +1,72 @@
+name: SEO and i18n Quality Gate
+
+"on":
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-quality-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate SEO and i18n
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate multilingual files and metadata
+        run: node validate-i18n.js
+
+      - name: Validate sitemap XML and local targets
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+          const xml = fs.readFileSync('sitemap.xml', 'utf8');
+          if (!xml.startsWith('<?xml') || !xml.includes('<urlset') || !xml.includes('</urlset>')) {
+            throw new Error('sitemap.xml has an invalid XML envelope');
+          }
+
+          const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)]
+            .map((match) => match[1].trim())
+            .filter(Boolean);
+          const duplicates = locs.filter((url, index) => locs.indexOf(url) !== index);
+          if (duplicates.length) {
+            throw new Error(`Duplicate sitemap URLs: ${[...new Set(duplicates)].join(', ')}`);
+          }
+
+          const missing = locs
+            .map((url) => new URL(url).pathname.replace(/^\//, ''))
+            .filter((relativePath) => relativePath && !fs.existsSync(path.join(process.cwd(), relativePath)));
+          if (missing.length) {
+            throw new Error(`Sitemap targets missing locally: ${missing.join(', ')}`);
+          }
+
+          console.log(`Validated ${locs.length} sitemap URLs.`);
+          NODE
+
+      - name: Validate HTML placeholder encoding
+        shell: bash
+        run: |
+          if grep -RInE '\?{3,}' --include='*.html' ar en de . --exclude-dir=.git; then
+            echo 'Placeholder encoding detected in HTML.'
+            exit 1
+          fi
+
+      - name: Validate Git diff whitespace
+        run: git diff --check
