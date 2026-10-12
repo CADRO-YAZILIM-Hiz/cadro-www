@@ -144,10 +144,7 @@
       rows.push({ card, date, index });
     });
 
-    const visible = rows.filter(({ date }) => !date || date <= today);
-    // If all posts are filtered out by date (clock mismatch or future-dated content),
-    // keep the blog usable by rendering all collected cards.
-    const renderRows = visible.length ? visible : rows;
+    const renderRows = rows.filter(({ date }) => !date || date <= today);
 
     renderRows.sort((a, b) => {
       if (a.date && b.date) return b.date - a.date;
@@ -160,6 +157,8 @@
 
     grid.replaceChildren(...renderRows.map((entry) => entry.card));
   };
+
+  window.filterBlogCards = filterAndSortBlogCards;
 
   if (document.readyState === 'loading') {
     window.addEventListener('DOMContentLoaded', filterAndSortBlogCards);
