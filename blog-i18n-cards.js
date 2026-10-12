@@ -20,8 +20,7 @@
 
     const sourceHtml = await response.text();
     const sourceDocument = new DOMParser().parseFromString(sourceHtml, 'text/html');
-    const sourceCards = [...sourceDocument.querySelectorAll('.blog-card[data-publish-date]')]
-      .filter((card) => card.dataset.publishDate >= '2026-08-03');
+    const sourceCards = [...sourceDocument.querySelectorAll('.blog-card[data-publish-date]')];
 
     const cards = await Promise.all(sourceCards.map(async (sourceCard) => {
       const sourceLink = sourceCard.querySelector('a.read-more');
