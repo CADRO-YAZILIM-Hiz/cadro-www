@@ -36,6 +36,14 @@
         .find((link) => link.hreflang === language);
       if (!alternate) return null;
 
+      const localizedResponse = await fetch(alternate.href, { cache: 'no-store' });
+      if (!localizedResponse.ok) return null;
+
+      const localizedDocument = new DOMParser().parseFromString(
+        await localizedResponse.text(),
+        'text/html',
+      );
+
       const card = document.createElement('article');
       card.className = 'blog-card';
       card.style.borderLeft = '4px solid var(--cyan)';
@@ -43,8 +51,12 @@
       card.dataset.blogId = sourceCard.dataset.blogId || '';
       card.dataset.category = sourceCard.dataset.category || '';
 
-      const title = articleDocument.querySelector('h1')?.textContent || sourceCard.querySelector('h3')?.textContent || '';
-      const description = articleDocument.querySelector('meta[name="description"]')?.content || sourceCard.querySelector('p')?.textContent || '';
+      const title = localizedDocument.querySelector('h1')?.textContent
+        || articleDocument.querySelector('h1')?.textContent
+        || sourceCard.querySelector('h3')?.textContent || '';
+      const description = localizedDocument.querySelector('meta[name="description"]')?.content
+        || articleDocument.querySelector('meta[name="description"]')?.content
+        || sourceCard.querySelector('p')?.textContent || '';
       const sourceDate = new Date(`${sourceCard.dataset.publishDate}T00:00:00Z`);
       const dateText = dateFormatter.format(sourceDate);
 

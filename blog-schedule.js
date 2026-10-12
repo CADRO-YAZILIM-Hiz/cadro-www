@@ -109,7 +109,7 @@
   };
 
   const getCardKey = (card) => {
-    const anchor = card.querySelector('a.read-more');
+    const anchor = card.querySelector('a.read-more, a');
     if (anchor) {
       try {
         const url = new URL(anchor.getAttribute('href') || '', window.location.origin);
@@ -118,7 +118,7 @@
         return anchor.getAttribute('href') || '';
       }
     }
-    return card.querySelector('h3')?.textContent?.trim() || '';
+    return card.querySelector('h3, h2')?.textContent?.trim() || '';
   };
 
   const filterAndSortBlogCards = () => {
@@ -150,8 +150,8 @@
       if (a.date && b.date) return b.date - a.date;
       if (a.date) return -1;
       if (b.date) return 1;
-      const titleA = a.card.querySelector('h3')?.textContent?.trim() || '';
-      const titleB = b.card.querySelector('h3')?.textContent?.trim() || '';
+      const titleA = a.card.querySelector('h3, h2')?.textContent?.trim() || '';
+      const titleB = b.card.querySelector('h3, h2')?.textContent?.trim() || '';
       return titleA.localeCompare(titleB, undefined, { sensitivity: 'base' }) || a.index - b.index;
     });
 
