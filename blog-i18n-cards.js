@@ -5,7 +5,7 @@
   const grid = document.querySelector('.blog-grid');
   if (!grid) return;
 
-  const sourceUrl = `${window.location.origin}/blog.html`;
+  const sourceUrl = `${window.location.origin}/blog.html?localized-cards=${Date.now()}`;
   const dateFormatter = new Intl.DateTimeFormat(language, {
     day: '2-digit',
     month: 'long',
@@ -15,20 +15,20 @@
   const escapeText = (value) => value.replace(/\s+/g, ' ').trim();
 
   const addLocalizedCards = async () => {
-    const response = await fetch(sourceUrl);
+    const response = await fetch(sourceUrl, { cache: 'no-store' });
     if (!response.ok) return;
 
     const sourceHtml = await response.text();
     const sourceDocument = new DOMParser().parseFromString(sourceHtml, 'text/html');
     const sourceCards = [...sourceDocument.querySelectorAll('.blog-card[data-publish-date]')]
-      .filter((card) => card.dataset.publishDate >= '2026-10-05');
+      .filter((card) => card.dataset.publishDate >= '2026-08-03');
 
     const cards = await Promise.all(sourceCards.map(async (sourceCard) => {
       const sourceLink = sourceCard.querySelector('a.read-more');
       if (!sourceLink) return null;
 
       const articleUrl = new URL(sourceLink.getAttribute('href'), `${window.location.origin}/`);
-      const articleResponse = await fetch(articleUrl);
+      const articleResponse = await fetch(articleUrl, { cache: 'no-store' });
       if (!articleResponse.ok) return null;
 
       const articleDocument = new DOMParser().parseFromString(await articleResponse.text(), 'text/html');
