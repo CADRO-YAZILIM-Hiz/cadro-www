@@ -28,6 +28,15 @@ jobs:
         with:
           node-version: "24"
 
+      - name: Install SEO test dependencies
+        run: npm ci --prefix tests/seo --ignore-scripts
+
+      - name: Run SEO regression tests
+        run: npm test --prefix tests/seo
+
+      - name: Check published blog sitemap freshness
+        run: node generate-blog-sitemap.js --check
+
       - name: Validate multilingual files and metadata
         run: node validate-i18n.js
 

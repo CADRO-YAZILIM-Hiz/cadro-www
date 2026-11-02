@@ -101,7 +101,7 @@
   ,"makale-calisan-izleme-olcululuk-kvkk": { "en": "article-employee-monitoring-proportionality", "de": "artikel-mitarbeiterueberwachung-verhaeltnismaessigkeit", "ar": "mqal-mraqbt-almwzfyn-waltanasb" }
   ,"makale-elektronik-puantaj-delil-niteligi": { "en": "article-electronic-time-records-evidence", "de": "artikel-elektronische-zeiterfassung-beweiswert", "ar": "mqal-qymt-sjlat-alwaqt-alalktrwnyh" }
   ,"makale-ik-ai-risk-management-framework-rehberi": { "en": "article-nist-ai-rmf-hr-guide", "de": "artikel-nist-ai-rmf-hr-leitfaden", "ar": "mqal-dlyl-nist-llmward-albshrya" }
-  ,"makale-ik-dashboard-tasarimi": { "en": "article-hr-dashboard-design", "de": "artikel-hr-dashboard-design", "ar": "mqal-tsmym-lwht-hr" }
+  ,"makale-ik-dashboard-tasarimi": { "en": "article-hr-dashboard-design", "de": "artikel-hr-dashboard-design", "ar": "mqal-tsmym-lwht-maalwmat-almward-albshrya" }
   ,"makale-ik-yapay-zeka-kullanim-modeli": { "en": "article-ai-in-hr-operating-model", "de": "artikel-ki-im-hr-betriebsmodell", "ar": "mqal-astkhdam-aldka-alastnaay-fy-almward-albshrya" }
   ,"makale-insan-makine-isbirligi-ik": { "en": "article-human-machine-collaboration-hr", "de": "artikel-mensch-maschine-zusammenarbeit-hr", "ar": "mqal-taawn-alansan-walalat-fy-almward-albshrya" }
   ,"makale-ise-alim-algoritmik-bias": { "en": "article-hiring-algorithmic-bias", "de": "artikel-algorithmischer-bias-im-recruiting", "ar": "mqal-thyzt-khwaryzmyat-al-twzyf" }
@@ -129,7 +129,7 @@
   ,"makale-sektorel-ik-yazilimi-yazilim-sirketleri": { "en": "article-hr-software-for-software-companies", "de": "artikel-hr-software-fuer-software-firmen", "ar": "mqal-brnamj-hr-shrkat-brmjyat" }
   ,"makale-sektorlere-gore-qr-pdks": { "en": "article-qr-time-tracking-by-industry", "de": "artikel-qr-zeiterfassung-branchen", "ar": "mqal-hdur-qr-hsb-alqta" }
   ,"makale-turnover-tahmin-modeli-yanlis-pozitif": { "en": "article-turnover-prediction-false-positives", "de": "artikel-fehlalarme-fluktuationsprognose", "ar": "mqal-natayj-kadbt-tndb-dwran-almwzfyn" }
-  ,"makale-ucret-adaleti-analitigi": { "en": "article-pay-equity-analytics", "de": "artikel-lohngerechtigkeit-analyse", "ar": "mqal-thlylat-adalt-alajwr" }
+  ,"makale-ucret-adaleti-analitigi": { "en": "article-pay-equity-analytics", "de": "artikel-analytik-lohngerechtigkeit", "ar": "mqal-thlylat-adalt-alajwr" }
   ,"makale-yargitay-kvkk-kurul-karari-farki": { "en": "article-yargitay-vs-turkish-dpa-decisions", "de": "artikel-unterschied-yargitay-datenschutzbehoerde", "ar": "mqal-alfrq-byn-qrarat-yargitay-wkvkk" }
   ,"makale-yargitay-pdks-fazla-calisma-ispat": { "en": "article-turkish-court-time-records-overtime-proof", "de": "artikel-yargitay-zeiterfassung-ueberstunden-beweis", "ar": "mqal-mahkmt-alnqd-altrky-wsjalat-alwaqt" }
   ,"makale-yonetici-ai-adaptasyon-2026": { "en": "article-manager-ai-adaptation-2026", "de": "artikel-fuehrungskraft-ki-anpassung-2026", "ar": "mqal-tkyf-mdra-ma-ai-2026" }
