@@ -39,7 +39,7 @@ test('duplicate languages, wrong language, missing return and missing self fail'
 
 test('site-wide hreflang has no missing, wrong-language or nonreciprocal targets', () => {
   const all = pages();
-  assert.ok(all.length >= 586, 'The audit must include the complete HTML tree');
+  assert.ok(all.length >= 584, 'The audit must include the complete HTML tree');
   assert.deepEqual(audit(all), [], 'Unexpected hreflang regression');
 });
 

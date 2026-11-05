@@ -15,16 +15,16 @@
 <meta content="https://www.cadro.io/assets/screenshots/phase2/tr/dashboard.webp" property="og:image">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta content="CADRO Kıdem Tazminatı Calculatema Aracı" property="og:image:alt">
+<meta content="CADRO Kıdem Tazminatı Hesaplama Aracı" property="og:image:alt">
 <meta content="summary_large_image" name="twitter:card">
 <meta content="Severance Pay Calculator | Turkey Employment Termination Benefits | CADRO" name="twitter:title">
 <meta content="Calculate your severance pay in seconds: enter years worked and gross salary. The 2026 ceiling amount is automatically applied." name="twitter:description">
 <meta content="https://www.cadro.io/assets/screenshots/phase2/tr/dashboard.webp" name="twitter:image">
 <title>Severance Pay Calculator | Turkey Employment Termination Benefits | CADRO</title>
-    <meta name="keywords" content="kıdem tazminatı Calculatema, ihbar tazminatı, kıdem hesabı 2026, severance">
+    <meta name="keywords" content="kıdem tazminatı hesaplama, ihbar tazminatı, kıdem hesabı 2026, severance">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Severance Pay Calculator 2026","applicationCategory":"FinanceApplication","operatingSystem":"Web","url":"https://www.cadro.io/en/severance-pay-calculator.html","description":"Calculate your severance pay in seconds: enter years worked and gross salary. The 2026 ceiling amount is automatically applied.","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"provider":{"@type":"Organization","name":"CADRO","url":"https://www.cadro.io/en/"},"inLanguage":"en"}</script>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cadro.io/en/"},{"@type":"ListItem","position":2,"name":"Kıdem Tazminatı Calculatema | Ücretsiz Calculator | CADRO","item":"https://www.cadro.io/en/severance-pay-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cadro.io/en/"},{"@type":"ListItem","position":2,"name":"Severance Pay Calculator | Turkey Employment Termination Benefits | CADRO","item":"https://www.cadro.io/en/severance-pay-calculator.html"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="dns-prefetch" href="https://fonts.googleapis.com">
@@ -145,7 +145,7 @@
   <!-- Formül Açıklaması -->
   <section class="section reveal-on-scroll" style="padding-top: 10px;">
     <div class="section-head narrow">
-      <h2>How Is Severance Pay Calculated??</h2>
+      <h2>How Is Severance Pay Calculated?</h2>
     </div>
     <div class="card-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
       <article class="feature-card">
@@ -192,20 +192,20 @@
   </section>
 
   <section class="section reveal-on-scroll" style="padding-top: 10px;">
-    <div class="section-head narrow"><h2>Diğer Calculatema Araçları</h2></div>
+    <div class="section-head narrow"><h2>Diğer Hesaplama Araçları</h2></div>
     <div class="card-grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
       <article class="feature-card">
-        <h3>Asgari Ücret Calculatema</h3>
-        <p>2026 yılı asgari ücret net tutarını ve işveren maliyetini Calculateyın.</p>
+        <h3>Asgari Ücret Hesaplama</h3>
+        <p>2026 yılı asgari ücret net tutarını ve işveren maliyetini hesaplayın.</p>
         <a href="minimum-wage-calculator.html" style="color: var(--cyan); font-weight: 700;">Calculate →</a>
       </article>
       <article class="feature-card">
-        <h3>Net/Gross Salary Calculatema</h3>
-        <p>Gross Salaryın net değerini veya Net Salaryın brütünü anlık Calculateyın.</p>
+        <h3>Net/Gross Salary Hesaplama</h3>
+        <p>Gross Salaryın net değerini veya Net Salaryın brütünü anlık hesaplayın.</p>
         <a href="net-gross-salary-calculator.html" style="color: var(--cyan); font-weight: 700;">Calculate →</a>
       </article>
       <article class="feature-card">
-        <h3>SGK Prim Calculatema</h3>
+        <h3>SGK Prim Hesaplama</h3>
         <p>İşçi ve işveren SGK prim tutarlarını Gross Salarya göre görüntüleyin.</p>
         <a href="social-security-calculator.html" style="color: var(--cyan); font-weight: 700;">Calculate →</a>
       </article>
@@ -270,7 +270,7 @@ function calculateKidem() {
 
   let html = '';
   if (tavanUygulandı) {
-    html += `<div class="calc-warning">Girilen Gross Salary (${formatTL(brutMaas)}) ${secYil} yılı tavanını (${formatTL(tavan)}) aştığından Calculatema tavan üzerinden yapılmıştır.</div>`;
+    html += `<div class="calc-warning">Girilen Gross Salary (${formatTL(brutMaas)}) ${secYil} yılı tavanını (${formatTL(tavan)}) aştığından hesaplama tavan üzerinden yapılmıştır.</div>`;
   }
   html += `<div class="calc-result-row"><span class="calc-result-label">Çalışma Süresi</span><span class="calc-result-value">${yil} yıl ${ay} ay</span></div>`;
   html += `<div class="calc-result-row"><span class="calc-result-label">Baz Alınan Gross Salary</span><span class="calc-result-value">${formatTL(bazMaas)}</span></div>`;
