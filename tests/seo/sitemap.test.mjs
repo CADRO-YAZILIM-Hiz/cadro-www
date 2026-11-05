@@ -187,9 +187,9 @@ test('Excluded listing targets stay excluded; AR links without read-more stay ex
   assert.equal(generateSitemap(f.options).urls.length, 0);
 });
 
-test('All 176 targets at the checked-in sitemap cutoff are local, indexable and exactly canonical', () => {
+test('All 243 targets at the checked-in sitemap cutoff are local, indexable and exactly canonical', () => {
   const result = generateSitemap({ baseRoot: root, today: '2026-10-27' });
-  assert.equal(result.urls.length, 176);
+  assert.equal(result.urls.length, 243);
   for (const { url } of result.urls) {
     validateTarget(root, url);
     // Independent HTML parser verifies the canonical value, not just the generator regex.

@@ -4811,7 +4811,7 @@ mesai görünürlüğünü tek sistemde yönetin.
  
  
  
- ![CADRO puantaj ve vardiya yönetimi ana ekranı](./assets/screenshots/phase4/tr/devam.webp)
+ ![CADRO puantaj ve vardiya yönetimi ana ekranı](./assets/screenshots/phase4/tr/attendance.webp)
  
  
 
@@ -4865,7 +4865,7 @@ mesai görünürlüğünü tek sistemde yönetin.
  [Masraf ve Satın Alma Modülünü İncele →](masraf-ve-satin-alma.html)
  
  
- ![CADRO puantaj payroll raporu ekranı](./assets/screenshots/phase4/tr/devam-payroll.webp)
+ ![CADRO puantaj payroll raporu ekranı](./assets/screenshots/phase4/tr/attendance-payroll.webp)
  
  
  
@@ -4878,7 +4878,7 @@ mesai görünürlüğünü tek sistemde yönetin.
  [Dijital Özlük ve İzin Modülüne Göz At →](dijital-ozluk-ve-izin.html)
  
  
- ![CADRO sağlık raporu giriş ekranı](./assets/screenshots/phase4/tr/devam-health.webp)
+ ![CADRO sağlık raporu giriş ekranı](./assets/screenshots/phase4/tr/attendance-health.webp)
  
  
  

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html dir="rtl" lang="ar"><head>
 <meta property="og:locale:alternate" content="tr_TR"><meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="de_DE">
 <meta charset="utf-8">
@@ -62,9 +63,9 @@
   <link rel="manifest" href="../manifest.json">
 
 
-</head><body data-page="pay" dir="rtl"><div class="site-shell">
+</head><body data-page="pay" dir="rtl"><a class="skip-link" href="#main-content">انتقل إلى المحتوى الرئيسي</a><div class="site-shell">
 <div class="top-logo">
-<img alt="CADRO" class="top-logo-img" src="../Cadro Logo.webp">
+<img width="1099" height="600" alt="CADRO" class="top-logo-img" src="../Cadro Logo.webp">
 </div>
 <header class="topbar">
 <button aria-expanded="false" class="nav-toggle" data-i18n-key="nav_menu">القائمة</button>
@@ -87,7 +88,7 @@
 <a class="primary-button" data-i18n-key="btn_start_selling" href="pay.html?plan=start&amp;billing=monthly">ابدأ الآن</a>
 </div>
 </header>
-<main class="container" style="padding-top: 10rem;">
+<main id="main-content" class="container" style="padding-top: 10rem;">
 <section class="checkout reveal-on-scroll">
 <div class="price-card highlighted" data-checkout-status="" hidden="" style="margin-bottom: 24px; text-align: center;">
 <p class="eyebrow" data-checkout-status-eyebrow=""></p>
@@ -100,8 +101,8 @@
 <p data-i18n-key="pay_checkout_ready_text">أكمل معاملتك بأمان عبر مزود الدفع العالمي الخاص بنا.</p>
 </div>
 <div class="checkout-form" style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
-<input id="checkout-company" placeholder="اسم الشركة" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="text">
-<input id="checkout-email" placeholder="عنوان البريد الإلكتروني" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="email">
+<input aria-label="اسم الشركة" id="checkout-company" placeholder="اسم الشركة" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="text">
+<input aria-label="عنوان البريد الإلكتروني" id="checkout-email" placeholder="عنوان البريد الإلكتروني" required="" style="width:100%; padding:0.85rem 1rem; border:1.5px solid #e2e8f0; border-radius:12px; font-size:0.95rem; outline:none;" type="email">
 </div>
 <div class="billing-toggle" data-billing-toggle="">
 <button class="billing-chip is-active" data-billing-option="monthly" data-i18n-key="billing_monthly" type="button">شهري</button>
@@ -183,7 +184,7 @@
   </main>
   <footer class="footer">
 <div>
-<img alt="CADRO" class="brand-logo-img" src="../Cadro Logo.webp">
+<img width="1099" height="600" alt="CADRO" class="brand-logo-img" src="../Cadro Logo.webp">
 <p data-i18n-key="footer_text">المنصة السحابية الحديثة لتسريع عمليات الموارد البشرية.</p>
 </div>
 <div class="footer-links">
