@@ -7,6 +7,11 @@
 - [ ] 5. İndeksleme ve hız: önemli URL'lerde GSC denetimi, temsilî sayfalarda laboratuvar ölçümü.
 - [ ] 6. Yayın sonrası: canlı HTTP/DOM doğrulaması ve GSC takibi.
 
+## Faz 11 — teknik performans
+- Teknik performans ve Core Web Vitals kontrol planı `SEO_PHASE11_TECHNICAL_PERFORMANCE_CHECKLIST.md` içinde tutulur.
+- Mevcut kaynak kodunda preload, lazy loading, görsel boyutları, preconnect, service worker ve consent-gated analytics kontrolleri bulunur.
+- Gerçek saha CWV/PageSpeed verisi alınmadan performans sonucu iddia edilmez.
+
 ## Koruma ve kapsam
 - Başlangıçta değişmiş olan `bordro-yazilimi.html`, `ik-yazilimi.html`, `pdks.html`, `puantaj-ve-vardiya-yazilimi.html`, `site-config.min.js`, `sitemap.xml` korunur.
 - Test bağımlılıkları `tests/seo/` altında tutulur; sitenin runtime bağımlılığı değildir.

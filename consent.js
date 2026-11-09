@@ -22,8 +22,20 @@
     document.head.appendChild(script);
   }
 
+  function loadAnalytics() {
+    if (window.__cadroAnalyticsLoaded) return;
+    window.__cadroAnalyticsLoaded = true;
+    var script = document.createElement('script');
+    script.defer = true;
+    script.src = prefix + 'analytics.js';
+    document.head.appendChild(script);
+  }
+
   function applyConsent(value) {
-    if (value) loadClarity();
+    if (value) {
+      loadClarity();
+      loadAnalytics();
+    }
     if (typeof window.clarity === 'function') window.clarity('consent', value);
   }
 
