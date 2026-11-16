@@ -3,9 +3,9 @@
 <meta property="og:locale:alternate" content="tr_TR"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="ar_AR">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HR ROI Calculator | Measure Your HR Software Investment Return | CADRO</title>
-    <meta name="keywords" content="HR ROI calculator, HR software ROI, human resources return on investment, HR cost savings calculator">
-    <meta name="description" content="Calculate your HR software ROI in 60 seconds. Enter your team size and current costs to see how much you can save. Free, no sign-up needed.">
+    <title>HR ROI Scenario Calculator | Open Formula and Assumptions | CADRO</title>
+    <meta name="keywords" content="HR ROI scenario calculator, HR ROI estimator, HR investment return">
+    <meta name="description" content="Build your own HR ROI scenario with viewed hours, rates, hiring days and plan cost. No external benchmarks are assumed.">
 <link rel="canonical" href="https://www.cadro.io/en/hr-roi-calculator.html"><link rel="alternate" hreflang="tr" href="https://www.cadro.io/ik-roi-hesaplama.html"><link rel="alternate" hreflang="en" href="https://www.cadro.io/en/hr-roi-calculator.html"><link rel="alternate" hreflang="de" href="https://www.cadro.io/de/hr-roi-rechner.html"><link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/hasb-ayd-hr.html"><link rel="alternate" hreflang="x-default" href="https://www.cadro.io/ik-roi-hesaplama.html">
 
 
@@ -34,7 +34,7 @@
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="../Cadro Logo.webp">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"HR ROI Calculator","description":"Calculate your HR software ROI in 60 seconds. Enter your team size and current costs to see how much you can save. Free, no sign-up needed.","url":"https://www.cadro.io/en/hr-roi-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"provider":{"@type":"Organization","name":"CADRO","url":"https://www.cadro.io/en/hr-roi-calculator.html"},"inLanguage":"en"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"HR ROI Calculator","description":"HR ROI scenario tool with user‑defined hours, rates, hiring assumptions and plan cost.","url":"https://www.cadro.io/en/hr-roi-calculator.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"TRY"},"provider":{"@type":"Organization","name":"CADRO","url":"https://www.cadro.io/en/hr-roi-calculator.html"},"inLanguage":"en"}</script>
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.cadro.io/en/"},{"@type":"ListItem","position":2,"name":"HR ROI Calculator | Measure Your HR Software Investment Return | CADRO","item":"https://www.cadro.io/en/hr-roi-calculator.html"},{"@type":"ListItem","position":3,"name":"HR ROI Calculator | Measure Your HR Software Investment Return | CADRO","item":"https://www.cadro.io/en/hr-roi-calculator.html"}]}</script>
 
@@ -118,171 +118,62 @@
     </div>
   </header>
 
-  <main id="main-content">
-    <!-- Hero -->
-    <section class="roi-hero">
-      <div class="tool-badge">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 13.93V17a1 1 0 0 1-2 0v-1.07A5 5 0 0 1 7.07 11H9a1 1 0 0 1 0 2 3 3 0 0 0 3 3 3 3 0 0 0 3-3 1 1 0 0 1 0-2h1.93A5 5 0 0 1 13 15.93zM13 9V7a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0zm-4 0V7a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0z"></path></svg>
-        Free Tool
-      </div>
-      <h1>HR Software ROI Calculator</h1>
-      <p>Enter your team size and current process costs — instantly calculate how quickly your HR digital transformation will pay off and how much you'll save annually.</p>
-    </section>
-
-    <!-- Calculator -->
-    <div class="roi-shell">
-      <div class="calc-card">
-        <div class="calc-grid">
-          <!-- Inputs -->
-          <div class="input-section">
-            <h2>Define Your Company</h2>
-
-            <div class="field-group">
-              <label for="emp-count">Total Employees: <span class="field-value" id="emp-val">75</span></label>
-              <span class="field-hint">Include all active staff</span>
-              <input type="range" id="emp-count" min="10" max="1000" step="5" value="75" aria-label="Employee count">
-              <div class="range-labels"><span>10</span><span>500</span><span>1000</span></div>
-            </div>
-
-            <div class="field-group">
-              <label for="ik-count">HR / Admin Staff Count: <span class="field-value" id="ik-val">3</span></label>
-              <span class="field-hint">Number of people handling HR processes</span>
-              <input type="range" id="ik-count" min="1" max="30" step="1" value="3" aria-label="HR staff count">
-              <div class="range-labels"><span>1</span><span>15</span><span>30</span></div>
-            </div>
-
-            <div class="field-group">
-              <label for="ik-salary">Avg. HR Staff Monthly Gross Salary (₺): <span class="field-value" id="salary-val">45,000</span></label>
-              <span class="field-hint">Gross salary (₺)</span>
-              <input type="range" id="ik-salary" min="20000" max="200000" step="5000" value="45000" aria-label="HR staff salary">
-              <div class="range-labels"><span>20K</span><span>100K</span><span>200K</span></div>
-            </div>
-
-            <div class="field-group">
-              <label for="manual-hours">Weekly Manual HR Hours (per person): <span class="field-value" id="hours-val">10</span></label>
-              <span class="field-hint">Time spent on personnel files, timesheets, leave approvals</span>
-              <input type="range" id="manual-hours" min="2" max="30" step="1" value="10" aria-label="Manual work hours">
-              <div class="range-labels"><span>2 hrs</span><span>16 hrs</span><span>30 hrs</span></div>
-            </div>
-
-            <div class="field-group">
-              <label for="hire-per-year">Annual Hires: <span class="field-value" id="hire-val">20</span></label>
-              <span class="field-hint">New positions + replacements combined</span>
-              <input type="range" id="hire-per-year" min="0" max="200" step="5" value="20" aria-label="Annual hiring">
-              <div class="range-labels"><span>0</span><span>100</span><span>200</span></div>
-            </div>
-          </div>
-
-          <!-- Results -->
-          <div class="result-section">
-            <h2>Estimated Results</h2>
-
-            <div class="result-metric highlight">
-              <div class="metric-label">Annual Savings</div>
-              <div class="metric-value" id="res-annual-save">₺—</div>
-              <div class="metric-sub">Cost recovered from manual processes</div>
-            </div>
-
-            <hr class="result-divider">
-
-            <div class="result-metric">
-              <div class="metric-label">Payback Period</div>
-              <div class="metric-value" id="res-payback">— months</div>
-              <div class="metric-sub">Based on CADRO Pro plan pricing</div>
-            </div>
-
-            <div class="result-metric">
-              <div class="metric-label">HR Efficiency Gain</div>
-              <div class="metric-value" id="res-efficiency">— hrs/month</div>
-              <div class="metric-sub">Total time recovered</div>
-            </div>
-
-            <div class="result-metric">
-              <div class="metric-label">Hiring Acceleration</div>
-              <div class="metric-value" id="res-hiring">— days/position</div>
-              <div class="metric-sub">Average 35% faster hiring</div>
-            </div>
-
-            <div class="result-metric">
-              <div class="metric-label">3-Year Net Savings</div>
-              <div class="metric-value" id="res-3yr">₺—</div>
-              <div class="metric-sub">After deducting total software cost</div>
-            </div>
-
-            <div class="roi-cta-row">
-              <a href="pricing.html" class="roi-cta-primary">View Plans</a>
-              <a href="pay.html?plan=pro&amp;billing=monthly" class="roi-cta-secondary">Free Trial</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Assumptions -->
-      <div class="assumptions-card">
-        <h3>Calculation Assumptions</h3>
-        <div class="assumptions-grid">
-          <div class="assumption-item">
-            <div class="a-source">SHRM Research</div>
-            <div class="a-text">After digitalization, HR staff spend 65% less time on routine tasks.</div>
-          </div>
-          <div class="assumption-item">
-            <div class="a-source">Deloitte 2024</div>
-            <div class="a-text">Companies using an ATS reduce time-to-hire by an average of 35%.</div>
-          </div>
-          <div class="assumption-item">
-            <div class="a-source">CADRO Customer Data</div>
-            <div class="a-text">Average payback period is 3-6 months; can drop below 3 months for 100+ employee companies.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ -->
-      <section class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-          <h3>Can HR software ROI really be measured?</h3>
-          <p>Yes. The most tangible ROI sources are directly measurable: hours saved from manual processes × HR staff hourly cost = direct labor savings. Additionally, error reduction (incorrect payroll, missed leave tracking), faster hiring, and employee satisfaction are indirect gains.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>How does this calculator work?</h3>
-          <p>The tool uses an estimation model based on your entered employee count, HR team size, and manual process hours. Calculations use fixed coefficients derived from SHRM, Deloitte, and CADRO's anonymized customer data. Results are estimates; actual values may vary based on operational differences.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>How is CADRO pricing factored into the ROI calculation?
-          <p>The payback period is calculated using the CADRO Pro plan monthly fixed cost as reference. For current pricing, visit the <a href="pricing.html" style="color:#0891b2;font-weight:600;">pricing page</a>. Contact our team for a personalized quote based on your employee count.</p>
-        </h3></div>
-
-        <div class="faq-item">
-          <h3>Which HR processes deliver the highest ROI?</h3>
-          <p>Time & attendance management (8-12 hours/week savings), leave approval workflows (85% faster), and the ATS module (35% faster position closure) deliver the highest returns. Performance management (OKR) generates indirect ROI over the long term through engagement and retention.</p>
-        </div>
-      </section>
-
-      <!-- Related Tools -->
-      <section style="margin-bottom: 80px;">
-        <div class="section-head" style="text-align:center;margin-bottom:28px;">
-          <h2 style="font-size:1.6rem;">Related Free Resources</h2>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;">
-          <a href="onboarding-checklist-template.html" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:24px;text-decoration:none;color:inherit;transition:all 0.2s ease;" onmouseover="this.style.borderColor='#0891b2'" onmouseout="this.style.borderColor='#e2e8f0'">
-            <strong style="display:block;font-size:1.05rem;color:#0f172a;margin-bottom:8px;">Onboarding Checklist</strong>
-            <span style="color:#475569;font-size:0.93rem;line-height:1.6;">Track new hire onboarding step by step.</span>
-          </a>
-          <a href="performance-review-template.html" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:24px;text-decoration:none;color:inherit;transition:all 0.2s ease;" onmouseover="this.style.borderColor='#0891b2'" onmouseout="this.style.borderColor='#e2e8f0'">
-            <strong style="display:block;font-size:1.05rem;color:#0f172a;margin-bottom:8px;">Performance Review Form</strong>
-            <span style="color:#475569;font-size:0.93rem;line-height:1.6;">Speed up reviews with ready-to-use manager templates.</span>
-          </a>
-          <a href="payroll-cost-calculator.html" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:24px;text-decoration:none;color:inherit;transition:all 0.2s ease;" onmouseover="this.style.borderColor='#0891b2'" onmouseout="this.style.borderColor='#e2e8f0'">
-            <strong style="display:block;font-size:1.05rem;color:#0f172a;margin-bottom:8px;">Payroll Cost Calculator</strong>
-            <span style="color:#475569;font-size:0.93rem;line-height:1.6;">Calculate total payroll cost per employee.</span>
-          </a>
-        </div>
-      </section>
+  <main id="main-content" data-i18n-skip="true">
+<section class="roi-hero">
+  <div class="tool-badge">Open scenario tool</div>
+  <h1>HR software ROI scenario: define your own inputs</h1>
+  <p>Enter hours, rates, hiring timelines and plan cost. This calculation does not claim CADRO customer results or industry averages.</p>
+</section>
+<div class="roi-shell">
+  <p class="legal-note"><strong>Önemli sınır:</strong> Important limitation: this tool only shows the arithmetic result of your inputs. The provided sample values are not external research, CADRO customer outcomes or price quotes. Use your own measurements and your current contract cost.</p>
+  <form class="calc-card" id="roi-form" novalidate>
+    <h2>1. İş gücü varsayımları</h2>
+    <div class="calc-grid">
+      <label>İK/idari kişi sayısı<input id="ik-count" type="number" min="1" max="10000" step="1" value="3" required></label>
+      <label>Kişi başı haftalık manuel iş süresi (saat)<input id="manual-hours" type="number" min="0" max="168" step="0.1" value="10" required></label>
+      <label>Süreden düşeceğini varsaydığınız oran (%)<input id="automation-rate" type="number" min="0" max="100" step="1" value="20" required><small>Example scenario; not a research result.</small></label>
+      <label>Yıllık çalışma haftası<input id="workweeks" type="number" min="1" max="52" step="1" value="52" required></label>
+      <label>Aylık brüt İK ücreti (TRY)<input id="ik-salary" type="number" min="0.01" max="1000000" step="0.01" value="45000" required></label>
+      <label>Saatlik maliyet (TRY)<input id="hourly-cost" type="number" min="0.01" max="100000" step="0.01" value="255.68" required><button id="derive-hourly" class="ghost-button" type="button">Brüt ÷ 176 saat kullan</button></label>
     </div>
-  </main>
+    <h2>2. İşe alım varsayımları</h2>
+    <div class="calc-grid">
+      <label>Yıllık işe alım sayısı<input id="hire-per-year" type="number" min="0" max="10000" step="1" value="20" required></label>
+      <label>Önceki süre (gün/pozisyon)<input id="days-before" type="number" min="0" max="365" step="0.1" value="30" required></label>
+      <label>Yeni süre (gün/pozisyon)<input id="days-after" type="number" min="0" max="365" step="0.1" value="24" required></label>
+      <label>Açık pozisyon gününün varsayımsal maliyeti (TRY)<input id="vacancy-day-cost" type="number" min="0" max="1000000" step="0.01" value="0" required><small>Leave at zero to exclude hiring benefit.</small></label>
+    </div>
+    <h2>3. Plan maliyeti</h2>
+    <label>Aylık plan maliyeti (TRY)<input id="monthly-plan-cost" type="number" min="1" max="1000000" step="1" value="0" required><small>Gerçek teklif/fatura bedeli 0’dan büyük olmalıdır. Fiyatı <a href="pricing.html">fiyat sayfasından veya teklifinizden</a> girmeden sonuç gösterilmez.</small></label>
+    <input id="emp-count" type="hidden" value="0">
+    <p id="roi-input-error" class="legal-note" hidden role="alert">All inputs must be valid numbers in range. Enter a monthly cost greater than zero for a payback calculation.</p>
+    <p id="roi-days-error" class="legal-note" hidden role="alert">New hiring days must not exceed previous days.</p>
+    <button class="primary-button" type="submit">Senaryoyu hesapla</button>
+  </form>
+  <section id="roi-results" class="result-section" aria-live="polite">
+    <h2>Senaryo sonucu</h2>
+    <p><strong>Yıllık toplam brüt fayda:</strong> <span id="res-annual-save">—</span></p>
+    <p><strong>Yıllık net fayda:</strong> <span id="res-annual-net">—</span></p>
+    <p><strong>Geri ödeme:</strong> <span id="res-payback">—</span></p>
+    <p><strong>Üç yıllık net (sabit girdiler):</strong> <span id="res-3yr">—</span></p>
+    <p><strong>Varsayımsal yıllık ROI:</strong> <span id="res-roi">—</span></p>
+    <p><strong>Saat kazanımı:</strong> <span id="res-efficiency">—</span></p>
+    <p><strong>İşe alım farkı:</strong> <span id="res-hiring">—</span></p>
+    <p id="res-benefit-detail"></p>
+  </section>
+  <section class="assumptions-card" id="hesaplama">
+    <h2>Formül, kaynak ve sınırlar</h2>
+    <ul>
+      <li>Yıllık işgücü faydası = kişi × haftalık saat × düşüş oranı × çalışma haftası × saatlik maliyet.</li>
+      <li>Yıllık işe alım faydası = işe alım sayısı × (eski gün − yeni gün) × pozisyon gün maliyeti.</li>
+      <li>Yıllık net = toplam iki fayda − (12 × aylık plan maliyeti).</li>
+      <li>Geri ödeme = yıllık maliyet ÷ (yıllık toplam brüt fayda ÷ 12).</li>
+      <li>ROI = yıllık net fayda ÷ yıllık maliyet × 100. Sıfır maliyetle oran gösterilmez.</li>
+    </ul>
+    <p>The formula is a simplification: wage increases, tax, financial discounting, employee departures/reductions, product licensing status and real productivity transformation are not included. The result is not a guarantee, tax advice or customer proof.</p>
+  </section>
+</div>
+</main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -399,6 +290,7 @@
   calc();
 })();
 </script>
+<script src="../hr-roi-calculator.js" defer></script>
 <script src="../app.min.js" defer=""></script>
   <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js');</script>
 <script src="../consent.js"></script>

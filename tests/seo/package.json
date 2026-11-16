@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "test": "node --test *.test.mjs",
-    "audit": "node audit-head.mjs"
+    "audit": "node audit-head.mjs",
+    "audit:sitemap": "node sitemap-url-audit.mjs && node audit-docs.mjs"
   },
   "devDependencies": {
     "parse5": "8.0.0"

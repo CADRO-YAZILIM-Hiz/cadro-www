@@ -3,9 +3,9 @@
 <meta property="og:locale:alternate" content="en_US"><meta property="og:locale:alternate" content="de_DE"><meta property="og:locale:alternate" content="ar_AR">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>İK ROI Hesaplama Aracı | Dijital Dönüşümün Getirisi</title>
-    <meta name="keywords" content="ik roi hesaplama, hr roi, insan kaynakları yatırım getirisi, ik maliyet hesabı">
-<meta name="description" content="İnsan kaynakları yazılımına yaptığınız yatırımın geri dönüşünü (ROI) ücretsiz hesaplayın. Ekip büyüklüğünüzü ve mevcut maliyetlerinizi girin, tasarrufu anında görün.">
+<title>İK ROI Senaryo Hesaplama | Açık Formül ve Varsayımlar | CADRO</title>
+    <meta name="keywords" content="ik roi senaryosu, hr roi hesaplama, insan kaynakları yatırım getirisi">
+<meta name="description" content="Kendi İK saat, işe alım ve plan maliyeti girdilerinizle açık bir ROI senaryosu hesaplayın. Formül ve sınırları görün; harici başarı oranı varsayılmaz.">
 <link rel="canonical" href="https://www.cadro.io/ik-roi-hesaplama.html"><link rel="alternate" hreflang="tr" href="https://www.cadro.io/ik-roi-hesaplama.html"><link rel="alternate" hreflang="en" href="https://www.cadro.io/en/hr-roi-calculator.html"><link rel="alternate" hreflang="de" href="https://www.cadro.io/de/hr-roi-rechner.html"><link rel="alternate" hreflang="ar" href="https://www.cadro.io/ar/hasb-ayd-hr.html"><link rel="alternate" hreflang="x-default" href="https://www.cadro.io/ik-roi-hesaplama.html">
 
 
@@ -38,7 +38,7 @@
 
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ana Sayfa","item":"https://www.cadro.io/"},{"@type":"ListItem","position":2,"name":"İK ROI Hesaplama Aracı | Dijital Dönüşümün Getirisi","item":"https://www.cadro.io/ik-roi-hesaplama.html"}]}</script>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"İK yazılımının ROI'si nasıl hesaplanır?","acceptedAnswer":{"@type":"Answer","text":"İK yazılımı ROI'si = (Elde Edilen Tasarruf - Yazılım Maliyeti) / Yazılım Maliyeti × 100 formülüyle hesaplanır. Tasarruf kalemleri arasında manuel süreçlerden kurtarılan çalışan saatleri, hata maliyetleri ve işe alım süresindeki kısalmadan kaynaklanan verimlilik artışı yer alır."}},{"@type":"Question","name":"İK dijital dönüşümü ne kadar sürede kendini amorti eder?","acceptedAnswer":{"@type":"Answer","text":"CADRO müşterilerinin verilerine göre ortalama geri ödeme süresi 3-6 ay arasındadır. 50+ çalışanlı şirketlerde bu süre daha da kısalmaktadır. Yukarıdaki hesap aracı size şirketinize özgü tahmini amortisman süresini verir."}},{"@type":"Question","name":"Hangi İK süreçleri en fazla maliyet tasarrufu sağlar?","acceptedAnswer":{"@type":"Answer","text":"En yüksek tasarrufu sağlayan süreçler sırasıyla: manuel puantaj ve özlük yönetimi (haftalık ortalama 8-12 saat/İK), işe alım koordinasyonu (pozisyon başına 30-40% süre azalması) ve izin onay süreçleridir (dijitalleştirme sonrası %85 hızlanma)."}}]}</script>
+
 
 <style>
   .brand-logo-img { display: block; height: 42px; width: auto; }
@@ -118,171 +118,62 @@
     </div>
   </header>
 
-  <main id="main-content">
-    <!-- Hero -->
-    <section class="roi-hero">
-      <div class="tool-badge">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 13.93V17a1 1 0 0 1-2 0v-1.07A5 5 0 0 1 7.07 11H9a1 1 0 0 1 0 2 3 3 0 0 0 3 3 3 3 0 0 0 3-3 1 1 0 0 1 0-2h1.93A5 5 0 0 1 13 15.93zM13 9V7a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0zm-4 0V7a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0z"></path></svg>
-        Ücretsiz Araç
-      </div>
-      <h1>İK Yazılımı ROI Hesaplama Aracı</h1>
-      <p>Ekibinizin büyüklüğünü ve mevcut süreç maliyetlerinizi girin — İK dijital dönüşümünün size kaç ayda geri döneceğini ve yıllık ne kadar tasarruf sağlayacağını anında hesaplayın.</p>
-    </section>
-
-    <!-- Calculator -->
-    <div class="roi-shell">
-      <div class="calc-card">
-        <div class="calc-grid">
-          <!-- Inputs -->
-          <div class="input-section">
-            <h2>Şirketinizi Tanımlayın</h2>
-
-            <div class="field-group">
-              <label for="emp-count">Toplam Çalışan Sayısı: <span class="field-value" id="emp-val">75</span></label>
-              <span class="field-hint">Tüm aktif personeli dahil edin</span>
-              <input type="range" id="emp-count" min="10" max="1000" step="5" value="75" aria-label="Çalışan sayısı">
-              <div class="range-labels"><span>10</span><span>500</span><span>1000</span></div>
-            </div>
-
-            <div class="field-group">
-              <label for="ik-count">İK / İdari Personel Sayısı: <span class="field-value" id="ik-val">3</span></label>
-              <span class="field-hint">İK süreçleriyle ilgilenen kişi sayısı</span>
-              <input type="range" id="ik-count" min="1" max="30" step="1" value="3" aria-label="İK personel sayısı">
-              <div class="range-labels"><span>1</span><span>15</span><span>30</span></div>
-            </div>
-
-            <div class="field-group">
-              <label for="ik-salary">Ortalama İK Personel Aylık Brüt Maaş (₺): <span class="field-value" id="salary-val">45.000</span></label>
-              <span class="field-hint">Brüt maaş (₺)</span>
-              <input type="range" id="ik-salary" min="20000" max="200000" step="5000" value="45000" aria-label="İK personel maaşı">
-              <div class="range-labels"><span>20K</span><span>100K</span><span>200K</span></div>
-            </div>
-
-            <div class="field-group">
-              <label for="manual-hours">Haftalık Manuel İK Saati (kişi başı): <span class="field-value" id="hours-val">10</span></label>
-              <span class="field-hint">Özlük, puantaj, izin onayı gibi işlemlere harcanan süre</span>
-              <input type="range" id="manual-hours" min="2" max="30" step="1" value="10" aria-label="Manuel iş saati">
-              <div class="range-labels"><span>2 saat</span><span>16 saat</span><span>30 saat</span></div>
-            </div>
-
-            <div class="field-group">
-              <label for="hire-per-year">Yıllık İşe Alım Sayısı: <span class="field-value" id="hire-val">20</span></label>
-              <span class="field-hint">Yeni pozisyon + yedekleme toplamı</span>
-              <input type="range" id="hire-per-year" min="0" max="200" step="5" value="20" aria-label="Yıllık işe alım">
-              <div class="range-labels"><span>0</span><span>100</span><span>200</span></div>
-            </div>
-          </div>
-
-          <!-- Results -->
-          <div class="result-section">
-            <h2>Tahmini Sonuçlar</h2>
-
-            <div class="result-metric highlight">
-              <div class="metric-label">Yıllık Tasarruf</div>
-              <div class="metric-value" id="res-annual-save">₺—</div>
-              <div class="metric-sub">Manuel süreçlerden kurtarılan maliyet</div>
-            </div>
-
-            <hr class="result-divider">
-
-            <div class="result-metric">
-              <div class="metric-label">Geri Ödeme Süresi</div>
-              <div class="metric-value" id="res-payback">— ay</div>
-              <div class="metric-sub">CADRO Pro planı baz alınarak</div>
-            </div>
-
-            <div class="result-metric">
-              <div class="metric-label">İK Verimliliği Artışı</div>
-              <div class="metric-value" id="res-efficiency">— saat/ay</div>
-              <div class="metric-sub">Geri kazanılan toplam süre</div>
-            </div>
-
-            <div class="result-metric">
-              <div class="metric-label">İşe Alım Hızlanması</div>
-              <div class="metric-value" id="res-hiring">— gün/pozisyon</div>
-              <div class="metric-sub">Ortalama 35% daha hızlı işe alım</div>
-            </div>
-
-            <div class="result-metric">
-              <div class="metric-label">3 Yıllık Net Tasarruf</div>
-              <div class="metric-value" id="res-3yr">₺—</div>
-              <div class="metric-sub">Toplam yazılım maliyeti düşüldükten sonra</div>
-            </div>
-
-            <div class="roi-cta-row">
-              <a href="pricing.html" class="roi-cta-primary">Planları İncele</a>
-              <a href="pay.html?plan=pro&amp;billing=monthly" class="roi-cta-secondary">Ücretsiz Dene</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Assumptions -->
-      <div class="assumptions-card">
-        <h3>Hesaplama Varsayımları</h3>
-        <div class="assumptions-grid">
-          <div class="assumption-item">
-            <div class="a-source">SHRM Araştırması</div>
-            <div class="a-text">Dijitalleşme sonrası İK personeli, rutin işlemlerden %65 daha az zaman harcar.</div>
-          </div>
-          <div class="assumption-item">
-            <div class="a-source">Deloitte 2024</div>
-            <div class="a-text">ATS kullanan şirketlerde işe alım süresi ortalama %35 kısalır.</div>
-          </div>
-          <div class="assumption-item">
-            <div class="a-source">CADRO Müşteri Verisi</div>
-            <div class="a-text">Ortalama geri ödeme süresi 3-6 ay; 100+ çalışanlı firmalar için 3 ayın altına inebilir.</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ -->
-      <section class="faq-section">
-        <h2>Sıkça Sorulan Sorular</h2>
-
-        <div class="faq-item">
-          <h3>İK yazılımının ROI'si gerçekten ölçülebilir mi?</h3>
-          <p>Evet. ROI'nin en somut kaynakları doğrudan ölçülebilir: manuel süreçlerden kurtarılan saat × İK personeli saatlik maliyeti = doğrudan işgücü tasarrufu. Buna ek olarak hata azalması (yanlış bordro, eksik izin takibi), işe alım hızlanması ve çalışan memnuniyeti dolaylı kazanımlar arasında yer alır.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Bu hesaplama aracı nasıl çalışıyor?</h3>
-          <p>Araç, girdiğiniz çalışan sayısı, İK ekibi büyüklüğü ve manuel süreç saatlerine dayalı bir tahmin modeli kullanır. Sonuçlar tahminidir; gerçek değerler operasyonel farklılıklara göre değişebilir. Kullandığınız varsayımları ve kaynakları kendi kurum verilerinizle ayrıca doğrulayın.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>CADRO'nun fiyatlandırması ROI hesabına nasıl dahil ediliyor?
-          <p>Geri ödeme süresi hesaplanırken CADRO Pro planının aylık sabit maliyeti referans alınır. Güncel fiyatlar için <a href="pricing.html" style="color:#0891b2;font-weight:600;">fiyatlandırma sayfasını</a> ziyaret edin. Çalışan sayınıza göre kişiselleştirilmiş teklif almak için ekibimizle iletişime geçebilirsiniz.</p>
-        </h3></div>
-
-        <div class="faq-item">
-          <h3>Hangi İK süreçleri en fazla ROI sağlar?</h3>
-          <p>Puantaj ve özlük yönetimi (haftalık 8-12 saat tasarruf), izin onay akışları (%85 hızlanma) ve ATS modülü (pozisyon başına %35 daha hızlı kapama) en yüksek geri dönüşü sağlayan modüllerdir. Performans yönetimi (OKR) daha uzun vadede bağlılık ve çalışan tutma üzerinden dolaylı ROI üretir.</p>
-        </div>
-      </section>
-
-      <!-- Related Tools -->
-      <section style="margin-bottom: 80px;">
-        <div class="section-head" style="text-align:center;margin-bottom:28px;">
-          <h2 style="font-size:1.6rem;">İlgili Ücretsiz Kaynaklar</h2>
-        </div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;">
-          <a href="onboarding-kontrol-listesi-sablonu.html" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:24px;text-decoration:none;color:inherit;transition:all 0.2s ease;" onmouseover="this.style.borderColor='#0891b2'" onmouseout="this.style.borderColor='#e2e8f0'">
-            <strong style="display:block;font-size:1.05rem;color:#0f172a;margin-bottom:8px;">Onboarding Kontrol Listesi</strong>
-            <span style="color:#475569;font-size:0.93rem;line-height:1.6;">Yeni çalışan işe giriş sürecini adım adım takip edin.</span>
-          </a>
-          <a href="performans-degerlendirme-formu-sablonu.html" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:24px;text-decoration:none;color:inherit;transition:all 0.2s ease;" onmouseover="this.style.borderColor='#0891b2'" onmouseout="this.style.borderColor='#e2e8f0'">
-            <strong style="display:block;font-size:1.05rem;color:#0f172a;margin-bottom:8px;">Performans Değerlendirme Formu</strong>
-            <span style="color:#475569;font-size:0.93rem;line-height:1.6;">Yöneticiler için hazır şablon ile değerlendirmeyi hızlandırın.</span>
-          </a>
-          <a href="bordro-maliyet-hesaplama.html" style="display:block;background:#fff;border:1px solid #e2e8f0;border-radius:18px;padding:24px;text-decoration:none;color:inherit;transition:all 0.2s ease;" onmouseover="this.style.borderColor='#0891b2'" onmouseout="this.style.borderColor='#e2e8f0'">
-            <strong style="display:block;font-size:1.05rem;color:#0f172a;margin-bottom:8px;">Bordro Maliyet Hesaplama</strong>
-            <span style="color:#475569;font-size:0.93rem;line-height:1.6;">Çalışan başına toplam bordro maliyetini hesaplayın.</span>
-          </a>
-        </div>
-      </section>
+  <main id="main-content" data-i18n-skip="true">
+<section class="roi-hero">
+  <div class="tool-badge">Açık senaryo aracı</div>
+  <h1>İK yazılımı ROI senaryosu: girdilerinizi siz belirleyin</h1>
+  <p>Saat, oran, işe alım süreleri ve plan maliyetini girin. Hesap, CADRO müşterilerinin kazanımını veya genel sektör ortalamasını iddia etmez.</p>
+</section>
+<div class="roi-shell">
+  <p class="legal-note"><strong>Önemli sınır:</strong> Bu araç yalnız girdiğiniz varsayımların aritmetik sonucunu gösterir. Sağlanan örnek başlangıç değerleri dış araştırma, CADRO müşteri sonuçları veya fiyat teklifi değildir. Kendi ölçümlerinizi ve güncel sözleşme maliyetini kullanın.</p>
+  <form class="calc-card" id="roi-form" novalidate>
+    <h2>1. İş gücü varsayımları</h2>
+    <div class="calc-grid">
+      <label>İK/idari kişi sayısı<input id="ik-count" type="number" min="1" max="10000" step="1" value="3" required></label>
+      <label>Kişi başı haftalık manuel iş süresi (saat)<input id="manual-hours" type="number" min="0" max="168" step="0.1" value="10" required></label>
+      <label>Süreden düşeceğini varsaydığınız oran (%)<input id="automation-rate" type="number" min="0" max="100" step="1" value="20" required><small>Örnek senaryo; araştırma sonucu değildir.</small></label>
+      <label>Yıllık çalışma haftası<input id="workweeks" type="number" min="1" max="52" step="1" value="52" required></label>
+      <label>Aylık brüt İK ücreti (TRY)<input id="ik-salary" type="number" min="0.01" max="1000000" step="0.01" value="45000" required></label>
+      <label>Saatlik maliyet (TRY)<input id="hourly-cost" type="number" min="0.01" max="100000" step="0.01" value="255.68" required><button id="derive-hourly" class="ghost-button" type="button">Brüt ÷ 176 saat kullan</button></label>
     </div>
-  </main>
+    <h2>2. İşe alım varsayımları</h2>
+    <div class="calc-grid">
+      <label>Yıllık işe alım sayısı<input id="hire-per-year" type="number" min="0" max="10000" step="1" value="20" required></label>
+      <label>Önceki süre (gün/pozisyon)<input id="days-before" type="number" min="0" max="365" step="0.1" value="30" required></label>
+      <label>Yeni süre (gün/pozisyon)<input id="days-after" type="number" min="0" max="365" step="0.1" value="24" required></label>
+      <label>Açık pozisyon gününün varsayımsal maliyeti (TRY)<input id="vacancy-day-cost" type="number" min="0" max="1000000" step="0.01" value="0" required><small>Sıfır bırakılırsa işe alım faydası eklenmez.</small></label>
+    </div>
+    <h2>3. Plan maliyeti</h2>
+    <label>Aylık plan maliyeti (TRY)<input id="monthly-plan-cost" type="number" min="1" max="1000000" step="1" value="0" required><small>Gerçek teklif/fatura bedeli 0’dan büyük olmalıdır. Fiyatı <a href="pricing.html">fiyat sayfasından veya teklifinizden</a> girmeden sonuç gösterilmez.</small></label>
+    <input id="emp-count" type="hidden" value="0">
+    <p id="roi-input-error" class="legal-note" hidden role="alert">Tüm girdiler geçerli aralıklarda sayı olmalıdır. Geri dönüş hesabı için sıfırdan büyük aylık maliyet girin.</p>
+    <p id="roi-days-error" class="legal-note" hidden role="alert">Yeni işe alım süresi eski süreyi aşamaz; azalma negatif olamaz.</p>
+    <button class="primary-button" type="submit">Senaryoyu hesapla</button>
+  </form>
+  <section id="roi-results" class="result-section" aria-live="polite">
+    <h2>Senaryo sonucu</h2>
+    <p><strong>Yıllık toplam brüt fayda:</strong> <span id="res-annual-save">—</span></p>
+    <p><strong>Yıllık net fayda:</strong> <span id="res-annual-net">—</span></p>
+    <p><strong>Geri ödeme:</strong> <span id="res-payback">—</span></p>
+    <p><strong>Üç yıllık net (sabit girdiler):</strong> <span id="res-3yr">—</span></p>
+    <p><strong>Varsayımsal yıllık ROI:</strong> <span id="res-roi">—</span></p>
+    <p><strong>Saat kazanımı:</strong> <span id="res-efficiency">—</span></p>
+    <p><strong>İşe alım farkı:</strong> <span id="res-hiring">—</span></p>
+    <p id="res-benefit-detail"></p>
+  </section>
+  <section class="assumptions-card" id="hesaplama">
+    <h2>Formül, kaynak ve sınırlar</h2>
+    <ul>
+      <li>Yıllık işgücü faydası = kişi × haftalık saat × düşüş oranı × çalışma haftası × saatlik maliyet.</li>
+      <li>Yıllık işe alım faydası = işe alım sayısı × (eski gün − yeni gün) × pozisyon gün maliyeti.</li>
+      <li>Yıllık net = toplam iki fayda − (12 × aylık plan maliyeti).</li>
+      <li>Geri ödeme = yıllık maliyet ÷ (yıllık toplam brüt fayda ÷ 12).</li>
+      <li>ROI = yıllık net fayda ÷ yıllık maliyet × 100. Sıfır maliyetle oran gösterilmez.</li>
+    </ul>
+    <p>Formül basitleştirme tercihidir: ücret artışları, vergi, finansal iskonto, işten çıkarma/eleman azaltımı, ürün lisans durumu ve gerçek üretkenlik dönüşümü hesaba katılmaz. Sonuç taahhüt, vergi danışmanlığı veya müşteri kanıtı değildir.</p>
+  </section>
+</div>
+</main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -322,83 +213,8 @@
   </footer>
 </div>
 
-<script>
-(function() {
-  'use strict';
 
-  // Sanitize number input
-  function sanitize(val, min, max) {
-    var n = parseInt(val, 10);
-    if (isNaN(n)) return min;
-    return Math.min(Math.max(n, min), max);
-  }
-
-  function formatTL(n) {
-    return '₺' + Math.round(n).toLocaleString('tr-TR');
-  }
-
-  function calc() {
-    var empCount = sanitize(document.getElementById('emp-count').value, 10, 1000);
-    var ikCount = sanitize(document.getElementById('ik-count').value, 1, 30);
-    var ikSalary = sanitize(document.getElementById('ik-salary').value, 20000, 200000);
-    var manualHours = sanitize(document.getElementById('manual-hours').value, 2, 30);
-    var hirePerYear = sanitize(document.getElementById('hire-per-year').value, 0, 200);
-
-    // Hourly rate (monthly gross / 176 work hours)
-    var hourlyRate = ikSalary / 176;
-
-    // Hours saved per month (65% reduction in manual tasks)
-    var weeklyHoursSaved = manualHours * 0.65 * ikCount;
-    var monthlyHoursSaved = weeklyHoursSaved * 4.33;
-    var annualHoursSaved = monthlyHoursSaved * 12;
-
-    // Annual labor cost saved
-    var annualLaborSave = annualHoursSaved * hourlyRate;
-
-    // Hiring speed savings (avg 35% faster, cost per day delay ~500 TL productivity loss per hire)
-    var avgTimeToHireDays = 30; // baseline
-    var daysSaved = avgTimeToHireDays * 0.35;
-    var hiringProductivitySave = hirePerYear * daysSaved * 500; // 500 TL per day per open role
-
-    var totalAnnualSave = annualLaborSave + hiringProductivitySave;
-
-    // CADRO Pro plan cost estimate (rough: 150 TL/user/month for HR staff + base)
-    var monthlyPlanCost = (ikCount * 150) + 1500;
-    var annualPlanCost = monthlyPlanCost * 12;
-
-    // Payback in months
-    var paybackMonths = annualPlanCost / (totalAnnualSave / 12);
-
-    // 3 year net
-    var threeYearNet = (totalAnnualSave * 3) - (annualPlanCost * 3);
-
-    document.getElementById('res-annual-save').textContent = formatTL(totalAnnualSave);
-    document.getElementById('res-payback').textContent = paybackMonths < 1 ? '< 1 ay' : Math.round(paybackMonths) + ' ay';
-    document.getElementById('res-efficiency').textContent = Math.round(monthlyHoursSaved) + ' saat/ay';
-    document.getElementById('res-hiring').textContent = Math.round(daysSaved) + ' gün/pozisyon';
-    document.getElementById('res-3yr').textContent = formatTL(threeYearNet);
-  }
-
-  function updateLabel(inputId, labelId, formatter) {
-    var inp = document.getElementById(inputId);
-    var lbl = document.getElementById(labelId);
-    if (!inp || !lbl) return;
-    inp.addEventListener('input', function() {
-      var v = parseInt(this.value, 10);
-      lbl.textContent = formatter ? formatter(v) : v;
-      calc();
-    });
-  }
-
-  updateLabel('emp-count', 'emp-val', null);
-  updateLabel('ik-count', 'ik-val', null);
-  updateLabel('ik-salary', 'salary-val', function(v) { return v.toLocaleString('tr-TR'); });
-  updateLabel('manual-hours', 'hours-val', null);
-  updateLabel('hire-per-year', 'hire-val', null);
-
-  calc();
-})();
-</script>
+<script src="./hr-roi-calculator.js" defer></script>
 <script src="./app.min.js" defer=""></script>
 <script src="./consent.js"></script>
   <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js');</script>

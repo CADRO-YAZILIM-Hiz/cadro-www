@@ -1,7 +1,7 @@
 # CADRO AI Claim Registry
 
-**Tarih:** 14 Ağustos 2026  
-**Durum:** İlk envanter — ürün ve hukuk doğrulaması bekliyor  
+**Tarih:** 14 Ağustos 2026
+**Durum:** İlk envanter — ürün ve hukuk doğrulaması bekliyor
 **Sorumlu:** AI Program Owner + Ürün + Hukuk/KVKK + İçerik
 
 ## Kullanım kuralları
@@ -36,6 +36,8 @@
 | AI-009 | `makale-ik-yapay-zeka-kesisim-2026.html` | AI işe alım, performans, analytics etkileri | Use-case eğitimi | Yüksek | Kaynak bekliyor | Kaynaksız sayıları ve alıntıları kaldırmak; senaryo/örnek olarak etiketlemek; kaynakça bloğu eklemek | İçerik |
 | AI-010 | `ik-roi-hesaplama.html` | AI/İK ROI tahmini | ROI / karar desteği | Orta | İnceleme | Katsayıların kaynağını ve belirsizlik aralığını açıklamak; sonuçların tahmin olduğunu görünür tutmak | Ürün + Finans |
 | AI-011 | `vaka-calismasi-*.html` | AI/otomasyon sonucu veya müşteri başarısı | Vaka çalışması | Yüksek | Kanıt bekliyor | Müşteri izni, dönem, baseline, yöntem ve sınırlamaları eklemek; sahte Review schema kullanmamak | Müşteri Başarı + Hukuk |
+| EVD-001 | `security.html` | AES-256, Türkiye sunucusu, ISO 27001 ve 2FA | Ürün güvenlik pazarlaması | Yüksek | Kaldırılacak | Yazılı teknik belge ve ürün kanıtı yoksa şifreleme/sertifika/lokasyon/2FA iddialarını yayınlamamak | Güvenlik + IT |
+| EVD-002 | `ik-roi-hesaplama.html` | SHRM/Deloitte/%65/%35 ve müşteri geri ödeme kanıtı | ROI / karar desteği | Yüksek | Kaldırılacak | Dış rapor/bölüm veya müşteri veri seti olmadan benchmark kullanmamak; modeli kullanıcı girdileriyle sınırlamak | Ürün + Finans |
 | AI-012 | `AI_PLAN.md` / yeni governance sayfaları | AI kullanım ilkeleri | Kurumsal politika | Yüksek | Roadmap | `ai-governance.html` ve `ai-kullanim-ilkeleri.html` oluşturmak | AI Program Owner |
 | AI-013 | Yeni AI champion programı | AI champion işletim modeli | Adaptasyon | Orta | Roadmap | Sponsor, seçim kriterleri, eğitim, ofis saati, escalation ve aylık KPI planı oluşturmak | Değişim Yönetimi |
 | AI-014 | Yeni data storytelling standardı | Sinyal → içgörü → karar → sonuç | Yönetici iletişimi | Orta | Roadmap | KPI sözlüğü, veri sahibi, kaynak, baseline, hedef ve karar kaydı şablonu oluşturmak | People Analytics |

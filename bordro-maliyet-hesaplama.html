@@ -130,7 +130,7 @@
         Ücretsiz Araç
       </div>
       <h1>Bordro Maliyet Hesaplama Aracı</h1>
-      <p>Brüt maaşı girin — 2026 Türkiye mevzuatına göre işveren SGK, işsizlik sigortası ve toplam çalışan maliyetini anında hesaplayın. Kıdem karşılığı ve yıllık toplam da dahildir.</p>
+      <p>Brüt ücret ve çalışan sayısını girin. Gösterilen oran, teşvik ve karşılık varsayımlarıyla standart 4/a için kişi başı ve ekip maliyetini tahmini olarak hesaplayın.</p>
     </section>
 
     <div class="bordro-shell">
@@ -138,25 +138,27 @@
         ⚠️ Bu araç bilgilendirme amaçlıdır. Kesin bordro hesaplaması için lütfen muhasebe veya mali müşavirinizle çalışın. Prim oranları düzenleyici değişikliklere tabidir.
       </div>
 
-      <div class="calc-card">
+      <form class="calc-card" id="payroll-cost-form" novalidate>
         <div class="calc-grid">
-          <!-- Input -->
+          <!-- Senaryo girdileri -->
           <div class="input-section">
-            <h2>Çalışan Bilgileri</h2>
+            <h2>Tahmini maliyet senaryonuz</h2>
 
             <div class="field-group">
-              <label for="gross-salary">Brüt Aylık Maaş (₺)</label>
-              <span class="field-hint">Çalışanın sözleşmesindeki brüt tutar</span>
-              <input type="number" id="gross-salary" class="salary-input" min="17002" max="10000000" step="500" value="50000" placeholder="50.000" aria-label="Brüt aylık maaş">
+              <label for="gross-salary">Aylık brüt ücret (TRY)</label>
+              <span class="field-hint">Standart 4/a senaryosu; günlük ücret veya prime esas kazanç sınırı uygulanmaz.</span>
+              <input type="number" id="gross-salary" class="salary-input" min="0.01" max="10000000" step="0.01" value="50000" placeholder="50.000" aria-describedby="gross-salary-error" required>
+              <span class="field-hint" id="gross-salary-error" role="alert"></span>
             </div>
 
             <div class="field-group">
-              <label>Çalışan Sayısı</label>
-              <span class="field-hint">Toplam işveren maliyetini görmek için</span>
+              <label for="emp-count">Aynı senaryodaki çalışan sayısı</label>
+              <span class="field-hint">Her kişiye aynı brüt ve seçenekler uygulanır.</span>
               <div class="count-row">
-                <input type="number" id="emp-count" class="count-input" min="1" max="10000" value="1" aria-label="Çalışan sayısı">
+                <input type="number" id="emp-count" class="count-input" min="1" max="10000" step="1" value="1" aria-describedby="emp-count-error" required>
                 <span style="color:#64748b;font-size:0.9rem;">kişi</span>
               </div>
+              <span class="field-hint" id="emp-count-error" role="alert"></span>
             </div>
 
             <div class="field-group">
@@ -179,70 +181,77 @@
 
             <!-- Prim rates table -->
             <div style="margin-top:24px;">
-              <p style="font-weight:700;color:#0f172a;font-size:0.95rem;margin-bottom:10px;">2026 SGK Prim Oranları</p>
+              <p style="font-weight:700;color:#0f172a;font-size:0.95rem;margin-bottom:10px;">Kullanılan standart oran varsayımları</p>
               <table class="prim-table">
-                <thead><tr><th>Prim Türü</th><th>İşçi</th><th>İşveren</th></tr></thead>
+                <caption class="field-hint">Son kaynak kontrolü: 16 Kasım 2026. Mevzuat ve teşvik durumu değişince yeniden kontrol edilmelidir.</caption>
+                <thead><tr><th>Kalem</th><th>İşveren oranı</th><th>Kapsam</th></tr></thead>
                 <tbody>
-                  <tr><td>Sosyal Güvenlik</td><td>%9</td><td>%11</td></tr>
-                  <tr><td>Genel Sağlık Sigortası</td><td>%5</td><td>%7,5</td></tr>
-                  <tr><td>İşsizlik Sigortası</td><td>%1</td><td>%2</td></tr>
-                  <tr><td><strong>Toplam</strong></td><td><strong>%15</strong></td><td><strong>%20,5</strong></td></tr>
+                  <tr><td>SGK işveren payı</td><td>%20,5</td><td>Standart 4/a; seçim öncesi</td></tr>
+                  <tr><td>İşsizlik sigortası</td><td>%2</td><td>Ayrı işveren payı</td></tr>
+                  <tr><td>Seçili teşvik</td><td>−5 puan</td><td>Yalnız SGK indirimi; uygunluk varsayımı</td></tr>
                 </tbody>
               </table>
+              <p class="field-hint"><a href="https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5510.pdf" rel="noopener noreferrer">5510 sayılı Kanun</a>, <a href="https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4447.pdf" rel="noopener noreferrer">4447 sayılı Kanun</a> ve <a href="https://www.sgk.gov.tr/" rel="noopener noreferrer">güncel SGK duyuruları</a> resmî kontrol kaynaklarıdır. Oranların her personel türü için geçerli olduğu varsayılmamalıdır.</p>
             </div>
           </div>
 
           <!-- Result -->
-          <div class="result-section">
-            <h2>Hesaplama Sonucu</h2>
+          <div class="result-section" id="payroll-results" role="status" aria-live="polite">
+            <h2>Tahmini maliyet dökümü</h2>
 
             <div class="result-row">
-              <span class="r-label">Brüt Maaş</span>
+              <span class="r-label">Aylık brüt ücret</span>
               <span class="r-val" id="r-gross">—</span>
             </div>
             <div class="result-row">
-              <span class="r-label">İşveren SGK Primi (%20,5)</span>
+              <span class="r-label">SGK işveren payı (seçili indirim sonrası)</span>
               <span class="r-val" id="r-sgk">—</span>
             </div>
             <div class="result-row">
-              <span class="r-label">İşsizlik Sigortası (%2)</span>
+              <span class="r-label">İşsizlik sigortası işveren payı (%2)</span>
               <span class="r-val" id="r-isizlik">—</span>
             </div>
             <div class="result-row" id="kidem-row">
-              <span class="r-label">Kıdem Karşılığı (1/12)</span>
+              <span class="r-label">Kıdem karşılığı (brüt ÷ 12, isteğe bağlı)</span>
               <span class="r-val" id="r-kidem">—</span>
             </div>
-            <div class="result-row" id="prim-row" style="display:none;">
-              <span class="r-label">Aylık Prim Karşılığı (1/12)</span>
+            <div class="result-row" id="prim-row" hidden>
+              <span class="r-label">Yıllık bir brüt prim ÷ 12</span>
               <span class="r-val" id="r-prim">—</span>
             </div>
-            <div class="result-row" id="tesvik-row" style="display:none;">
-              <span class="r-label">SGK Teşvik İndirimi (-5 puan)</span>
+            <div class="result-row" id="tesvik-row" hidden>
+              <span class="r-label">SGK indirimi (5 puan, varsayım)</span>
               <span class="r-val highlight" id="r-tesvik">—</span>
             </div>
 
             <div class="result-total">
-              <span class="t-label">Aylık Toplam İşveren Maliyeti</span>
+              <span class="t-label">Tahmini kişi başı aylık toplam maliyet</span>
               <span class="t-val" id="r-total">—</span>
             </div>
 
             <div class="result-annual">
-              <span class="t-label">Yıllık Toplam (1 kişi)</span>
+              <span class="t-label" id="r-annual-label">Tahmini senaryo yıllık toplam (12 ay)</span>
               <span class="t-val" id="r-annual">—</span>
             </div>
 
-            <div class="result-annual" id="team-row" style="display:none;">
-              <span class="t-label">Toplam Ekip Maliyeti / Ay</span>
+            <div class="result-annual" id="team-row" hidden>
               <span class="t-val" id="r-team">—</span>
             </div>
 
+            <p class="field-hint" id="r-cost-note" style="color:#cbd5e1;margin-top:14px;"></p>
             <div class="roi-cta-row">
-              <a href="ik-roi-hesaplama.html" class="roi-cta-primary">İK ROI Hesapla</a>
-              <a href="pricing.html" class="roi-cta-secondary">Planları İncele</a>
+              <a href="pricing.html" class="roi-cta-primary">Planları İncele</a>
+              <a href="demo.html" class="roi-cta-secondary">Ürün Kapsamını Görüşün</a>
             </div>
           </div>
         </div>
-      </div>
+      </form>
+      <section class="feature-card" style="margin-bottom:32px;">
+        <h2>Kaynak, varsayımlar ve ürün sınırı</h2>
+        <p>Bu araç standart 4/a çalışan için tahmini brüt ücret toplamıdır; kesin bordro, net maaş veya vergi hesaplaması değildir. Prime esas kazanç tavanı, günlük ücret, farklı personel türleri ve teşvik uygunluğu kontrol edilmez.</p>
+        <p>Kıdem karşılığı, her tam yıl için en fazla 30 günlük ücreti yıllık gider yaklaşımı olarak aylığa böler. Kıdem tazminatının kesin hesabında hizmet süresi, giydirilmiş ücret, fesih nedeni ve dönem tavanı incelenmelidir. <a href="kidem-tazminati-hesaplama.html">Kaynaklı kıdem aracını inceleyin</a>.</p>
+        <p><strong>Ürün sınırı:</strong> Bu bağımsız web aracı, CADRO bordro modülünün tüm mevzuatı otomatik güncellediğini veya SGK/muhasebe entegrasyonunu kanıtlamaz. Modül ve entegrasyon kapsamını sözleşme öncesinde <a href="demo.html">demo sırasında</a> doğrulayın.</p>
+      </section>
 
       <!-- FAQ -->
       <section style="max-width:760px;margin:0 auto 80px;">
@@ -264,8 +273,8 @@
         </div>
 
         <div class="faq-item">
-          <h3>Bordro süreçleri nasıl dijitalleştirilebilir?</h3>
-          <p>CADRO'nun entegre bordro modülü, puantaj verilerini otomatik olarak bordro hesaplamalarına aktarır, onay akışlarını dijitalleştirir ve muhasebe entegrasyonu sağlar. <a href="ik-yazilimi.html" style="color:#0891b2;font-weight:600;">İK Yazılımı sayfasını</a> ziyaret ederek daha fazla bilgi alabilirsiniz.</p>
+          <h3>Bu araç CADRO bordro modülünün tüm özelliklerini kapsar mı?</h3>
+          <p>Hayır. Bu sayfa bağımsız bir maliyet tahmin aracıdır. Puantajdan veri aktarımı, bordro üretimi, yetkilendirme ve muhasebe/SGK entegrasyonu için <a href="bordro-yazilimi.html" style="color:#0891b2;font-weight:600;">bordro ürün kapsamını</a> inceleyip demo sırasında teyit edin.</p>
         </div>
       </section>
 
@@ -327,78 +336,8 @@
   </footer>
 </div>
 
-<script>
-(function() {
-  'use strict';
-
-  function sanitize(val, min, max) {
-    var n = parseFloat(val);
-    if (isNaN(n) || n < min) return min;
-    if (n > max) return max;
-    return n;
-  }
-
-  function fmt(n) {
-    return '₺' + Math.round(n).toLocaleString('tr-TR');
-  }
-
-  function calc() {
-    var gross = sanitize(document.getElementById('gross-salary').value, 17002, 10000000);
-    var empCount = sanitize(document.getElementById('emp-count').value, 1, 10000);
-    var includeKidem = document.getElementById('kidem-check').checked;
-    var includePrim = document.getElementById('prim-check').checked;
-    var includeTesvik = document.getElementById('tesvik-check').checked;
-
-    var sgkRate = 0.205;
-    var isizlikRate = 0.02;
-    var tesvik = includeTesvik ? gross * 0.05 : 0;
-
-    var sgkAmount = gross * sgkRate;
-    var isizlikAmount = gross * isizlikRate;
-    var kidemAmount = includeKidem ? gross / 12 : 0;
-    var primAmount = includePrim ? gross / 12 : 0;
-
-    var total = gross + sgkAmount + isizlikAmount + kidemAmount + primAmount - tesvik;
-    var annual = total * 12;
-    var teamMonthly = total * empCount;
-
-    document.getElementById('r-gross').textContent = fmt(gross);
-    document.getElementById('r-sgk').textContent = fmt(sgkAmount);
-    document.getElementById('r-isizlik').textContent = fmt(isizlikAmount);
-    document.getElementById('r-kidem').textContent = includeKidem ? fmt(kidemAmount) : '—';
-    document.getElementById('kidem-row').style.opacity = includeKidem ? '1' : '0.4';
-
-    var primRow = document.getElementById('prim-row');
-    primRow.style.display = includePrim ? 'flex' : 'none';
-    document.getElementById('r-prim').textContent = fmt(primAmount);
-
-    var tesvikRow = document.getElementById('tesvik-row');
-    tesvikRow.style.display = includeTesvik ? 'flex' : 'none';
-    document.getElementById('r-tesvik').textContent = '-' + fmt(tesvik);
-
-    document.getElementById('r-total').textContent = fmt(total);
-    document.getElementById('r-annual').textContent = fmt(annual);
-
-    var teamRow = document.getElementById('team-row');
-    if (empCount > 1) {
-      teamRow.style.display = 'flex';
-      document.getElementById('r-team').textContent = fmt(teamMonthly);
-    } else {
-      teamRow.style.display = 'none';
-    }
-  }
-
-  ['gross-salary', 'emp-count'].forEach(function(id) {
-    document.getElementById(id).addEventListener('input', calc);
-  });
-  ['kidem-check', 'prim-check', 'tesvik-check'].forEach(function(id) {
-    document.getElementById(id).addEventListener('change', calc);
-  });
-
-  calc();
-})();
-</script>
-<script src="./app.min.js" defer=""></script>
+<script src="./payroll-cost-calculator.js" defer></script>
+<script src="./app.min.js" defer></script>
   <script>if('serviceWorker' in navigator) navigator.serviceWorker.register('./service-worker.js');</script>
 
 <script src="./consent.js"></script>

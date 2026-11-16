@@ -159,6 +159,11 @@
     <p style="font-size: 0.78rem; opacity: 0.6; text-align: center;">* Değerler bilgilendirme amaçlı olup resmi açıklamalar değişkenlik gösterebilir. Kesin değerler için Çalışma Bakanlığı duyurularını takip ediniz.</p>
   </section>
 
+  <section class="feature-card" id="kaynak" style="margin:24px auto;max-width:800px;padding:24px;">
+    <h2>Kaynak, dönem ve güncellik kontrolü</h2>
+    <p>Asgari ücret rakamları <a href="https://www.csgb.gov.tr/poco-pages/asgari-ucret/" rel="noopener noreferrer">ÇSGB’nin resmî asgari ücret sayfası</a> ve Asgari Ücret Tespit Komisyonu kararlarına dayanır. Kesinti oranları ve tavan çarpanı için <a href="https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5510.pdf" rel="noopener noreferrer">5510 sayılı Kanun</a> ve <a href="https://www.mevzuat.gov.tr/mevzuatmetin/1.5.4447.pdf" rel="noopener noreferrer">4447 sayılı Kanun</a> esas alınır.</p>
+    <p>Son kaynak ve formül kontrolü: 16 Kasım 2026. Enflasyon veya mevzuat değişikliğinde yeniden kontrol edilmelidir. Bu araç bilgilendirme amaçlı olup, resmî bordro yerine geçmez.</p>
+  </section>
   <section class="section reveal-on-scroll" style="padding-top: 10px;">
     <div class="section-head narrow">
       <h2>2026 Asgari Ücret Hakkında Sık Sorulanlar</h2>
@@ -236,7 +241,7 @@ function calculateMinWage() {
   const type = document.getElementById('calc-type').value;
   const d = WAGE_DATA[year];
   const resultEl = document.getElementById('calc-result');
-  
+
   let html = '';
   if (type === 'net' || type === 'all') {
     html += `<div class="calc-result-row"><span class="calc-result-label">Brüt Asgari Ücret</span><span class="calc-result-value">${formatTL(d.gross)}</span></div>`;
@@ -252,7 +257,7 @@ function calculateMinWage() {
     html += `<div class="calc-result-row"><span class="calc-result-label">İşsizlik Sigortası İşveren (%2)</span><span class="calc-result-value">+ ${formatTL(d.unemp_employer)}</span></div>`;
     html += `<div class="calc-result-row"><span class="calc-result-label"><strong>İşveren Toplam Maliyeti (${year})</strong></span><span class="calc-result-value">${formatTL(d.total_employer)}</span></div>`;
   }
-  
+
   resultEl.innerHTML = html;
   resultEl.style.display = 'block';
 }

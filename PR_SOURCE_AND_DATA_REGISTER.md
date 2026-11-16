@@ -14,6 +14,7 @@ Bu dosya kaynak ve kanıt envanteridir. Boş alanlar gerçek veri veya kaynak va
 | SGK tavan/taban | SGK | https://www.sgk.gov.tr/ |  |  | 2026-11-09 | Türkiye | Bordro/Hukuk | Belge seçimi bekliyor |
 | Vergi/istisna | GİB | https://www.gib.gov.tr/ |  |  | 2026-11-09 | Türkiye | Vergi/Hukuk | Belge seçimi bekliyor |
 | Mevzuat | Mevzuat Bilgi Sistemi | https://www.mevzuat.gov.tr/ |  |  | 2026-11-09 | Türkiye | Hukuk | Belge seçimi bekliyor |
+| Kıdem tavanı | ÇSGB | https://www.csgb.gov.tr/Media/ydelgoxf/kidem-tazminati-yillar-1980-2026.pdf | Kıdem Tazminatı Yıllık Tavan Miktarı (1980–2026) |  | 2026-11-16 | 2024–2026 dönemleri | Bordro/Hukuk | PDF’den okunarak altı dönem doğrulandı; uygulama notu |
 | KVKK veri sorumlusu | KVKK | https://www.kvkk.gov.tr/Icerik/2032/Veri-Sorumlusu-Kimdir | Veri Sorumlusu Kimdir? |  | 2026-11-09 | Türkiye | KVKK | Bağlantı mevcut |
 | KVKK silme/imha | KVKK | https://www.kvkk.gov.tr/Icerik/2038/kisisel-verilerin-silinmesi-yok-edilmesi-veya-anonim-hale-getirilmesi | Silme, Yok Etme ve Anonimleştirme |  | 2026-11-09 | Türkiye | KVKK | Bağlantı mevcut |
 | Biyometrik mesai | KVKK | https://www.kvkk.gov.tr/Icerik/8912/29-04-2026-tarihli-ve-2026-921-sayili-mesai-takibi-amaciyla-biyometrik-veri-islenmesi-hakkinda-ilke-karari-na-iliskin-gorus-talepleri-hakkinda-kamuoyu-duyurusu | 2026/921 duyurusu | 2026-04-29 | 2026-11-09 | Türkiye | KVKK/Hukuk | Bağlantı mevcut |
@@ -69,6 +70,13 @@ Bu dosya kaynak ve kanıt envanteridir. Boş alanlar gerçek veri veya kaynak va
 | AI-007 | AI ve KVKK | Bekliyor | İnceleme |
 | AI-010 | İK/AI ROI | Bekliyor | İnceleme |
 | AI-011 | Vaka sonuçları | Bekliyor | Kanıt bekliyor |
+
+## 2026-11-16 içerik daraltma kararı
+
+- `ik-arastirma-raporu-2026.html` ve EN/DE/AR karşılıklarında doğrulanmamış araştırma istatistikleri, katılımcı/veri seti ifadeleri ve PDF vaadi yayından kaldırıldı.
+- Dört URL de `noindex, follow` olarak işaretlendi ve `sitemap.xml` içinden çıkarıldı. Gerçek veri seti ve editoryal yayın onayı bulunana kadar yeniden indekslenmemelidir.
+- Bu sayfalar artık mevcut veri seti olmadığını açıklayan metodoloji taslağıdır; açık kaynak bağlantıları kaldırılan oranlara kanıt olarak gösterilmemektedir.
+- Önceki rapor versiyonlarında oluşan gösterim/tıklama, araştırma kalitesi veya veri doğruluğunun kanıtı kabul edilmez.
 
 ## Yayın engelleri
 

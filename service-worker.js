@@ -1,10 +1,11 @@
-const CACHE = 'cadro-v1';
+const CACHE = 'cadro-v3';
 const STATIC_ASSETS = [
   '/styles.min.css',
   '/app.min.js',
   '/site-config.min.js',
-  '/components.min.js',
-  '/lang-all.min.js'
+  '/payroll-cost-calculator.js',
+  '/severance_calculator.js',
+  '/hr-roi-calculator.js'
 ];
 
 self.addEventListener('install', (event) => {
