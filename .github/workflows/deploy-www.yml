@@ -34,6 +34,14 @@ jobs:
             -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" \
             deploy/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/
 
+      - name: Install nginx redirects with rollback guard
+        run: |
+          cp tests/seo/apply-nginx-redirects.sh deploy/apply-nginx-redirects.sh
+          SCP="scp -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+          SSH="ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+          $SCP deploy/apply-nginx-redirects.sh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/html/apply-nginx-redirects.sh
+          $SSH ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'bash /var/www/html/apply-nginx-redirects.sh'
+
       - name: IndexNow — Notify Bing & Copilot of URL changes
         if: success()
         env:

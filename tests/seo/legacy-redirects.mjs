@@ -10,8 +10,9 @@ export function legacyRedirectBlock(server) {
   }
   if (server === 'nginx') {
     return Object.entries(extraLegacyRedirects)
-      .map(([source, target]) => `    rewrite ^${source.replaceAll('.', '\\.')}$ ${target} permanent;`)
-      .join('\n');
+      .map(([source, target]) => `    rewrite ^${source.replaceAll('.', '\\\\.')}$ ${target} permanent;`)
+      .join('\n')
+      + '\n    rewrite ^/Artikel-personel-takip-programi-Was[[:space:]]ist\\.html$ /de/artikel-was-ist-mitarbeiter-tracking.html permanent;';
   }
   throw new Error(`Unknown server: ${server}`);
 }
@@ -137,7 +138,6 @@ export const extraLegacyRedirects = {
   '/makale-esnek-calisma-saat-2026.html': '/makale-esnek-calisma-saatleri-2026.html',
   '/makale-hr-yazilimi-maliyet-Berechnung.html': '/makale-hr-yazilimi-maliyet-hesabi.html',
   '/Artikel-HR-roi-Berechnung-formulu.html': '/de/artikel-hr-roi-berechnung.html',
-  '/Artikel-personel-takip-programi-Was ist.html': '/de/artikel-was-ist-mitarbeiter-tracking.html',
   '/makale-bordro-maliyet-Berechnenma.html': '/bordro-maliyet-hesaplama.html',
   '/makale-ik-roi-Calculatema-formulu.html': '/makale-ik-roi-hesaplama-formulu.html',
   '/makale-ise-alim-sureci-kpi-metrHRleri.html': '/makale-ise-alim-sureci-kpi-metrikleri.html',
@@ -191,6 +191,9 @@ export function readNginxRedirects(root) {
     if (line.trim() === 'rewrite ^/en/hr-software\\.html$ /en/hr-software.html permanent;') continue;
     const match = line.trim().match(/^rewrite \^(\S+)\$ (\S+) permanent;$/);
     if (match) redirects[match[1].replaceAll('\\.', '.')] ??= match[2];
+  }
+  if (!nginx.includes('rewrite ^/Artikel-personel-takip-programi-Was[[:space:]]ist')) {
+    throw new Error('Nginx redirect for the legacy URL containing a space is missing.');
   }
   return redirects;
 }

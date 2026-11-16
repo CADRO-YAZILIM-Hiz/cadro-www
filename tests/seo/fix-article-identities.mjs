@@ -48,8 +48,12 @@ if (process.argv.includes('--check')) {
 
 if (process.argv.includes('--normalize-modified-whitespace')) {
   const { execFileSync } = await import('node:child_process');
-  const names = execFileSync('git', ['diff', '--name-only'], { encoding: 'utf8' }).trim().split(/\r?\n/).filter(Boolean);
-  const results = names.map(file => {
+  // Add untracked maintenance scripts explicitly: git diff --name-only omits them.
+  const names = new Set(execFileSync('git', ['diff', '--name-only'], { encoding: 'utf8' }).trim().split(/\r?\n/).filter(Boolean));
+  for (const file of ['tests/seo/legacy-redirects.mjs', 'tests/seo/legacy-redirects.test.mjs', 'tests/seo/fix-article-identities.mjs', 'tests/seo/apply-nginx-redirects.sh', '.github/workflows/deploy-www.yml']) {
+    if (fs.existsSync(file)) names.add(file);
+  }
+  const results = Array.from(names).map(file => {
     const before = fs.readFileSync(file, 'utf8');
     const after = before.replace(/[\t ]+(?=\r?\n)/g, '').replace(/\r/g, '');
     const counts = {
