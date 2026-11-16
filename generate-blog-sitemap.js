@@ -93,8 +93,15 @@ function validateTarget(baseRoot, url) {
   const html = markup(fs.readFileSync(file, 'utf8'));
   for (const match of html.matchAll(/<meta\b([^>]*)>/gi)) {
     const attrs = attributes(match[1]);
-    if (/^(robots|googlebot|bingbot)$/i.test(attrs.name || '') &&
-        /\bnoindex\b/i.test(attrs.content || '')) {
+    if (!/^(robots|googlebot|bingbot)$/i.test(attrs.name || '')) continue;
+    const directives = (attrs.content || '')
+      .split(',')
+      .map(directive => directive.trim().toLowerCase())
+      .filter(Boolean);
+    if (directives.includes('x')) {
+      throw new Error(`Published target has invalid robots directive "x": ${url}`);
+    }
+    if (directives.includes('noindex')) {
       throw new Error(`Published target has noindex: ${url}`);
     }
   }

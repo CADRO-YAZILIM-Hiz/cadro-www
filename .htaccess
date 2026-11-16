@@ -3,6 +3,14 @@
 RewriteEngine On
 RewriteBase /
 
+# Canonicalize extensionless article URLs that are still discovered in legacy
+# structured-data links. The target is only redirected when the corresponding
+# .html file exists, so real directories and unknown URLs are unaffected.
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.html$
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+RewriteRule ^(.+)$ /$1.html [R=301,L,NE]
+
 # Fallback 301 redirects for hosts where mod_rewrite rules are not applied
 Redirect 301 /ik-roi-Berechnenma.html /ik-roi-hesaplama.html
 Redirect 301 /de/ik-roi-Berechnenma.html /de/hr-roi-rechner.html
@@ -323,11 +331,9 @@ RewriteRule ^Artikel-predHRtif-HR\.html$ /makale-prediktif-ik.html [R=301,L]
 RewriteRule ^Artikel-HR-yazilimi-karsilasma-2026\.html$ /makale-ik-yazilimi-karsilastirma-2026.html [R=301,L]
 RewriteRule ^Artikel-ucret-degerlendirme-ve-piyasa-karsilasmasi\.html$ /makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi.html [R=301,L]
 
-RewriteRule ^de/tools\.html$ /de/hr-software.html [R=301,L]
 RewriteRule ^de/makale-yonetici-ai-adaptasyon-2026\.html$ /de/artikel-fuehrungskraft-ki-anpassung-2026.html [R=301,L]
 RewriteRule ^makale-pdks-with-bordro-entegrasyonu\.html$ /makale-pdks-ile-bordro-entegrasyonu.html [R=301,L]
 RewriteRule ^ar/asgari-ucret-Calculatema\.html$ /ar/hasb-ajr.html [R=301,L]
-RewriteRule ^en/tools\.html$ /en/hr-software.html [R=301,L]
 RewriteRule ^de/artikel-praedHRtive-hr\.html$ /de/artikel-praediktive-hr.html [R=301,L]
 RewriteRule ^makale-performans-and-prim-modeli\.html$ /makale-performans-ve-prim-modeli.html [R=301,L]
 RewriteRule ^ar/makale-prediktif-ik-sadakat-2026\.html$ /ar/mqal-hr-tnby-wla-2026.html [R=301,L]
@@ -356,10 +362,8 @@ RewriteRule ^ar/demo\.html$ /ar/ [R=301,L]
 RewriteRule ^en/demo\.html$ /en/ [R=301,L]
 RewriteRule ^de/demo\.html$ /de/ [R=301,L]
 
-# Var olmayan sayfalar -> ana sayfa
-RewriteRule ^de/about\.html$ /de/ [R=301,L]
-RewriteRule ^en/about\.html$ /en/ [R=301,L]
-RewriteRule ^ar/about\.html$ /ar/ [R=301,L]
+# EN/DE about documents are served directly; AR retains its legacy redirect.
+Redirect 301 /ar/about.html /about.html
 RewriteRule ^de/demo\.html$ /de/ [R=301,L]
 RewriteRule ^en/demo\.html$ /en/ [R=301,L]
 
@@ -464,3 +468,140 @@ RewriteRule ^ar/mqal-thyzt-khwaryzmyat-al-twzyf\.html$ /ar/mqal-thyzt-khwaryzmya
     Header add Link '</llms.txt>; rel="describedby"; type="text/markdown"'
   </FilesMatch>
 </IfModule>
+
+# === GSC LEGACY 404 REDIRECTS (2026-11-16) ===
+Redirect 301 /Artikel-2026-sgk-tavan-taban.html /makale-2026-sgk-tavan-taban.html
+Redirect 301 /Artikel-Digital-ozluk-donusu-suresi.html /makale-dijital-ozluk-donusu-suresi.html
+Redirect 301 /Artikel-HR-Digital-donusum-2026.html /makale-ik-dijital-donusum-2026.html
+Redirect 301 /Artikel-HR-Berichterstattung-dashboard-kurgusu.html /makale-ik-raporlama-dashboard-kurgusu.html
+Redirect 301 /Artikel-HR-analitigi-Berichterstattung-sHR-hatalar.html /makale-ik-analitigi-raporlama-sik-hatalar.html
+Redirect 301 /Artikel-HR-analitigi-12-kpi.html /makale-ik-analitigi-12-kpi.html
+Redirect 301 /Artikel-HR-yazilimi-2026-trendler.html /makale-ik-yazilimi-2026-trendler.html
+Redirect 301 /Artikel-HR-yazilimi-Implementierung-takvimi-90-gun.html /makale-ik-yazilimi-uygulama-takvimi-90-gun.html
+Redirect 301 /Artikel-HR-yazilimi-karsilasma-2026.html /makale-ik-yazilimi-karsilastirma-2026.html
+Redirect 301 /Artikel-KMU-icin-HR-programi.html /makale-kobi-icin-ik-programi.html
+Redirect 301 /Artikel-Leistung-ve-prim-modeli.html /makale-performans-ve-prim-modeli.html
+Redirect 301 /Artikel-Leistung-yonetimi-okr-modeli.html /makale-performans-yonetimi-okr-modeli.html
+Redirect 301 /Artikel-Lohnabrechnung-yazilimi-entegrasyon-listesi.html /makale-bordro-yazilimi-entegrasyon-listesi.html
+Redirect 301 /Artikel-Lohnabrechnung-yazilimi-wie-secilir.html /makale-bordro-yazilimi-nasil-secilir.html
+Redirect 301 /Artikel-ai-ve-kvkk-uyumu.html /makale-ai-ve-kvkk-uyumu.html
+Redirect 301 /Artikel-esnek-calisma-saat-2026.html /makale-esnek-calisma-saatleri-2026.html
+Redirect 301 /Artikel-excel-Lohnabrechnung-sizintilari.html /makale-excel-bordro-sizintilari.html
+Redirect 301 /Artikel-hr-yazilimi-global-lokal-fark.html /makale-hr-yazilimi-global-lokal-fark.html
+Redirect 301 /Artikel-insan-kaynaklari-yazilimi-kvkk-kontrol-listesi.html /makale-insan-kaynaklari-yazilimi-kvkk-kontrol-listesi.html
+Redirect 301 /Artikel-ise-alim-sureci-kpi-metrHRleri.html /makale-ise-alim-sureci-kpi-metrikleri.html
+Redirect 301 /Artikel-ise-alim-yazilimi-aday-Erfahrung.html /makale-ise-alim-yazilimi-aday-deneyimi.html
+Redirect 301 /Artikel-ise-alim-yazilimi-ats-kontrol-listesi.html /makale-ise-alim-yazilimi-ats-kontrol-listesi.html
+Redirect 301 /Artikel-izin-yonetimi-hatalari.html /makale-izin-yonetimi-hatalari.html
+Redirect 301 /Artikel-onboarding-Digitallesme.html /makale-onboarding-dijitallestirme.html
+Redirect 301 /Artikel-pdks-ile-Lohnabrechnung-Integration.html /makale-pdks-ile-bordro-entegrasyonu.html
+Redirect 301 /Artikel-pdks-secim-kriterleri.html /makale-pdks-secim-kriterleri.html
+Redirect 301 /Artikel-pdks-ve-uzaktan-calisma-yonetimi.html /makale-pdks-ve-uzaktan-calisma-yonetimi.html
+Redirect 301 /Artikel-personel-takip-programi-kurulum-Leitfaden.html /makale-personel-takip-programi-kurulum-rehberi.html
+Redirect 301 /Artikel-predHRtif-HR.html /makale-prediktif-ik.html
+Redirect 301 /Artikel-sessiz-istifa-Kosten.html /makale-sessiz-istifa-maliyeti.html
+Redirect 301 /Artikel-turnover-dusurme-yollari.html /makale-turnover-dusurme-yollari.html
+Redirect 301 /Artikel-ucret-degerlendirme-ve-piyasa-karsilasmasi.html /makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi.html
+Redirect 301 /Artikel-yillHR-Leistung-degerlendirme.html /makale-yillik-performans-degerlendirme.html
+Redirect 301 /article-hr-roi-calculation-formula.html /en/article-hr-roi-calculation-formula.html
+Redirect 301 /article-hr-roi-calculation-scenarios.html /en/article-hr-roi-calculation-scenarios.html
+Redirect 301 /ar/article-hr-roi-calculation-scenarios.html /ar/mqal-synarywhat-ayd-hr.html
+Redirect 301 /ar/bordro-maliyet-Calculatema.html /ar/hasb-tklf-rwatb.html
+Redirect 301 /ar/ik-roi-Calculatema.html /ar/hasb-ayd-hr.html
+Redirect 301 /ar/makale-ik-roi-Calculatema-formulu.html /ar/mqal-madt-hsab-ayd-hr.html
+Redirect 301 /ar/makale-ik-roi-Calculatema-ornek-senaryolar.html /ar/mqal-synarywhat-ayd-hr.html
+Redirect 301 /ar/makale-prediktif-ik-sadakat-2026.html /ar/mqal-hr-tnby-wla-2026.html
+Redirect 301 /ar/mqal-mshrat-ada-msar-twzyf.html /ar/mqal-mshrat-ada-msar-altwzyf.html
+Redirect 301 /ar/mqal-thyzt-khwaryzmyat-al-twzyf.html /ar/mqal-thyzt-khwaryzmyat-altwzyf.html
+Redirect 301 /ar/makale-yonetici-ai-adaptasyon-2026.html /ar/mqal-tkyf-mdra-ma-ai-2026.html
+Redirect 301 /ar/makale-onboarding-dijitallestirme.html /ar/mqal-rqmn-tahym-mwzfy.html
+Redirect 301 /ar/makale-pdks-ve-uzaktan-calisma-yonetimi.html /ar/mqal-pdks-adart-ml-bd.html
+Redirect 301 /ar/makale-ik-yazilimi-2026-trendler.html /ar/mqal-atjahat-brnamj-hr-2026.html
+Redirect 301 /ar/makale-ise-alimda-ai-etik.html /ar/mqal-akhlqyat-ai-twzyf.html
+Redirect 301 /ar/asgari-ucret-Calculatema.html /ar/hasb-ajr.html
+Redirect 301 /ar/ik-roi-Berechnenma.html /ar/hasb-ayd-hr.html
+Redirect 301 /de/article-hr-software-pricing-model.html /de/artikel-hr-software-preismodell.html
+Redirect 301 /de/article-hr-software-selection-guide-2026.html /de/artikel-hr-software-auswahl-2026.html
+Redirect 301 /de/article-hr-roi-calculation-scenarios.html /de/artikel-hr-roi-szenarien.html
+Redirect 301 /de/makale-yonetici-ai-adaptasyon-2026.html /de/artikel-fuehrungskraft-ki-anpassung-2026.html
+Redirect 301 /de/makale-prediktif-ik-sadakat-2026.html /de/artikel-praediktive-hr-mitarbeiterbindung-2026.html
+Redirect 301 /de/asgari-ucret-Berechnung.html /de/mindestlohn-rechner.html
+Redirect 301 /de/ik-roi-Berechnenma.html /de/hr-roi-rechner.html
+Redirect 301 /de/sgk-prim-Berechnenma.html /de/sozialversicherung-rechner.html
+Redirect 301 /de/sgk-prim-Berechnung.html /de/sozialversicherung-rechner.html
+Redirect 301 /de/kidem-tazminati-Berechnenma.html /de/abfindungsrechner.html
+Redirect 301 /de/asgari-ucret-Berechnenma.html /de/mindestlohn-rechner.html
+Redirect 301 /de/net-brut-maas-Berechnenma.html /de/brutto-netto-rechner.html
+Redirect 301 /de/makale-ik-yazilimi-2026-trendler.html /de/artikel-hr-software-2026-trends.html
+Redirect 301 /de/makale-onboarding-dijitallestirme.html /de/artikel-onboarding-digitalisierung.html
+Redirect 301 /de/attendance-shift-software.html /en/attendance-shift-software.html
+Redirect 301 /de/artikel-2026-mstlohn-netto.html /de/artikel-2026-mindestlohn-netto.html
+Redirect 301 /de/artikel-2026-sozialandrsicherung-grenze.html /de/artikel-2026-sozialversicherung-grenze.html
+Redirect 301 /de/artikel-ki-und-generatiand-ki.html /de/artikel-ki-und-generative-ki.html
+Redirect 301 /de/artikel-praedHRtive-hr.html /de/artikel-praediktive-hr.html
+Redirect 301 /de/artikel-praediktiand-hr.html /de/artikel-praediktive-hr.html
+Redirect 301 /de/artikel-recruiting-kpi-metrHRen.html /de/artikel-recruiting-kpi-metriken.html
+Redirect 301 /de/asgari-ucret-Calculatema.html /de/mindestlohn-rechner.html
+Redirect 301 /de/bordro-maliyet-Berechnenma.html /de/lohnkosten-rechner.html
+Redirect 301 /de/ik-roi-Calculatema.html /de/hr-roi-rechner.html
+Redirect 301 /de/makale-ik-roi-Calculatema-formulu.html /de/artikel-hr-roi-berechnung.html
+Redirect 301 /de/makale-ik-roi-Calculatema-ornek-senaryolar.html /de/artikel-hr-roi-szenarien.html
+Redirect 301 /en/article-ai-and-generatiand-ai.html /en/article-ai-and-generative-ai.html
+Redirect 301 /en/article-predictiand-hr.html /en/article-predictive-hr.html
+Redirect 301 /en/asgari-ucret-Calculatema.html /en/minimum-wage-calculator.html
+Redirect 301 /en/bordro-maliyet-Berechnenma.html /en/payroll-cost-calculator.html
+Redirect 301 /en/ik-roi-Calculatema.html /en/hr-roi-calculator.html
+Redirect 301 /en/ik-roi-Berechnenma.html /en/hr-roi-calculator.html
+Redirect 301 /en/makale-yonetici-ai-adaptasyon-2026.html /en/article-manager-ai-adaptation-2026.html
+Redirect 301 /en/makale-ik-roi-Calculatema-ornek-senaryolar.html /en/article-hr-roi-calculation-scenarios.html
+Redirect 301 /en/makale-prediktif-ik-sadakat-2026.html /en/article-predictive-hr-loyalty-2026.html
+Redirect 301 /en/makale-ik-yazilimi-2026-trendler.html /en/article-hr-software-2026-trends.html
+Redirect 301 /en/sgk-prim-Calculatema.html /en/social-security-calculator.html
+Redirect 301 /en/sgk-prim-Berechnenma.html /en/social-security-calculator.html
+Redirect 301 /en/kidem-tazminati-Berechnenma.html /en/severance-pay-calculator.html
+Redirect 301 /en/kidem-tazminati-Calculatema.html /en/severance-pay-calculator.html
+Redirect 301 /en/asgari-ucret-Berechnenma.html /en/minimum-wage-calculator.html
+Redirect 301 /en/bordro-maliyet-Calculatema.html /en/payroll-cost-calculator.html
+Redirect 301 /en/lohnsteuer-rechner.html /de/lohnsteuer-rechner.html
+Redirect 301 /en/ik-arastirma-raporu-2026.html /ik-arastirma-raporu-2026.html
+Redirect 301 /en/asgari-ucret-hesaplama.html /en/minimum-wage-calculator.html
+Redirect 301 /ar/hr-software.html /ar/brnamj-hr.html
+Redirect 301 /ar/kidem-tazminati-Berechnenma.html /ar/hasb-mkafat.html
+Redirect 301 /ar/net-brut-maas-Berechnenma.html /ar/hasb-ratb-safy.html
+Redirect 301 /ar/asgari-ucret-Berechnenma.html /ar/hasb-ajr.html
+Redirect 301 /ar/sgk-prim-Berechnenma.html /ar/hasb-tamynat.html
+Redirect 301 /ar/article-hr-roi-calculation-formula.html /ar/mqal-madt-hsab-ayd-hr.html
+Redirect 301 /makale-Bordro-maliyet-Berechnenma.html /bordro-maliyet-hesaplama.html
+Redirect 301 /makale-Digital-ozluk-donusu-suresi.html /makale-dijital-ozluk-donusu-suresi.html
+Redirect 301 /makale-HR-Berichterstattung-dashboard-kurgusu.html /makale-ik-raporlama-dashboard-kurgusu.html
+Redirect 301 /makale-HR-analitigi-12-kpi.html /makale-ik-analitigi-12-kpi.html
+Redirect 301 /makale-HR-analitigi-Berichterstattung-sHR-hatalar.html /makale-ik-analitigi-raporlama-sik-hatalar.html
+Redirect 301 /makale-HR-yazilimi-2026-trendler.html /makale-ik-yazilimi-2026-trendler.html
+Redirect 301 /makale-HR-yazilimi-Implementierung-takvimi-90-gun.html /makale-ik-yazilimi-uygulama-takvimi-90-gun.html
+Redirect 301 /makale-KMU-icin-HR-programi.html /makale-kobi-icin-ik-programi.html
+Redirect 301 /makale-Leistung-ve-prim-modeli.html /makale-performans-ve-prim-modeli.html
+Redirect 301 /makale-Leistung-yonetimi-okr-modeli.html /makale-performans-yonetimi-okr-modeli.html
+Redirect 301 /makale-Lohnabrechnung-yazilimi-entegrasyon-listesi.html /makale-bordro-yazilimi-entegrasyon-listesi.html
+Redirect 301 /makale-ai-and-kvkk-uyumu.html /makale-ai-ve-kvkk-uyumu.html
+Redirect 301 /makale-dijital-ozluk-and-kvkk.html /makale-dijital-ozluk-ve-kvkk.html
+Redirect 301 /makale-esnek-calisma-saat-2026.html /makale-esnek-calisma-saatleri-2026.html
+Redirect 301 /makale-hr-yazilimi-maliyet-Berechnung.html /makale-hr-yazilimi-maliyet-hesabi.html
+Redirect 301 /Artikel-HR-roi-Berechnung-formulu.html /de/artikel-hr-roi-berechnung.html
+Redirect 301 /Artikel-personel-takip-programi-Was ist.html /de/artikel-was-ist-mitarbeiter-tracking.html
+Redirect 301 /makale-bordro-maliyet-Berechnenma.html /bordro-maliyet-hesaplama.html
+Redirect 301 /makale-ik-roi-Calculatema-formulu.html /makale-ik-roi-hesaplama-formulu.html
+Redirect 301 /makale-ise-alim-sureci-kpi-metrHRleri.html /makale-ise-alim-sureci-kpi-metrikleri.html
+Redirect 301 /makale-pdks-ile-Lohnabrechnung-Integration.html /makale-pdks-ile-bordro-entegrasyonu.html
+Redirect 301 /makale-pdks-with-bordro-entegrasyonu.html /makale-pdks-ile-bordro-entegrasyonu.html
+Redirect 301 /makale-performans-and-prim-modeli.html /makale-performans-ve-prim-modeli.html
+Redirect 301 /makale-personel-takip-programi-kurulum-Leitfaden.html /makale-personel-takip-programi-kurulum-rehberi.html
+Redirect 301 /asgari-ucret-Berechnenma.html /asgari-ucret-hesaplama.html
+Redirect 301 /asgari-ucret-Calculatema.html /asgari-ucret-hesaplama.html
+Redirect 301 /bordro-maliyet-Berechnenma.html /bordro-maliyet-hesaplama.html
+Redirect 301 /net-brut-maas-Berechnenma.html /net-brut-maas-hesaplama.html
+Redirect 301 /sgk-prim-Berechnenma.html /sgk-prim-hesaplama.html
+Redirect 301 /makale-ucret-adaleti-and-analitik.html /makale-ucret-adaleti-ve-analitik.html
+Redirect 301 /makale-ucret-adaleti-ve-analitHR.html /makale-ucret-adaleti-ve-analitik.html
+Redirect 301 /makale-ucret-degerlendirme-ve-piyasa-karsilasmasi.html /makale-ucret-degerlendirme-ve-piyasa-karsilastirmasi.html
+Redirect 301 /ik-roi-Calculatema.html /ik-roi-hesaplama.html
+# === END GSC LEGACY 404 REDIRECTS ===
