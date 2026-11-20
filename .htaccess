@@ -3,6 +3,10 @@
 RewriteEngine On
 RewriteBase /
 
+# Canonicalize cadro.io → www.cadro.io (GSC duplicate sitemap fix 2026-11-20)
+RewriteCond %{HTTP_HOST} ^cadro\.io$ [NC]
+RewriteRule ^(.*)$ https://www.cadro.io/$1 [R=301,L,NE]
+
 # Canonicalize extensionless article URLs that are still discovered in legacy
 # structured-data links. The target is only redirected when the corresponding
 # .html file exists, so real directories and unknown URLs are unaffected.
