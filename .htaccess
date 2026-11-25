@@ -3,6 +3,12 @@
 RewriteEngine On
 RewriteBase /
 
+# HSTS: browsers must use HTTPS after a successful secure response.
+# Keep preload out until every subdomain is confirmed to serve HTTPS.
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
+</IfModule>
+
 # Canonicalize cadro.io → www.cadro.io (GSC duplicate sitemap fix 2026-11-20)
 RewriteCond %{HTTP_HOST} ^cadro\.io$ [NC]
 RewriteRule ^(.*)$ https://www.cadro.io/$1 [R=301,L,NE]
@@ -34,7 +40,6 @@ Redirect 301 /de/asgari-ucret-Berechnung.html /de/mindestlohn-rechner.html
 Redirect 301 /en/makale-ik-roi-Calculatema-formulu.html /en/article-hr-roi-calculation-formula.html
 Redirect 301 /makale-HR-analitigi-Berichterstattung-sHR-hatalar.html /makale-ik-analitigi-raporlama-sik-hatalar.html
 Redirect 301 /ik-roi-Calculatema.html /ik-roi-hesaplama.html
-Redirect 301 /ar/about.html /about.html
 Redirect 301 /Artikel-sessiz-istifa-Kosten.html /makale-sessiz-istifa-maliyeti.html
 Redirect 301 /en/kidem-tazminati-Berechnenma.html /en/severance-pay-calculator.html
 Redirect 301 /de/sgk-prim-Berechnenma.html /de/sozialversicherung-rechner.html
@@ -367,7 +372,6 @@ RewriteRule ^en/demo\.html$ /en/ [R=301,L]
 RewriteRule ^de/demo\.html$ /de/ [R=301,L]
 
 # EN/DE about documents are served directly; AR retains its legacy redirect.
-Redirect 301 /ar/about.html /about.html
 RewriteRule ^de/demo\.html$ /de/ [R=301,L]
 RewriteRule ^en/demo\.html$ /en/ [R=301,L]
 
